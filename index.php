@@ -17,7 +17,7 @@
 	# Define these here, or in _projectCommon.php for site-wide values
 	$pageKeywords	= "eclipse, project";
 	$pageAuthor		= "Your name";
-	$pageTitle 		= "My project home";
+	$pageTitle 		= "NatTable";
 	
 	
 	// 	# Paste your HTML content between the EOHTML markers!
