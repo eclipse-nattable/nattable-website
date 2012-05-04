@@ -17,11 +17,11 @@
 	# Define these here, or in _projectCommon.php for site-wide values
 	$pageKeywords	= "eclipse, project, nattable, grid";
 	$pageAuthor		= "Dirk Fauth, Stephan Wahlbrink";
-	$pageTitle 		= "NatTable";
+	$pageTitle 		= "NatTable - Documentation";
 	
-	$page = $_GET["page"];
-	if (strlen($page) == 0) {
-		$page = 'start';
+	$page = 'start';
+	if (isset($_GET["page"])) {
+		$page = $_GET["page"];
 	}
 	
 	// 	# Paste your HTML content between the EOHTML markers!
