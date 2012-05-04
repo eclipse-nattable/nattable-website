@@ -32,8 +32,8 @@
 	$Nav->addCustomNav("Getting Involved", "/project/developers", "_blank", 3);
 
 	# Define keywords, author and title here, or in each PHP page specifically
-	$pageKeywords	= "xtext, dsl, modeling, domain specific language, textual";
-	$pageAuthor		= "Your name";
+	$pageKeywords	= "xtext, dsl, modeling, domain specific language, textual, eclipse, nattable, grid";
+	$pageAuthor		= "Dirk Fauth, Stephan Wahlbrink";
 	# $pageTitle 		= "Xtext";
 
 
