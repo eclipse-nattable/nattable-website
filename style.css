@@ -92,17 +92,20 @@ a strong {
    margin: 0;
 }
 
-#bigbuttons a:hover {
-	text-decoration: none;
-}
-
 #bigbuttons a {
    display: block;
-   height:77px; width:250px;
-   padding: 0;
+   height:77px; width:170px;
+   padding: 12px 12px 0 68px;
    margin: 20px;
-   text-indent: -9000px;
    position: absolute;
+   
+   font-weight: normal;
+   color: black;
+}
+
+#bigbuttons a b {
+	font-size: 120%;
+	font-weight: bold;
 }
 
 #buttonDownload {
@@ -111,19 +114,10 @@ a strong {
    left: 0px;
 }
 
-#buttonDownload:hover {
-   background:transparent url("images/buttonDownload_sel.png") no-repeat 0 0;
-}
-
-   
 #buttonDocumentation {
    background:transparent url("images/buttonDocumentation.png") no-repeat 0 0;
    top: 87px;
    left: 0px;
-}
-
-#buttonDocumentation:hover {
-   background:transparent url("images/buttonDocumentation_sel.png") no-repeat 0 0;
 }
 
 #buttonSupport {
@@ -132,22 +126,13 @@ a strong {
    left: 280px;
 }
 
-#buttonSupport:hover {
-   background:transparent url("images/buttonSupport_sel.png") no-repeat 0 0;
-}
-
 #buttonInvolved {
    background:transparent url("images/buttonInvolved.png") no-repeat 0 0;
    top: 87px;
    left: 280px;
 }
 
-#buttonInvolved:hover {
-   background:transparent url("images/buttonInvolved_sel.png") no-repeat 0 0;
-}
-
 #bigbuttons a * {
-	visibility: hidden;
 }
 
 #headlines {
