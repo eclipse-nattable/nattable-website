@@ -25,14 +25,14 @@
 	# $Nav->setLinkList(array());
 	
 	# Break the navigation into sections
-	$Nav->addNavSeparator("MyProject", 	"/default");
-	$Nav->addCustomNav("Download", "/project/download.php", "_self", 3);
-	$Nav->addCustomNav("Documentation", "/project/documentation.php", "_blank", 3);
-	$Nav->addCustomNav("Support", "/project/support.php", "_blank", 3);
-	$Nav->addCustomNav("Getting Involved", "/project/developers", "_blank", 3);
+	$Nav->addNavSeparator("NatTable (Home)", "/nattable");
+	$Nav->addCustomNav("About this Project", "/nattable/about.php", "_blank", 3);
+	$Nav->addCustomNav("Download", "/nattable/download.php", "_self", 3);
+	$Nav->addCustomNav("Documentation", "/nattable/documentation.php", "_self", 3);
+	$Nav->addCustomNav("Support", "/nattable/support.php", "_self", 3);
 
 	# Define keywords, author and title here, or in each PHP page specifically
-	$pageKeywords	= "xtext, dsl, modeling, domain specific language, textual, eclipse, nattable, grid";
+	$pageKeywords	= "nattable, table, swt, grid, data viewer";
 	$pageAuthor		= "Dirk Fauth, Stephan Wahlbrink";
 	# $pageTitle 		= "Xtext";
 
