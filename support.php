@@ -22,18 +22,24 @@ volunteer basis.</p>
 
 <div class="homeitem">
 <h3>Questions</h3>
-<p>If you have questions about NatTable:</p>
+<p>The <i>Nebula Newsgroup</i> is for users of NatTable (and other Nebula widgets) 
+to ask questions, discuss ideas and so on. Join in and get involved!</p>
 <ul>
-	<li><a href="http://www.eclipse.org/forums/eclipse.technology.nebula">Nebula Forum/Newsgroup</a><br/>
-(nntp: <a href="news://news.eclipse.org/eclipse.technology.nebula">eclipse.technology.nebula</a>)</li>
+	<li><a href="http://www.eclipse.org/forums">General information and signup</a></li>
+	<li>Web access: <a href="http://www.eclipse.org/forums/eclipse.technology.nebula">Nebula Forum</a></li>
+	<li>nntp: <a href="news://news.eclipse.org/eclipse.technology.nebula">eclipse.technology.nebula</a></li>
 </ul>
+<p>Because the newsgroup is also for users of all Nebula widgets, please prefix new
+threads with <code>[NatTable]</code>.</p>
 </div>
 
 <div class="homeitem">
 <h3>Bugs, Code Contributions</h3>
-<p>If you want to report bugs or feature requests:</p>
+<p>NatTable uses Bugzilla to track bugs and enhancements. The issues of NatTable are 
+categorized in Product <i>NatTable</i>.</p>
 <ul>
-	<li><a href="https://bugs.eclipse.org/bugs/query.cgi?product=NatTable">Bugzilla</a> (Product: NatTable)</li>
+	<li><a href="https://bugs.eclipse.org/bugs/query.cgi?product=NatTable">Bugzilla Search</a></li>
+	<li>Eclipse FAQ: <a href="http://wiki.eclipse.org/FAQ_How_do_I_report_a_bug_in_Eclipse%3F">How to report a bug</a></li>
 </ul>
 </div>
 
