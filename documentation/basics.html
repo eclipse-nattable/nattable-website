@@ -1,0 +1,91 @@
+<div id="midcolumn">
+	<h3>Basic concepts - Under construction</h3>
+	<div id="introText">
+		<p>
+			NatTable is more than just a table. It is a general framework to create flexible and highly customizable grids.
+			It is necessary to understand some general concepts to configure and use NatTable.
+		</p>
+	 </div>
+	 
+	<div id="doccontent">
+		<div class="chapter">
+			<h6>Virtual table</h6>
+			<div class="content">
+				The NatTable is a custom painted table widget that doesn't use default SWT composites for rendering (with some exceptions
+				on editing or dialogs). As only those elements are calculated and rendered that are visible to the user, you can speak
+				of the NatTable as a <i>virtual</i> table. This enables it to handle huge amounts of data without performance loss on
+				rendering or creating TableItem objects, like a non-virtual SWT table would do.    		
+			</div>
+		</div>
+		<div class="chapter">
+			<h6>Layers</h6>
+			<div class="content">
+				A layer is NatTable's way of adding functionality. Each feature usually is implemented by a separate layer. 
+				For example column hiding is implemented by the ColumnHideShow layer, Sorting is implemented by the SortHeaderLayer and so on. 
+				Layers can be arranged in 'stacks', by piling them on top of each other. At the bottom of each layer stack there should
+				be a DataLayer which serves as a data source for all other layers.<br/>
+				For a list of available layers you can have a look 
+				<a href="/nattable/documentation.php?page=layer" title="NatTable Layers">here</a>.<br/>
+	    		<a href="images/NatTable_Architecture.png" title="NatTable Architecture">
+	    			<img align="middle" src="images/NatTable_Architecture.png" border="0" alt="NatTable Architecture" width="640"/>
+	    		</a>
+	    		The above diagram shows the architecture of a NatTable that is build as a grid with several layers.
+			</div>
+		</div>
+		<div class="chapter">
+			<h6>Regions</h6>
+			<div class="content">
+				If you want to implement a grid with column and row headers like in the diagram above, you should use the GridLayer. By doing this
+				the NatTable is splitted into regions which makes it easier to manage the different areas in configuration for example.
+				Additionally to the regions showed in the diagram there are regions for column and row header groups and the filter row.
+			</div>
+		</div>
+		<div class="chapter">
+			<h6>Configuration</h6>
+			<div class="content">
+				For every NatTable instance the configuration information is held in the following registries:
+				<ul class="simple">
+					<li>ConfigRegistry</li>
+					<li>UiBindingRegistry</li>
+				</ul>
+				Every layer has configuration information associated with it. This is in the form of <i>IConfiguration</i> objects. 
+				When the NatTable starts up every layer is given the opportunity to configure itself and make entries in the <i>ConfigRegistry</i> 
+				and the <i>UiBindingRegistry</i>. Mainly the following aspects are affected by configuration:
+				<ul>
+       				<li><a href="/nattable/documentation.php?page=styling" title="Styling">Styling</a></li>
+       				<li><a href="/nattable/documentation.php?page=editing" title="Editing">Editing</a></li>
+       				<li><a href="/nattable/documentation.php?page=binding" title="UI Bindings">UI Bindings</a></li>
+				</ul>
+	    		<a href="images/NatTable_Configuration_UML_simplified.png" title="Simplified NatTable configuration UML">
+	    			<img align="middle" src="images/NatTable_Configuration_UML_simplified.png" border="0" alt="Simplified NatTable configuration UML" width="450"/>
+	    		</a><br/>
+				The above simplified UML diagram shows the relationship regarding configuration on the NatTable and its layers.
+			</div>
+		</div>
+		<div class="chapter">
+			<h6>Actions/Commands/Events</h6>
+			<div class="content">
+				For handling user interaction with the NatTable, actions of type IKeyAction, IMouseAction or IDragMode can be registered
+				on UI interactions (see <a href="/nattable/documentation.php?page=binding" title="UI Bindings">here</a>). Normally these
+				actions will then fire a Command on the NatTable to invoke some behaviour. Commands are passed down the layer stack until
+				a layer handles the Command and stops further propagation. A layer can handle a Command by special handling within the
+				layer itself or on registering the corresponding command handler to the layer. Executing actions on the NatTable programmatically
+				is also achieved by firing Commands on the NatTable.<br/>
+				After a Command is executed, normally the state and therefore the UI needs to refreshed or at least the layers need to be
+				informed about the changed state. For this an event mechanism is used within the NatTable. Typically once a command is handled by 
+				a layer, the layer will fire an event to indicate that a change has occurred. Anyone can register themselves as a listener to layer 
+				events by implementing the ILayerListener interface.<br/> 
+				Note that commands travel down the layer stack and normally will be consumed on handling, while events travel up the layer stack
+				informing every listener whether handled or not. <br/>
+				For further information have a look <a href="/nattable/documentation.php?page=commands" title="Custom commands">here</a>.<br/>
+	    		<a href="images/NatTable_Commands_Events.png" title="NatTable Commands/Events">
+	    			<img align="middle" src="images/NatTable_Commands_Events.png" border="0" alt="NatTable Commands/Events" width="300"/>
+	    		</a>
+	    		<a href="images/NatTableSystemDiagram.png" title="NatTable system diagram">
+	    			<img align="middle" src="images/NatTableSystemDiagram.png" border="0" alt="NatTable system diagram" width="300"/>
+	    		</a>
+			</div>
+		</div>
+	</div>
+	
+</div>

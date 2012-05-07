@@ -25,7 +25,9 @@
 	}
 	
 	// 	# Paste your HTML content between the EOHTML markers!
-	$html = file_get_contents('documentation/start.html');
+	$html = file_get_contents('documentation/' . $page . '.html');
+
+	$html .= file_get_contents('documentation/navigation.html');
 
 	# Generate the web page
 	$App->generatePage($theme, $Menu, null, $pageAuthor, $pageKeywords, $pageTitle, $html);

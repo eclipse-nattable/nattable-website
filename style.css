@@ -173,3 +173,77 @@ a strong {
    background:transparent url("images/bannerNewAndNoteworthy08M4.png") no-repeat 0 0;
    margin-top: 10px;
 }
+
+#docnav
+{
+	margin-left: 10px;
+	margin-right: 20px;
+}
+#docnav li
+{
+	list-style-image: url('/eclipse.org-common/themes/Nova/images/leftnav.gif');
+	margin-left: 30px;
+	padding: 0px;
+}
+#docnav li a
+{
+	font-size: 12px;
+	line-height: 12px;
+}
+#docnav li.about
+{
+	list-style-image: none;
+	margin-left: 0;
+	padding-bottom: 10px;
+}
+#docnav li.about a
+{
+	color: #333333;
+	font-size: 12px;
+}
+#docnav li.separator
+{
+	border-top: 1px dotted #d4d4dd;
+	list-style-image: none;
+	margin-left: 0;
+	margin-top: 5px;
+	padding: 5px 0;
+	padding-top: 5px;
+}
+#docnav li.separator a
+{
+	color: #333333;
+	font-size: 12px;
+}
+
+#doccontent {
+	margin-bottom: 10px;
+}
+
+#doccontent li {
+	list-style-image: url('/eclipse.org-common/themes/Nova/images/leftnav.gif');
+	margin-left: 20px;
+	padding: 0px;
+}
+
+#doccontent .chapter h6 {
+	background-color: #e8e7dd;
+	border-bottom: 2px solid #FFF;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 0px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-topright:3px;
+	padding: 8px 5px;
+}
+
+#doccontent .chapter .content {
+	padding: 8px 5px;
+}
+
+#doccontent .chapter .content .simple li {
+	list-style-image: none;
+	list-style-type: disc;
+	margin-left: 20px;
+	padding: 0px;
+}
