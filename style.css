@@ -181,7 +181,7 @@ a strong {
 }
 #docnav li
 {
-	list-style-image: url('/eclipse.org-common/themes/Nova/images/leftnav.gif');
+	list-style-image: url('images/leftnav.gif');
 	margin-left: 30px;
 	padding: 0px;
 }
@@ -221,7 +221,7 @@ a strong {
 }
 
 #doccontent li {
-	list-style-image: url('/eclipse.org-common/themes/Nova/images/leftnav.gif');
+	list-style-image: url('images/leftnav.gif');
 	margin-left: 20px;
 	padding: 0px;
 }
