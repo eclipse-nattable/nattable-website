@@ -18,7 +18,7 @@
 
 <p>The support for NatTable at Eclipse.org is provided by the community on a 
 volunteer basis.</p>
-<br/>
+
 
 <div class="homeitem">
 <h3>Questions</h3>
@@ -47,7 +47,7 @@ categorized in Product <i>NatTable</i>.</p>
 EOHTML;
 	# Generate the web page
 	$App->AddExtraHtmlHeader("<style>
-p {margin-bottom : 5px;}
+.homeitem p {margin-bottom : 5px;}
 </style>");
 	
 	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
