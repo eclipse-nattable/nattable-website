@@ -27,11 +27,31 @@
 	// 	# Paste your HTML content between the EOHTML markers!
 	$html = file_get_contents('documentation/' . $page . '.html');
 
-	$html .= file_get_contents('documentation/navigation.html');
-
+	#$html .= file_get_contents('documentation/navigation.html');
+	
 	$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="style.css"/>');
 	
+	# Generate documentation navigation
+	$Nav->addNavSeparator('Documentation', '/nattable/documentation.php');
+	$Nav->addCustomNav('Getting started', '/nattable/documentation.php?page=getting_started', '_self', 3);
+	$Nav->addCustomNav('Basics', '/nattable/documentation.php?page=basics', '_self', 4);
+	$Nav->addCustomNav('Layers', '/nattable/documentation.php?page=layer', '_self', 4);
+	$Nav->addCustomNav('Data access', '/nattable/documentation.php?page=data', '_self', 4);
+	$Nav->addCustomNav('Styling', '/nattable/documentation.php?page=styling', '_self', 4);
+	$Nav->addCustomNav('Editing', '/nattable/documentation.php?page=editing', '_self', 4);
+	$Nav->addCustomNav('UI Bindings', '/nattable/documentation.php?page=binding', '_self', 4);
+	$Nav->addCustomNav('Selection', '/nattable/documentation.php?page=selection', '_self', 4);
+	$Nav->addCustomNav('Grouping', '/nattable/documentation.php?page=grouping', '_self', 4);
+	$Nav->addCustomNav('Sorting', '/nattable/documentation.php?page=sorting', '_self', 4);
+	$Nav->addCustomNav('Filtering', '/nattable/documentation.php?page=filtering', '_self', 4);
+	$Nav->addCustomNav('Trees', '/nattable/documentation.php?page=tree', '_self', 4);
+	$Nav->addCustomNav('Context menus', '/nattable/documentation.php?page=context', '_self', 4);
+	$Nav->addCustomNav('Custom commands', '/nattable/documentation.php?page=commands', '_self', 4);
+	$Nav->addCustomNav('FAQ', '/nattable/documentation.php?page=faq', '_self', 4);
+	$Nav->addCustomNav('Related articles', '/nattable/documentation.php?page=articles', '_self', 4);
+	$Nav->addCustomNav('API Javadoc', '/nattable/documentation.php?page=api', '_self', 4);
+	
 	# Generate the web page
-	$App->generatePage($theme, $Menu, null, $pageAuthor, $pageKeywords, $pageTitle, $html);
+	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 
 ?>

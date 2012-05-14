@@ -220,7 +220,7 @@ a strong {
 	margin-bottom: 10px;
 }
 
-#doccontent li {
+#doccontent .links li {
 	list-style-image: url('/eclipse.org-common/themes/Nova/images/leftNav.gif');
 	margin-left: 20px;
 	padding: 0px;
