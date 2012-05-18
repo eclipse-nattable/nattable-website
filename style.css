@@ -237,8 +237,21 @@ a strong {
 	padding: 8px 5px;
 }
 
+#doccontent .chapter h7 {
+	clear: both;
+	display: block;
+	font-weight: bold;
+	padding-left: 0;
+	padding-top: 1.5em;
+}
+
 #doccontent .chapter .content {
 	padding: 8px 5px;
+}
+
+#doccontent .chapter .content ul {
+	padding-top: 0;
+	padding-bottom: 0;
 }
 
 #doccontent .chapter .content .simple li {
@@ -247,3 +260,8 @@ a strong {
 	margin-left: 20px;
 	padding: 0px;
 }
+
+#doccontent .code {
+	font-family: "Courier New", monospace;
+}
+
