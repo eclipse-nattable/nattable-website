@@ -2,43 +2,46 @@
 	<h3>Layers - Under construction</h3>
 	
 	<div id="introText">
-		A layer is a rectangular region of grid cells. A layer has methods to access its columns, rows, width and height. 
+		<p>A layer is a rectangular region of grid cells. A layer has methods to access its columns, rows, width and height. 
 		All layers implement the ILayer interface. A layer can be stacked on top of another layer in order to expose a transformed 
 		view of its underlying layer's grid cell structure. Layers are used in this way to encapsulate grid transformation behavior 
-		such as hiding and reordering columns.
-		<p>
-			Columns and rows in a layer are referenced either by <b>position</b> or <b>index</b>:
-			<ul>
-				<li>The <b>position</b> of a column/row in a layer corresponds to the physical <b>location of the column/row in the current layer</b>. 
-					Positions always start from 0 and increase sequentially.</li>
-				<li>The <b>index</b> of a column/row in a layer corresponds to the <b>location of the column/row in the lowest level layer in the layer stack</b>. 
-					Usually the lowest layer in the layer stack will be the DataLayer. Indexes are not necessarily ordered, and in some cases may not even be unique within a layer.</li>
-			</ul>
-		<p>
-			These concepts are illustrated by the following example:<br/>
-			<br/>
-			ColumnHideShowLayer C<br/>
-			0 1 2 3 4 &lt;- column positions<br/>
-			1 0 3 4 5 &lt;- column indexes<br/>
-			<br/>
-			ColumnReorderLayer B<br/>
-			0 1 2 3 4 5 &lt;- column positions<br/>
-			2 1 0 3 4 5 &lt;- column indexes<br/>
-			<br/>
-			DataLayer A<br/>
-			0 1 2 3 4 5 &lt;- column positions<br/>
-			0 1 2 3 4 5 &lt;- column indexes<br/>
-			<br/>
-			In the above example, ColumnHideShowLayer C is stacked on top of ColumnReorderLayer B, which is in turn stacked on top of DataLayer A. 
-			The positions in DataLayer A are the same as its indexes, because it is the lowest level layer in the stack. ColumnReorderLayer B 
-			reorders column 0 of its underlying layer (DataLayer A) after column 2 of its underlying layer. ColumnHideShowLayer C hides the first 
-			column of its underlying layer (ColumnReorderLayer B).<br/>
-			Layers can also be laterally composed into larger layers. For instance, the <a href="#gridlayer">GridLayer</a> is composed of several 
-			layers/layer stacks for every region.
-		</p>
+		such as hiding and reordering columns.</p>
+
+		<p>Columns and rows in a layer are referenced either by <b>position</b> or <b>index</b>:</p>
+		<ul>
+			<li>The <b>position</b> of a column/row in a layer corresponds to the physical <b>location of the column/row in the current layer</b>. 
+				Positions always start from 0 and increase sequentially.</li>
+			<li>The <b>index</b> of a column/row in a layer corresponds to the <b>location of the column/row in the lowest level layer in the layer stack</b>. 
+				Usually the lowest layer in the layer stack will be the DataLayer. Indexes are not necessarily ordered, and in some cases may not even be unique within a layer.</li>
+		</ul>
+		
+		<p>These concepts are illustrated by the following example:</p>
+		<pre>
+		ColumnHideShowLayer C
+		0 1 2 3 4 &lt;- column positions
+		1 0 3 4 5 &lt;- column indexes
+		<br/>
+		ColumnReorderLayer B
+		0 1 2 3 4 5 &lt;- column positions
+		2 1 0 3 4 5 &lt;- column indexes
+		<br/>
+		DataLayer A
+		0 1 2 3 4 5 &lt;- column positions
+		0 1 2 3 4 5 &lt;- column indexes
+		</pre>
+		
+		<p>In the above example, ColumnHideShowLayer C is stacked on top of ColumnReorderLayer B, which is in turn stacked on top of DataLayer A. 
+		The positions in DataLayer A are the same as its indexes, because it is the lowest level layer in the stack. ColumnReorderLayer B 
+		reorders column 0 of its underlying layer (DataLayer A) after column 2 of its underlying layer. ColumnHideShowLayer C hides the first 
+		column of its underlying layer (ColumnReorderLayer B).</p>
+		
+		<p>Layers can also be laterally composed into larger layers. For instance, the <a href="#gridlayer">GridLayer</a> is composed of several 
+		layers/layer stacks for every region.</p>
+   		
    		<a href="images/NatTable_Architecture.png" title="NatTable Architecture">
    			<img align="middle" src="images/NatTable_Architecture.png" border="0" alt="NatTable Architecture" width="320"/>
    		</a>
+		
 		<p>Following you will find the existing layers in NatTable:</p>
 	</div>
 	<div id="doccontent">
@@ -114,9 +117,10 @@
 		<div class="chapter">
 			<a name="datalayer"></a><h6>DataLayer</h6>
 			<div class="content">
-				The primary purpose of the DataLayer is to attach the IDataProvider to the table and supply data for the cells. 
+				<p>The primary purpose of the DataLayer is to attach the IDataProvider to the table and supply data for the cells. 
 				It also handles resize commands and tracks column/row sizes via SizeConfig objects. This layer always works with column/row indexes 
-				i.e the position of the cell in the underlying data source. It is usually the lowermost layer in a layer stack.
+				i.e the position of the cell in the underlying data source. It is usually the lowermost layer in a layer stack.</p>
+				
 				<p>The following specializations of the DataLayer exist:
 				<ul>
 					<li>DefaultColumnHeaderDataLayer<br/>
@@ -162,10 +166,11 @@
 		<div class="chapter">
 			<a name="gridlayer"></a><h6>GridLayer</h6>
 			<div class="content">
-				This is a top level layer used to divide up the table into grid regions. A layer or layer stack can then be assigned to each 
-				of these regions. This layer mostly serves to delegate functions to its lower layers. 
+				<p>This is a top level layer used to divide up the table into grid regions. A layer or layer stack can then be assigned to each 
+				of these regions. This layer mostly serves to delegate functions to its lower layers.</p>
+				 
 				<p>There is a default implementation <i>DefaultGridLayer</i> that uses DefaultBodyLayerStack, ColumnHeaderLayer, RowHeaderLayer
-				and <a href="#cornerlayer">CornerLayer</a> which are created out of the data information given to one of the constructors.		
+				and <a href="#cornerlayer">CornerLayer</a> which are created out of the data information given to one of the constructors.</p>		
 			</div>
 		</div>
 		<div class="chapter">
