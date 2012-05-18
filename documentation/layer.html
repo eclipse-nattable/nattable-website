@@ -7,13 +7,14 @@
 		view of its underlying layer's grid cell structure. Layers are used in this way to encapsulate grid transformation behavior 
 		such as hiding and reordering columns.</p>
 
-		<p>Columns and rows in a layer are referenced either by <b>position</b> or <b>index</b>:</p>
+		<p>Columns and rows in a layer are referenced either by <b>position</b> or <b>index</b>:
 		<ul>
 			<li>The <b>position</b> of a column/row in a layer corresponds to the physical <b>location of the column/row in the current layer</b>. 
 				Positions always start from 0 and increase sequentially.</li>
 			<li>The <b>index</b> of a column/row in a layer corresponds to the <b>location of the column/row in the lowest level layer in the layer stack</b>. 
 				Usually the lowest layer in the layer stack will be the DataLayer. Indexes are not necessarily ordered, and in some cases may not even be unique within a layer.</li>
 		</ul>
+		</p>
 		
 		<p>These concepts are illustrated by the following example:</p>
 		<pre>
@@ -138,6 +139,7 @@
 					<li>SpanningDataLayer<br/>
 						...</li>
 				</ul>
+				</p>
 			</div>
 		</div>
 		<div class="chapter">

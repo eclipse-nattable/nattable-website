@@ -34,13 +34,15 @@
 			<h6>Developer</h6>
 			<div class="content">
 				<p>You can also download the source code and contribute it to NatTable. The following information will help you set up
-				your development environment. The development tools with minimum versions that are used by the NatTable team are listed below.</p> 
+				your development environment. The development tools with minimum versions that are used by the NatTable team are listed below. 
 					<ul>
 						<li>JDK 1.5</li>
 						<li>Eclipse 3.5</li>
 						<li>Maven 3 with Tycho</li>
 						<li>Git</li>
 					</ul>
+				</p>
+				
 				<p>After all of these tools are installed you can download the NatTable sources via Git with the following command:</p>
 				<p><span class="code">git clone git://git.eclipse.org/gitroot/nattable/org.eclipse.nebula.widgets.nattable.git</span></p>
 				
@@ -55,7 +57,7 @@
 
 				<h7>Importing projects into Eclipse</h7>
 
-				<p>The first thing you will need to do is import the NatTable projects into Eclipse:</p>
+				<p>The first thing you will need to do is import the NatTable projects into Eclipse:
 				<ul>
 				    <li>select File -> Import from the menubar</li>
 				    <li>choose General -> Existing Projects into Workspace</li>
@@ -63,6 +65,7 @@
 				    <li>Select root directory: (NATTABLE_TRUNK/nattable)</li>
 				    <li>click Finish</li>
 				</ul>
+				</p>
 
 				<h7>Setting the target platform</h7>
 				<ul>
@@ -86,13 +89,14 @@
 				Import this and set as the active profile in Eclipse in the Java -> Code Style -> Formatter preferences page.</p>
 
 				<h7>Source code organization</h7>
-				<p>NatTable source is divided into the following projects:</p>
+				<p>NatTable source is divided into the following projects:
 				<ul>
 					<li>org.eclipse.nebula.widgets.nattable.core - Core NatTable code
 					<li>org.eclipse.nebula.widgets.nattable.extension.glazedlists - NatTable extensions for GlazedLists
 					<li>org.eclipse.nebula.widgets.nattable.extension.poi - NatTable extensions for Apache POI
 					<li>org.eclipse.nebula.widgets.examples - example programs
 				</ul>
+				</p>
     
 				<p>In addition there are also various test projects. All of these projects are packaged as Eclipse plugins/OSGi bundles.</p>
 
