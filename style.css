@@ -265,3 +265,16 @@ a strong {
 	font-family: "Courier New", monospace;
 }
 
+#doccontent .codeBlock {
+	white-space: pre;
+	font-family: "Courier New", monospace;
+	padding: 0.5em;
+	background-color: #FFFF73;
+	border-style: dotted;
+	border-width: 1px;
+	border-color: black;
+}
+
+#doccontent .subline {
+	font-size: 0.8em;
+}

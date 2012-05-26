@@ -1,10 +1,109 @@
 <div id="midcolumn">
 	<h3>Editing - Under construction</h3>
-	
-	Edit rules
-	Editors
-	Conversion
-	Validation
-	Error handling
-	
+	<div id="doccontent">
+		<div class="chapter">
+			<div class="content">
+				<p>NatTable supports the following editing features:
+					<ol>
+						<li>Inline cell editing via a text box, Combo box or a check box</li>
+						<li>Multiple values can be edited simultaneously via a popup</li>
+						<li>Editing updates the underlying list data structure</li>
+					</ol>
+					There is no special layer needed to enable editing in NatTable. Everything is done via configuration.
+				</p>
+				<p>
+					The <span class="code">EditableGridExample</span> is the best place to look at. The default cell editing 
+					configuration is provided by the <span class="code">DefaultEditConfiguration</span>.
+				</p>
+			</div>
+		</div>
+		<div class="chapter">
+			<h6>Making cells editing</h6>
+			<div class="content">
+				<p>
+					Editing is turned <i>off</i> by default. To enable editing an <span class="code">IEditableRule</span> has to be 7
+					registered against the cell label. The <span class="code">isEditable()</span> method must return true. This rule 
+					must be registered against the cell label as shown below:
+				</p>
+				<div class="codeBlock">configRegistry.registerConfigAttribute(
+			EditConfigAttributes.CELL_EDITABLE_RULE, 
+			IEditableRule.ALWAYS_EDITABLE, 
+			DisplayMode.EDIT, 
+			"myCellLabel");</div>
+			</div>
+		</div>
+		<div class="chapter">
+			<h6>Cell editor</h6>
+			<div class="content">
+				<p>
+					This is the widget which gets activated when a cell is put into edit mode. Text box, combo box and check box are 
+					provided out of the box. These widgets implement the <span class="code">ICellEditor</span> interface. Note that 
+					there is only one instance of a cell editor active at any time. The editor must be registered against the cell 
+					label as follows:
+				</p>
+				<div class="codeBlock">configRegistry.registerConfigAttribute(
+			EditConfigAttributes.CELL_EDITOR, 
+			comboBoxCellEditor, 
+			DisplayMode.EDIT, 
+			"myCellLabel");</div>
+			</div>
+		</div>
+		<div class="chapter">
+			<h6>Data conversion</h6>
+			<div class="content">
+				<p>
+					TODO
+				</p>
+			</div>
+		</div>
+		<div class="chapter">
+			<h6>Data validation</h6>
+			<div class="content">
+				<p>
+					Data validation rules can be specified for the editable cells. Updates will be applied to the underlying list 
+					only if they pass the validation check. These are relevant in case of text boxes where the user can enter free 
+					text. These rules must implement the <span class="code">IDataValidator</span> interface.
+				</p>
+				<div class="codeBlock">configRegistry.registerConfigAttribute(
+			EditConfigAttributes.DATA_VALIDATOR, 
+			getSecurtityIdValidator(), 
+			DisplayMode.EDIT, 
+			"myCellLabel");</div>
+			</div>
+		</div>
+		<div class="chapter">
+			<h6>Error handling</h6>
+			<div class="content">
+				<p>
+					TODO
+				</p>
+			</div>
+		</div>
+		<div class="chapter">
+			<h6>How are cell values commited</h6>
+			<div class="content">
+				<p>
+					A cell editor fires an <span class="code">UpdateDataCommand</span> to commit the new value for a cell. 
+					This command is handled by the <span class="code">DataLayer</span> via the <span class="code">UpdateDataCommandHandler</span>. 
+					Ultimately the <span class="code">IDataProvider</span> will update the underlying data structure.
+				</p>
+				<img align="middle" src="images/updateDataCommandHandling.png" border="0" alt="Update data command handling"/>
+			</div>
+		</div>
+		<div class="chapter">
+			<h6>Handling the data update differently</h6>
+			<div class="content">
+				<p>
+					If you want to execute a custom action when the user edits a cell you will have to:
+					<ol>
+						<li>Deregister the UpdateDataCommandHandler</li>
+						<li>Register your custom command handler for handling the UpdateDataCommand</li>
+					</ol>
+				</p>
+				<p>The code will look something like this</p>
+				<div class="codeBlock">bodyDataLayer.unregisterCommandHandler(UpdateDataCommand.class);
+bodyDataLayer.registerCommandHandler(new MyUpdateDataCommandHandler());</div>
+			</div>
+		</div>		
+	</div>	
 </div>
