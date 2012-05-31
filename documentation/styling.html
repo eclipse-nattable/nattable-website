@@ -1,7 +1,185 @@
 <div id="midcolumn">
 	<h3>Styling - Under construction</h3>
+	<div id="introText">
+		<p>
+			Every layer that has effect on visualization has it's own style configuration. For example, the <span class="code">SelectionLayer</span>
+			has it's own style configuration telling how to render selected cells, the <span class="code">ColumnHeaderLayer</span> has it's
+			own style configuration telling how to render the column header cells, while the NatTable itself knows the style configuration
+			on how to render all other cells (mainly the cells in the body region of a grid). To customize the visualization of the NatTable
+			you have to override and register your own style configuration on the specific layer itself.
+		</p>
+	</div>
+	<div id="doccontent">
+		<div class="chapter">
+			<h6>Cell painters</h6>
+			<div class="content">
+				<p>
+					NatTable user cell painters to paint each cell. These painters implement the <span class="code">ICellPainter</span> 
+					interface. The default painter is the <span class="code">TextPainter</span>. As the name suggests, it paints its 
+					content as text and reads the relevant style attributes from the config registry. It takes into account font, colors 
+					and alignment when it paints. It can also be configured to wrap the text, calculate the cell size (row height, column width)
+					via constructor.
+				</p>
+				<p>
+					Current unreleased features to the <span class="code">TextPainter</span> and the <span class="code">VerticalTextPainter</span>
+					are flags to configure whether the text should be rendered underlined and/or strikethrough.  
+				</p>
+				<p>
+					NatTable comes with a bunch of painters that can be used and mixed so the NatTable gets painted the way you want.
+				</p>
+				<h7>CellPainterWrapper</h7>
+				<p>
+					Paints the interior of the cell using a given painter. It then goes on put some decorations around/behind the cell.
+				</p>
+				<p>
+					Implementing classes are:
+					<ul>
+						<li>TextPainter - paints its content as text</li>
+						<li>VerticalTextPainter  - paints its content as text vertically</li>
+						<li>LineBorderDecorator - paints a border around the cell</li>
+						<li>PaddingDecorator - puts a padding around the cell contents</li>
+						<li>BeveledBorderDecorator - Gives the cell a button like look by drawing a beveled border</li>
+						<li>ImagePainter - Paints its background using the given image</li>
+						<li>BackgroundImagePainter - Paints the background of the cell it wraps using the given image</li>
+					</ul>
+				</p>
+				<p>
+					You can mix and match the above painters to create your own variations without needing to write much code.
+				</p>
+				<p>
+					For example the following snippet
+					<div class="codeBlock">Image bgImage = new Image(Display.getDefault(), 
+	getClass().getResourceAsStream("column_header_bg.png"));
+TextPainter txtPainter = new TextPainter(false, false);
+ICellPainter bgImagePainter = new BackgroundImagePainter(txtPainter, bgImage, 
+	GUIHelper.getColor(192, 192, 192));</div>
+					<p class="subline">Snippet from StyledColumnHeaderConfiguration of StyledGridExample</p>
+				</p>
+				<p>
+					will paint something like this
+				</p>
+				<img align="middle" src="images/backgroungImgPainter.png" border="0" alt="Cell painter example for BackGroundImagePainter"/>
+
+				<h7>CellPainterDecorator</h7>
+				<p>
+					Paints using a base painter and then <i>decorates</i> it using a second painter. For example, in the following snippet
+					<div class="codeBlock">new CellPainterDecorator(
+	new TextPainter(), 
+	CellEdgeEnum.RIGHT, 
+	new ImagePainter(myImage))</div>
+					<p class="subline">Snippet from the ButtonCellExample</p>
+				</p>
+				<p>
+					will paint something like this
+				</p>
+				<img align="middle" src="images/cellPainterDecorator.png" border="0" alt="CellPainterDecorator example"/>
+				
+				<h7>Using a custom cell painter</h7>
+				<p>
+					In order to use a custom cell painter you need to:
+					<ol>
+						<li>Create a custom implementation of the <span class="code">ICellPainter</span>. 
+							Normally you would be able to reuse one of the existing ones.</li>
+						<li>Apply a custom label to the cells which should use your painter.</li>
+						<li>Register your painter in the config registry against the cell labels you applied in step 2. 
+						Custom painters are registered as <span class="code">CellConfigAttributes.CELL_PAINTER</span> attributes.</li>
+					</ol>
+				</p>
+				<p>
+					The <span class="code">PercentageBarExample</span> shows how to use the <span class="code">PercentageBarCellPainter</span> 
+					instead of the <span class="code">TextPainter</span> in the body region of the grid. This is done by registering 
+					the new painter as shown the following snippet
+					
+					<div class="codeBlock">configRegistry.registerConfigAttribute(
+	CellConfigAttributes.CELL_PAINTER, 
+	new PercentageBarCellPainter(),
+	DisplayMode.NORMAL, 
+	GridRegion.BODY);</div>
+					<p class="subline">Snippet from the PercentageBarExample</p>
+				</p>
+				<p>
+					The painter itself looks like this
+
+     				<div class="codeBlock">public PercentageBarCellPainter() {
+	super(new PaddingDecorator(
+		new LineBorderDecorator(
+			new PercentageBarDecorator(new TextPainter()), 
+			new BorderStyle())));
+}</div>
+				</p>
+				<p>
+					The diagram below illustrates the various parts of the cell these painters paint  
+					<img align="middle" src="images/percentageBarCell.png" border="0" alt="Percentage bar example"/>   
+				</p>
+			</div>
+		</div>
+	</div>
+	<div id="doccontent">
+		<div class="chapter">
+			<h6>Conditional styling</h6>
+			<div class="content">
+				<p>
+					NatTable supports conditional configurations by using <a href="/nattable/documentation.php?page=configuration#labels" title="Cell labels">labels</a>. 
+					This way it is also possible to add conditional styling. To use conditional styling the first step is to register a 
+					label to a cell. You can do this by using a <span class="code">IConfigLabelAccumulator</span>. There are several 
+					predefined implementations like
+				</p>
+				<ul>
+					<li>CellOverrideLabelAccumulator - register a label to a specific cell value</li>
+					<li>ColumnOverrideLabelAccumulator - register a label to all cells of a specific column</li>
+					<li>RowOverrideLabelAccumulator - register a label to all cells of a specific column</li>
+				</ul>
+				<p>
+					These implementations extend <span class="code">AbstractOverrider</span> which gives the opportunity to register
+					labels to certain conditions like a special value, column or row index.
+					<div class="codeBlock">//add custom cell label to cells that contain value AAA in column 2
+CellOverrideLabelAccumulator cellLabelAccumulator 
+	= new CellOverrideLabelAccumulator(gridLayer.getBodyDataProvider());
+cellLabelAccumulator.registerOverride("AAA", 2, CELL_LABEL);
+
+// Register label accumulator with the data layer
+bodyDataLayer.setConfigLabelAccumulator(cellLabelAccumulator);</div>
+					<p class="subline">Snippet from CellConfigurationExample</p>
+				</p>
+				<p>
+					If you need a more specific labeling mechanism you can implement <span class="code">IConfigLabelAccumulator</span> 
+					and put your conditional logic into <span class="code">accumulateConfigLabels()</span>. Within this method you have to
+					add your custom label to the given <span class="code">LabelStack</span> if your condition matches.
+				</p>
+				<p>
+					For example, if you have a NatTable that shows persons and you want to render rows that show females differently
+					you can implement it like this:
+					<div class="codeBlock">@Override
+public void accumulateConfigLabels(
+	LabelStack configLabels, int columnPosition, int rowPosition) {
 	
-	Styling
-	Conditional styling
-	
+	Person rowObject = dataProvider.getRowObject(rowPosition);
+
+	if (rowObject.getGender().equals(Person.Gender.FEMALE)) {
+		configLabels.addLabel(FEMALE_LABEL);
+	}
+}</div>
+</p>
+<p>
+Note that your <span class="code">IConfigLabelAccumulator</span> needs to know the <span class="code">IDataProvider</span> to make this work.
+				</p>
+				<p>
+					To enable conditional styling, the custom style needs to be registered in the <span class="code">IConfigRegistry</span>
+					against the label defined before.
+					<div class="codeBlock">Style style = new Style();
+// You can set other attributes here
+style.setAttributeValue(CellStyleAttributes.BACKGROUND_COLOR, GUIHelper.COLOR_RED);
+
+configRegistry.registerConfigAttribute(
+	CellConfigAttributes.CELL_STYLE,	// attribute to apply
+	style,					// value of the attribute
+	DisplayMode.NORMAL,			// apply during normal rendering
+	CELL_LABEL);				// apply for all cells with this label</div>
+					<p class="subline">Snippet from CellConfigurationExample</p>
+				</p>
+				
+				<img align="middle" src="images/configLabels_0.gif" border="0" alt="NatTable cell painting considering labels"/>
+			</div>
+		</div>
+	</div>
 </div>
