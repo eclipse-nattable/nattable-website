@@ -51,6 +51,7 @@
 	$Nav->addCustomNav('Context menus', '/nattable/documentation.php?page=context', '_self', 4);
 	$Nav->addCustomNav('Custom commands', '/nattable/documentation.php?page=commands', '_self', 4);
 	$Nav->addCustomNav('Persistence', '/nattable/documentation.php?page=persistence', '_self', 4);
+	$Nav->addCustomNav('Examples', '/nattable/documentation.php?page=examples', '_self', 4);
 	$Nav->addCustomNav('FAQ', '/nattable/documentation.php?page=faq', '_self', 4);
 	$Nav->addCustomNav('Related articles', '/nattable/documentation.php?page=articles', '_self', 4);
 	$Nav->addCustomNav('API Javadoc', '/nattable/documentation.php?page=api', '_self', 4);
