@@ -22,15 +22,13 @@ volunteer basis.</p>
 
 <div class="homeitem">
 <h3>Questions</h3>
-<p>The <i>Nebula Newsgroup</i> is for users of NatTable (and other Nebula widgets) 
+<p>The <i>NatTable Newsgroup</i> is for users of NatTable 
 to ask questions, discuss ideas and so on. Join in and get involved!</p>
 <ul>
 	<li><a href="http://www.eclipse.org/forums">General information and signup</a></li>
-	<li>Web access: <a href="http://www.eclipse.org/forums/eclipse.technology.nebula">Nebula Forum</a></li>
-	<li>nntp: <a href="news://news.eclipse.org/eclipse.technology.nebula">eclipse.technology.nebula</a></li>
+	<li>Web access: <a href="http://www.eclipse.org/forums/eclipse.nattable">NatTable Forum</a></li>
+	<li>nntp: <a href="news://news.eclipse.org/eclipse.nattable">eclipse.nattable</a></li>
 </ul>
-<p>Because the newsgroup is also for users of all Nebula widgets, please prefix new
-threads with <code>[NatTable]</code>.</p>
 </div>
 
 <div class="homeitem">
