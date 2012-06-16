@@ -18,11 +18,6 @@ h3 {
 	clear: both;
 }
 
-h7 {
-	font-weight: bold;
-	padding: 5px;
-}
-
 a strong {
 	text-decoration: underline;
 }
@@ -226,7 +221,7 @@ a strong {
 	padding: 0px;
 }
 
-#doccontent .chapter h6 {
+#doccontent .chapter h5 {
 	background-color: #e8e7dd;
 	border-bottom: 2px solid #FFF;
 	font-size: 14px;
@@ -237,12 +232,12 @@ a strong {
 	padding: 8px 5px;
 }
 
-#doccontent .chapter h7 {
+#doccontent .chapter h6 {
 	clear: both;
-	display: block;
 	font-weight: bold;
 	padding-left: 0;
 	padding-top: 1.5em;
+	margin-bottom: 5px;
 }
 
 #doccontent .chapter .content {

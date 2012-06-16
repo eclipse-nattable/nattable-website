@@ -47,66 +47,66 @@
 	</div>
 	<div id="doccontent">
 		<div class="chapter">
-			<a name="blinklayer"></a><h6>BlinkLayer</h6>
+			<a name="blinklayer"></a><h5>BlinkLayer</h5>
 			<div class="content">
 				Enables the blink cell functionality i.e the cell blinks when the data in it is updated. This layer listens for the update 
 				events and caches them locally. During rendering it uses this cache to check if data in a cell has been updated.
 			</div>
 		</div>
 		<div class="chapter">
-			<h6>ColumnGroupExpandCollapseLayer</h6>
+			<h5>ColumnGroupExpandCollapseLayer</h5>
 			<div class="content">
 			...
 			</div>
 		</div>
 		<div class="chapter">
-			<h6>ColumnGroupGroupHeaderLayer</h6>
+			<h5>ColumnGroupGroupHeaderLayer</h5>
 			<div class="content">
 			...
 			</div>
 		</div>
 		<div class="chapter">
-			<h6>ColumnGroupHeaderLayer</h6>
+			<h5>ColumnGroupHeaderLayer</h5>
 			<div class="content">
 			...
 			</div>
 		</div>
 		<div class="chapter">
-			<h6>ColumnGroupReorderLayer</h6>
+			<h5>ColumnGroupReorderLayer</h5>
 			<div class="content">
 			...
 			</div>
 		</div>
 		<div class="chapter">
-			<h6>ColumnHeaderLayer</h6>
+			<h5>ColumnHeaderLayer</h5>
 			<div class="content">
 			...<br>
 			type: DimensionallyDependentLayer
 			</div>
 		</div>
 		<div class="chapter">
-			<a name="columnhideshowlayer"></a><h6>ColumnHideShowLayer</h6>
+			<a name="columnhideshowlayer"></a><h5>ColumnHideShowLayer</h5>
 			<div class="content">
 				Enables the hiding of columns. The layers underneath are not aware of hidden columns. When requests pass through this layer 
 				it manipulates them to return the columns positioned after the hidden columns.
 			</div>
 		</div>
 		<div class="chapter">
-			<a name="columnreorderlayer"></a><h6>ColumnReorderLayer</h6>
+			<a name="columnreorderlayer"></a><h5>ColumnReorderLayer</h5>
 			<div class="content">
 				Tracks the reordered columns. Similar to the <a href="columnhideshowlayer">ColumnHideShowLayer</a>, the other layers are 
 				unaware of column reordering.
 			</div>
 		</div>
 		<div class="chapter">
-			<h6>CompositeFreezeLayer</h6>
+			<h5>CompositeFreezeLayer</h5>
 			<div class="content">
 			...<br>
 			type: CompositeLayer
 			</div>
 		</div>
 		<div class="chapter">
-			<a name="cornerlayer"></a><h6>CornerLayer</h6>
+			<a name="cornerlayer"></a><h5>CornerLayer</h5>
 			<div class="content">
 				The CornerLayer is a layer that is used for the corner region of a grid. It is a DimensionallyDependentLayer which means 
 				its horizontal and vertical dimensions are dependent on the horizontal and vertical dimensions of other layers. Usually it
@@ -116,7 +116,7 @@
 			</div>
 		</div>
 		<div class="chapter">
-			<a name="datalayer"></a><h6>DataLayer</h6>
+			<a name="datalayer"></a><h5>DataLayer</h5>
 			<div class="content">
 				<p>The primary purpose of the DataLayer is to attach the IDataProvider to the table and supply data for the cells. 
 				It also handles resize commands and tracks column/row sizes via SizeConfig objects. This layer always works with column/row indexes 
@@ -143,7 +143,7 @@
 			</div>
 		</div>
 		<div class="chapter">
-			<h6>FilterRowHeaderComposite</h6>
+			<h5>FilterRowHeaderComposite</h5>
 			<div class="content">
 			...<br>
 			...<br>
@@ -152,13 +152,13 @@
 			</div>
 		</div>
 		<div class="chapter">
-			<h6>FreezeLayer</h6>
+			<h5>FreezeLayer</h5>
 			<div class="content">
 			...
 			</div>
 		</div>
 		<div class="chapter">
-			<a name="glazedlistseventlayer"></a><h6>GlazedListsEventLayer</h6>
+			<a name="glazedlistseventlayer"></a><h5>GlazedListsEventLayer</h5>
 			<div class="content">
 				This layer is meant to be used if the backing data source is a GlazedLists instance. Its acts as a listener for the 
 				list insert/delete/update events and fires corresponding NatTable events. Hence, the table knows to repaint itself 
@@ -166,7 +166,7 @@
 			</div>
 		</div>
 		<div class="chapter">
-			<a name="gridlayer"></a><h6>GridLayer</h6>
+			<a name="gridlayer"></a><h5>GridLayer</h5>
 			<div class="content">
 				<p>This is a top level layer used to divide up the table into grid regions. A layer or layer stack can then be assigned to each 
 				of these regions. This layer mostly serves to delegate functions to its lower layers.</p>
@@ -176,27 +176,27 @@
 			</div>
 		</div>
 		<div class="chapter">
-			<h6>GroupByHeaderLayer</h6>
+			<h5>GroupByHeaderLayer</h5>
 			<div class="content">
 			...<br>
 			type: DimensionallyDependentLayer
 			</div>
 		</div>
 		<div class="chapter">
-			<h6>RowGroupHeaderLayer</h6>
+			<h5>RowGroupHeaderLayer</h5>
 			<div class="content">
 			...
 			</div>
 		</div>
 		<div class="chapter">
-			<h6>RowHeaderLayer</h6>
+			<h5>RowHeaderLayer</h5>
 			<div class="content">
 			...<br>
 			type: DimensionallyDependentLayer
 			</div>
 		</div>
 		<div class="chapter">
-			<a name="selectionlayer"></a><h6>SelectionLayer</h6>
+			<a name="selectionlayer"></a><h5>SelectionLayer</h5>
 			<div class="content">
 				<p>
 				Enables selection of rows, columns or cells on the table. Adds keyboard / mouse configuration used to trigger selection
@@ -210,39 +210,39 @@
 			</div>
 		</div>
 		<div class="chapter">
-			<h6>SortHeaderLayer</h6>
+			<h5>SortHeaderLayer</h5>
 			<div class="content">
 			...
 			</div>
 		</div>
 		<div class="chapter">
-			<h6>SummaryRowLayer</h6>
+			<h5>SummaryRowLayer</h5>
 			<div class="content">
 			...
 			</div>
 		</div>
 		<div class="chapter">
-			<a name="viewportlayer"></a><h6>ViewportLayer</h6>
+			<a name="viewportlayer"></a><h5>ViewportLayer</h5>
 			<div class="content">
 				Places a 'viewport' over the table. Introduces scroll bars over the table and keeps them in sync with the data being displayed. 
 				This is typically placed over the <a href="#selectionlayer">SelectionLayer</a>.
 			</div>
 		</div>
 		<div class="chapter">
-			<h6>ZoomLayer</h6>
+			<h5>ZoomLayer</h5>
 			<div class="content">
 			...
 			</div>
 		</div>
 		
 		<div class="chapter">
-			<h6>DefaultBodyLayerStack</h6>
+			<h5>DefaultBodyLayerStack</h5>
 			<div class="content">
 			...
 			</div>
 		</div>
 		<div class="chapter">
-			<h6>ColumnGroupBodyLayerStack</h6>
+			<h5>ColumnGroupBodyLayerStack</h5>
 			<div class="content">
 				...    		
 			</div>

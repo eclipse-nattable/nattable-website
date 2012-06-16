@@ -2,7 +2,7 @@
 	<h3>Sorting - Under construction</h3>
 	<div id="doccontent">
 		<div class="chapter">
-			<h6>Sorting with GlazedLists</h6>
+			<h5>Sorting with GlazedLists</h5>
 			<div class="content">
 				<p>In this section we will walk through the <span class="code">SortableGridExample</span> to demonstrate sorting in NatTable. 
 				Further on, we will see how to plugin custom comparators.</p>
@@ -47,7 +47,7 @@ SortHeaderLayer sortHeaderLayer = new SortHeaderLayer(
 		</div>
 		
 		<div class="chapter">
-			<h6>Using custom comparators</h6>
+			<h5>Using custom comparators</h5>
 			<div class="content">
 				<p>The default comparator treats the objects in the column being sorted as <span class="code">Comparable</span>.</p>
 
@@ -78,7 +78,7 @@ configRegistry.registerConfigAttribute(SortConfigAttributes.SORT_COMPARATOR,
 		</div>
 		
 		<div class="chapter">
-			<h6>Disable sorting on selected columns</h6>
+			<h5>Disable sorting on selected columns</h5>
 			<div class="content">
 				<p>Disabling sorting is very similar to applying custom comparator to a column. The only difference is that you 
 				register a <span class="code">NullComparator</span> as your custom comparator. 
@@ -87,7 +87,7 @@ configRegistry.registerConfigAttribute(SortConfigAttributes.SORT_COMPARATOR,
 		</div>
 		
 		<div class="chapter">
-			<h6>Customize sort configuration</h6>
+			<h5>Customize sort configuration</h5>
 			<div class="content">
 				<p>The <span class="code">DefaultSortConfiguration</span> object sets up the:
 					<ol>
@@ -107,7 +107,7 @@ configRegistry.registerConfigAttribute(SortConfigAttributes.SORT_COMPARATOR,
 		</div>
 		
 		<div class="chapter">
-			<h6>Sorting without GlazedLists</h6>
+			<h5>Sorting without GlazedLists</h5>
 			<div class="content">
 				<p>It is recommended to use GlazedLists to get full performance benefits on using the NatTable with huge datasets.
 				Nevertheless it is possible to enable sorting without using GlazedLists. To do this you have to implement your

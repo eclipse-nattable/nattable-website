@@ -8,7 +8,7 @@
 	 
 	<div id="doccontent">
 		<div class="chapter">
-			<h6>Creating a basic grid</h6>
+			<h5>Creating a basic grid</h5>
 			<div class="content">
 				In this example we will create a basic grid that will show objects of type Person. 
 				You will need to the follow these steps to setup the grid:
@@ -24,7 +24,7 @@
 					<li>Selection</li>
 				</ol>
 
-				<h7>Plugging data</h7>
+				<h6>Plugging data</h6>
 				<p>The primary interface for providing data to NatTable is <span class="code">IDataProvider</span>. 
 				The most common way of providing data to the table is to use a List data structure. This list contains an object for 
 				each row in the table. Each property of the row object is represented in a column.</p>
@@ -53,7 +53,7 @@ new ListDataProvider(people, new ReflectiveColumnPropertyAccessor(propertyNames)
 				row object. If you wish to fetch data from your row object in specific ways, you can plugin a custom 
 				<span class="code">IColumnPropertyAccessor</span> here.</p>
 
-				<h7>Setting up the body region</h7>
+				<h6>Setting up the body region</h6>
 				<p>In this stack we are plugging in the column reorder, column hide show, selection layer and scrolling functionality. 
 				The viewport is a window into the complete data set. In other words this is the rows/columns visible in the table. 
 				As you scroll the viewport moves over the underlying data set. The data provider should be wrapped up by the 
@@ -79,7 +79,7 @@ new ListDataProvider(people, new ReflectiveColumnPropertyAccessor(propertyNames)
 	}
 }</div>
 				
-				<h7>Setting up the column header region</h7>
+				<h6>Setting up the column header region</h6>
 				<p>Since the column header has a dependence on the body layer and hence inherits features from it. 
 				All it needs to do in most cases is to have a data provider. This data provider will supply data for the column labels.</p>
 				<div class="codeBlock">public class ColumnHeaderLayerStack extends AbstractLayerTransform {
@@ -93,7 +93,7 @@ new ListDataProvider(people, new ReflectiveColumnPropertyAccessor(propertyNames)
 	}
 }</div>
 				
-				<h7>Setting up the row header layer</h7>
+				<h6>Setting up the row header layer</h6>
 				<p>The row header is similar the column header. Note that the data layer also tracks the sizes of the rows/columns. 
 				Hence, you can set the default sizes in the constructor for the data layer.</p>
 				<div class="codeBlock">public class RowHeaderLayerStack extends AbstractLayerTransform {
@@ -107,7 +107,7 @@ new ListDataProvider(people, new ReflectiveColumnPropertyAccessor(propertyNames)
 	}
 }</div>
 				
-				<h7>Setting up the corner layer</h7>
+				<h6>Setting up the corner layer</h6>
 				<p>The corner layer derives all its feature set from the column and row header layers. 
 				Hence, it can be set up very simply by passing in the dependents.</p>
 				<div class="codeBlock">DefaultCornerDataProvider cornerDataProvider = 
@@ -116,7 +116,7 @@ CornerLayer cornerLayer =
 	new CornerLayer(
 		new DataLayer(cornerDataProvider), rowHeaderLayer, columnHeaderLayer);</div>
 				
-				<h7>Drum roll ...</h7>
+				<h6>Drum roll ...</h6>
 				<p>Now we have setup layer stacks for all regions in the grid. These stacks need to be unified to work as a coherent whole. 
 				We do this by placing a grid layer on the top. This layer is set as the underlying layer for NatTable and we are all ready to go.</p>
 				<div class="codeBlock">GridLayer gridLayer = 

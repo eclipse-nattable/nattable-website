@@ -9,7 +9,7 @@
 	 
 	<div id="doccontent">
 		<div class="chapter">
-			<h6>Virtual table</h6>
+			<h5>Virtual table</h5>
 			<div class="content">
 				The NatTable is a custom painted table widget that doesn't use default SWT composites for rendering (with some exceptions
 				on editing or dialogs). As only those elements are calculated and rendered that are visible to the user, you can speak
@@ -18,7 +18,7 @@
 			</div>
 		</div>
 		<div class="chapter">
-			<h6>Layers</h6>
+			<h5>Layers</h5>
 			<div class="content">
 				<p>A layer is NatTable's way of adding functionality. Each feature usually is implemented by a separate layer. 
 				For example column hiding is implemented by the ColumnHideShow layer, Sorting is implemented by the SortHeaderLayer and so on. 
@@ -36,7 +36,7 @@
 			</div>
 		</div>
 		<div class="chapter">
-			<h6>Regions</h6>
+			<h5>Regions</h5>
 			<div class="content">
 				If you want to implement a grid with column and row headers like in the diagram above, you should use the GridLayer. By doing this
 				the NatTable is splitted into regions which makes it easier to manage the different areas in configuration for example.
@@ -44,7 +44,7 @@
 			</div>
 		</div>
 		<div class="chapter">
-			<h6>Configuration</h6>
+			<h5>Configuration</h5>
 			<div class="content">
 				<p>For every NatTable instance the configuration information is held in the following registries:
 				<ul class="simple">
@@ -71,7 +71,7 @@
 			</div>
 		</div>
 		<div class="chapter">
-			<h6>Actions/Commands/Events</h6>
+			<h5>Actions/Commands/Events</h5>
 			<div class="content">
 				<p>For handling user interaction with the NatTable, actions of type IKeyAction, IMouseAction or IDragMode can be registered
 				on UI interactions (see <a href="/nattable/documentation.php?page=binding" title="UI Bindings">here</a>). Normally these

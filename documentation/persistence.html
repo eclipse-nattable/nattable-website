@@ -16,7 +16,7 @@
 				
 				<p>The PersistentNatExample is a good place to get started.</p>
 				
-				<h7>Saving state</h7>
+				<h6>Saving state</h6>
 				<p>NatTable saves its state in a <span class="code">java.util.Properties</span> file as key/value pairs. 
 				The main method to note is the</p>
 				<div class="codeBlock">NatTable.saveState(prefix, properties)</div>
@@ -25,14 +25,14 @@
 				You can now save this file anywhere/anyway you wish. Prefix is any arbitrary string which will be prepended to all the key 
 				values in the property file.</p>
 	
-				<h7>Loading state</h7>	
+				<h6>Loading state</h6>	
 				<p>The method to note is the</p>
 				<div class="codeBlock">NatTable.loadState(String prefix, Properties properties)</div>
 				<p>The prefix and properties file are from the save state step.</p>
 			</div>
 		</div>
 		<div class="chapter">
-			<h6>Saving your custom state</h6>
+			<h5>Saving your custom state</h5>
 			<div class="content">
 				<p>The <span class="code">IPersistable</span> interface is the main interface to note. All the layers which save state, 
 				implement this interface. Additionally, you can register your own persistable with any layer using the 
