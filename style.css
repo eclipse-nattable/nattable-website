@@ -13,6 +13,10 @@
 	width: 260px;
 }
 
+div.sideitem p {
+	margin-bottom: 0px
+}
+
 
 h3 {
 	clear: both;
