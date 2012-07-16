@@ -5,54 +5,167 @@
 			<div class="content">
 				<p>NatTable supports the following editing features:
 					<ol>
-						<li>Inline cell editing via a text box, Combo box or a check box</li>
-						<li>Multiple values can be edited simultaneously via a popup</li>
+						<li>Inline cell editing via a text box, combobox or a checkbox</li>
+						<li>Multiple values can be edited simultaneously via a popup on pressing F2</li>
 						<li>Editing updates the underlying list data structure</li>
 					</ol>
 					There is no special layer needed to enable editing in NatTable. Everything is done via configuration.
 				</p>
 				<p>
-					The <span class="code">EditableGridExample</span> is the best place to look at. The default cell editing 
-					configuration is provided by the <span class="code">DefaultEditConfiguration</span>.
+					The default cell editing configuration is provided by the <span class="code">DefaultEditConfiguration</span>
+					that is used by the <span class="code">DefaultGridLayerConfiguration</span>. This default configuration
+					tells the NatTable to be not editable and sets the <span class="code">TextCellEditor</span> as default
+					editor in case editing is turned on for specific cells. It also adds the validation error style to
+					render the content of a cell red on validation errors.
+				</p>
+				<p>
+					The <span class="code">EditableGridExample</span> and <span class="code">EditErrorHandlingExample</span>
+					are the best places to look at. 
 				</p>
 			</div>
 		</div>
 		<div class="chapter">
-			<h5>Making cells editing</h5>
+			<h5>Making cells editable</h5>
 			<div class="content">
 				<p>
-					Editing is turned <i>off</i> by default. To enable editing an <span class="code">IEditableRule</span> has to be 7
-					registered against the cell label. The <span class="code">isEditable()</span> method must return true. This rule 
-					must be registered against the cell label as shown below:
+					Editing is turned <i>off</i> by default. To enable editing an <span class="code">IEditableRule</span> has to be
+					registered. Usually you will register an <span class="code">IEditableRule</span> against a cell label
+					if you only want to  enable editing for specific conditions like shown in the code below: 
 				</p>
 				<div class="codeBlock">configRegistry.registerConfigAttribute(
-			EditConfigAttributes.CELL_EDITABLE_RULE, 
-			IEditableRule.ALWAYS_EDITABLE, 
-			DisplayMode.EDIT, 
-			"myCellLabel");</div>
+	EditConfigAttributes.CELL_EDITABLE_RULE, 
+	IEditableRule.ALWAYS_EDITABLE, 
+	DisplayMode.EDIT, 
+	"myCellLabel");</div>
+				<p class="subline">Set cells with label <i>myCellLabel</i> to be always editable</p>
+			<p>
+				You can also create your own <span class="code">IEditableRule</span> if you need to decide whether
+				a cell should be editable or not. Just ensure that <span class="code">IEditableRule.isEditable()</span>
+				returns <span class="code">true</span> if your cell should be editable.<br/>
+				Creating your own <span class="code">IEditableRule</span> is useful if you want to register an
+				<span class="code">IEditableRule</span> globally (instead of only for a specific cell label) that 
+				reacts on a global flag (like enable/disable editing in the UI).
+			</p>
 			</div>
 		</div>
 		<div class="chapter">
 			<h5>Cell editor</h5>
 			<div class="content">
 				<p>
-					This is the widget which gets activated when a cell is put into edit mode. Text box, combo box and check box are 
-					provided out of the box. These widgets implement the <span class="code">ICellEditor</span> interface. Note that 
-					there is only one instance of a cell editor active at any time. The editor must be registered against the cell 
-					label as follows:
+					This is the widget which gets activated when a cell is put into edit mode. A cell editor needs to
+					implement the <span class="code">ICellEditor</span> interface.
+					The following editors are provided out of the box:
+					<ul>
+						<li>TextCellEditor</li>
+						<li>CheckBoxCellEditor</li>
+						<li>ComboBoxCellEditor</li>
+					</ul>
+					Note that there is only one instance of a cell editor active at any time. The editor must be registered 
+					against the cell label as follows:
 				</p>
 				<div class="codeBlock">configRegistry.registerConfigAttribute(
-			EditConfigAttributes.CELL_EDITOR, 
-			comboBoxCellEditor, 
-			DisplayMode.EDIT, 
-			"myCellLabel");</div>
+	EditConfigAttributes.CELL_EDITOR, 
+	new CheckBoxCellEditor(), 
+	DisplayMode.EDIT, 
+	"myCheckboxLabel");</div>
+					<p class="subline">Use a CheckBoxCellEditor for cells with label <i>myCheckboxLabel</i></p>
+				<p>
+					While <span class="code">TextCellEditor</span> and <span class="code">CheckBoxCellEditor</span>
+					can be created without additional information, the <span class="code">ComboBoxCellEditor</span>
+					needs the list of values contained within the combobox.
+				</p>
+				<p>
+					As editing and rendering in different display modes are separated tasks you should check which cell
+					painter is used for your editable cell. There are predefined cell painters for the existing cell 
+					editors in NatTable. 
+					<ul>
+						<li>TextCellEditor - TextPainter</li>
+						<li>CheckBoxCellEditor - CheckBoxPainter</li>
+						<li>ComboBoxCellEditor - ComboBoxPainter</li>
+					</ul>
+					As <span class="code">TextCellEditor</span> and <span class="code">TextPainter</span> are configured
+					by default, you only have to check the cell painter for <span class="code">CheckBoxCellEditor</span> and
+					<span class="code">ComboBoxCellEditor</span> if this is intended.
+				<div class="codeBlock">//register a checkbox editor for DisplayMode.EDIT
+configRegistry.registerConfigAttribute(
+	EditConfigAttributes.CELL_EDITOR, 
+	new CheckBoxCellEditor(), 
+	DisplayMode.EDIT, 
+	"myCheckboxLabel");
+			
+//register the checkbox painter DisplayMode.NORMAL
+configRegistry.registerConfigAttribute(
+	CellConfigAttributes.CELL_PAINTER, 
+	new CheckBoxPainter(), 
+	DisplayMode.NORMAL, 
+	"myCheckboxLabel");
+			
+//register a combobox editor for DisplayMode.EDIT
+configRegistry.registerConfigAttribute(
+	EditConfigAttributes.CELL_EDITOR, 
+	new ComboBoxCellEditor(Arrays.asList(new String[] {"Value1", "Value2"} )), 
+	DisplayMode.EDIT, 
+	"myComboBoxLabel");
+			
+//register the combobox painter for DisplayMode.NORMAL
+configRegistry.registerConfigAttribute(
+	EditConfigAttributes.CELL_PAINTER, 
+	new ComboBoxPainter(), 
+	DisplayMode.EDIT, 
+	"myComboBoxLabel");</div>
+					<p class="subline">Ensure to use the matching cell painter together with the editor</p>
+				</p>
 			</div>
 		</div>
 		<div class="chapter">
 			<h5>Data conversion</h5>
 			<div class="content">
 				<p>
-					TODO
+					NatTable renders every information that should be showed within a cell as Strings. To support
+					other data types, conversion is needed. This is done by registering a <span class="code">IDisplayConverter</span>
+					against a cell label.
+				</p>
+				<div class="codeBlock">configRegistry.registerConfigAttribute(
+	CellConfigAttributes.DISPLAY_CONVERTER, 
+	new DefaultBooleanDisplayConverter(), 
+	"myCheckboxLabel");</div>
+					<p class="subline">Use the DefaultBooleanDisplayConverter for cells with label <i>myCheckboxLabel</i></p>
+				<p>
+					There are several default converter shipped with the NatTable:
+					<ul>
+						<li>DefaultDisplayConverter</li>
+						<li>DefaultCharacterDisplayConverter</li>
+						<li>DefaultBooleanDisplayConverter</li>
+						<li>DefaultByteDisplayConverter</li>
+						<li>DefaultShortDisplayConverter</li>
+						<li>DefaultIntegerDisplayConverter</li>
+						<li>DefaultLongDisplayConverter</li>
+						<li>DefaultFloatDisplayConverter</li>
+						<li>DefaultDoubleDisplayConverter</li>
+						<li>DefaultBigIntegerDisplayConverter</li>
+						<li>DefaultBigDecimalDisplayConverter</li>
+						<li>DefaultDateDisplayConverter</li>
+						<li>PercentageDisplayConverter</li>
+					</ul>
+				</p>
+				<p>
+					Note that the provided default converter are simple default implementations. If you need a more
+					specific conversion, e.g. convert double values via <span class="code">NumberFormat</span>, you'll
+					have to create your own. <br/>
+					Feel free to contribute any generic converter that fits into the NatTable.
+				</p>
+				<p>
+					To create your own <span class="code">IDisplayConverter</span> you should choose one of the
+					existing abstract implementations dependent on your requirements:
+					<ul>
+						<li>DisplayConverter<br/>
+						extend this class to support simple value conversion. </li>
+						<li>ContextualDisplayConverter<br/>
+						extend this class to support value conversion dependent on additional context information.</li>
+					</ul>
+					If you want to use specialized conversion failure messages, you need to 
+					throw a <span class="code">ConversionFailedException</span> that will be evaluated by the
+					configured error handling strategy (see below).
 				</p>
 			</div>
 		</div>
@@ -60,22 +173,83 @@
 			<h5>Data validation</h5>
 			<div class="content">
 				<p>
-					Data validation rules can be specified for the editable cells. Updates will be applied to the underlying list 
-					only if they pass the validation check. These are relevant in case of text boxes where the user can enter free 
-					text. These rules must implement the <span class="code">IDataValidator</span> interface.
+					You can configure data validation rules for the editable cells of the NatTable instance. 
+					Model updates will only be applied to the underlying list if if they pass the validation check. 
+					To add data validation to the NatTable you have to register a <span class="code">IDataValidator</span>
+					against a cell label.
 				</p>
 				<div class="codeBlock">configRegistry.registerConfigAttribute(
-			EditConfigAttributes.DATA_VALIDATOR, 
-			getSecurtityIdValidator(), 
-			DisplayMode.EDIT, 
-			"myCellLabel");</div>
+	EditConfigAttributes.DATA_VALIDATOR, 
+	getSecurtityIdValidator(), 
+	DisplayMode.EDIT, 
+	"myCellLabel");</div>
+					<p class="subline">Use the data validator returned by getSecurtityIdValidator() on commiting values 
+					for cells with label <i>myCellLabel</i></p>
+				<p>
+					To create your own <span class="code">IDataValidator</span> you should choose one of the
+					existing abstract implementations dependent on your requirements:
+					<ul>
+						<li>DataValidator<br/>
+						extend this class to support simple data validation. </li>
+						<li>ContextualDataValidator<br/>
+						extend this class to support data validation dependent on additional context information.</li>
+					</ul>
+					If you want to use specialized validation failure messages, you need to 
+					throw a <span class="code">ValidationFailedException</span> that will be evaluated by the
+					configured error handling strategy (see below).
+				</p>
 			</div>
 		</div>
 		<div class="chapter">
 			<h5>Error handling</h5>
 			<div class="content">
 				<p>
-					TODO
+					Conversion and validation errors will always result in not updating the values of the underlying list.
+					How these errors are handled within the UI can be configured in NatTable. Currently the following
+					error handling strategies are supported:
+					<ul>
+						<li>LoggingErrorHandling<br/>
+						Will only write a log entry with the conversion/validation error message.
+						Default if no other error handling is registered.</li>
+						<li>DiscardValueErrorHandling<br/>
+						Will only close the open editor which discards the entered value without updating the values of
+						the underlying list.</li>
+						<li>DialogErrorHandling<br/>
+						Will show a dialog with the conversion/validation error message and the option to discard
+						or change the entered value. Discard will close the editor without updating the values
+						of the underlying list, Change will leave the editor open to allow corrections.</li>
+						<li>RenderErrorHandling<br/>
+						Used to visualize errors on entering them into a <span class="code">TextCellEditor</span>.
+						It is set by default to render entered values with a red font color for handling conversion 
+						and validation errors.
+						</li>
+					</ul>
+					It is also possible to wrap those handlers, for example to open a dialog and write a log entry
+					the same time.
+				</p>
+				<p>
+					The following code shows how to add <span class="code">DialogErrorHandling</span> for conversion
+					and validation errors.
+				<div class="codeBlock">configRegistry.registerConfigAttribute(
+	EditConfigAttributes.CONVERSION_ERROR_HANDLER, 
+	new DialogErrorHandling(), 
+	DisplayMode.EDIT, 
+	EditErrorHandlingExample.COLUMN_FOUR_LABEL);
+		
+configRegistry.registerConfigAttribute(
+	EditConfigAttributes.VALIDATION_ERROR_HANDLER, 
+	new DialogErrorHandling(), 
+	DisplayMode.EDIT, 
+	EditErrorHandlingExample.COLUMN_FOUR_LABEL);</div>
+					<p class="subline">Snippet from EditErrorHandlingExample</p>
+				</p>
+				<p>
+					If you want to change the error handling while editing within the <span class="code">TextCellEditor</span>
+					you need to set your customized <span class="code">IEditErrorHandler</span> as inputConversionErrorHandler
+					or inputValidationErrorHandler.
+				</p>
+				<p>
+					It is not allowed to set those handlers to <span class="code">null</span>.
 				</p>
 			</div>
 		</div>
