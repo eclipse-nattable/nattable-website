@@ -18,11 +18,53 @@
 		
 		<div class="chapter">
 			<h5>How To...</h5>
-			Under construction...
+			
+			<h6>How to create ComboBoxCellEditors with dynamic content?</h6>
+			<p>
+				You can either create an instance of <span class="code">ComboBoxCellEditor</span> with a given list of values 
+				(which results in a static combobox) or with an instance of a custom <span class="code">IComboBoxDataProvider</span>. 
+				By creating and using a custom <span class="code">IComboBoxDataProvider</span> you are able to load the content 
+				of the combobox at runtime. As <span class="code">IComboBoxDataProvider.getValues(int, int)</span> gets
+				the column and row index of the cell for which the combobox should be rendered, it is possible to get
+				information out of other cells to determine which content the combobox should contain.
+				<div class="codeBlock">public class MyComboBoxDataProvider implements IComboBoxDataProvider {
+				
+	private IDataProvider bodyDataProvider;
+	
+	public MyComboBoxDataProvider(IDataProvider bodyDataProvider) {
+		this.bodyDataProvider = bodyDataProvider;
+	}
+	
+	@Override
+	public List&lt;?&gt; getValues(int columnIndex, int rowIndex) {
+		//guess in column with index == 1 a checkbox editor with a boolean value 
+		//is configured, we get the current boolean value out of the body data 
+		//provider and decide which values to show
+		Boolean checked = (Boolean) bodyDataProvider.getDataValue(1, rowIndex);
+		if (checked) {
+			return Arrays.asList(new String[] {"Homer", "Bart"});
+		} else {
+			return Arrays.asList(new String[] {"Marge", "Lisa", "Maggie"});
+		}
+	}
+}</div>
+				<p class="subline">Create custom IComboBoxDataProvider to return different lists regarding other cell values</p>
+
+				<div class="codeBlock">//the body data provider needs to be known by this configuration
+configRegistry.registerConfigAttribute(
+	EditConfigAttributes.CELL_EDITOR, 
+	new ComboBoxCellEditor(new MyComboBoxDataProvider(bodyDataProvider))), 
+	DisplayMode.EDIT, 
+	"myComboBoxLabel");</div>
+				<p class="subline">Register a ComboBoxCellEditor with the custom IComboBoxDataProvider</p>
+
+			</p>
 			
 			<h6>How to add NatTable commands to eclipse menus?</h6>
+			TODO
 			
 			<h6>How to access NatTable icons?</h6>
+			TODO
 		</div>
 	</div>
 
