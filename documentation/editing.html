@@ -254,6 +254,38 @@ configRegistry.registerConfigAttribute(
 			</div>
 		</div>
 		<div class="chapter">
+			<h5>Text editor control decoration</h5>
+			<div class="content">
+				<p>
+					If you want to present the user with some more contextual information in a non-intrusive manner then you can use 
+					a ControlDecoration. This allows you to show a small icon, e.g. an error or info/warning icon, to one side of the 
+					editor and when the mouse is hovered over it then a tooltip is shown with a text info message. If you're not familiar 
+					with ControlDecorations youy'll almost definitely have seen them in action in Eclipse as it's how some content-assist 
+					info is presented!
+				</p>
+				<p>
+					For example, here's a text editor with a control decoration set to show on the top, left of the editor, with the mouse 
+					hovering over the icon hence showing the tooltip: 
+				</p>
+				<img align="middle" src="images/control_decoration_during_editing.png" border="0" alt="Text editor control decoration" width="448"/>
+				<p>
+					This is very simple to achieve:
+					<div class="codeBlock">TextCellEditor textCellEditor = new TextCellEditor();
+textCellEditor.setErrorDecorationEnabled(true);
+textCellEditor.setErrorDecorationText("Security Id must be 3 alpha characters optionally followed by numbers");
+textCellEditor.setDecorationPositionOverride(SWT.LEFT | SWT.TOP);
+configRegistry.registerConfigAttribute(EditConfigAttributes.CELL_EDITOR, textCellEditor, DisplayMode.NORMAL, SECURITY_ID_EDITOR);</div>
+					<p class="subline">Snippet from EditableGridExample</p>
+					This works in tandem with the cells ICellValidator (and internally with the TextCellEditors RenderErrorHandling instances).
+				</p>
+				<p>
+					You can get further access for customization by calling <pre>TextCellEditor.getDecorationProvider()</pre> e.g. to force the hover 
+					text to be shown immediately rather than on hover. The returned ControlDecorationProvider can also be reused in your own custom 
+					editors.
+				</p>				
+			</div>
+		</div>
+		<div class="chapter">
 			<h5>How are cell values commited</h5>
 			<div class="content">
 				<p>
