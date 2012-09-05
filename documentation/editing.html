@@ -59,6 +59,7 @@
 						<li>TextCellEditor</li>
 						<li>CheckBoxCellEditor</li>
 						<li>ComboBoxCellEditor</li>
+						<li>PasswordCellEditor (as a specialization of TextCellEditor)</li>
 					</ul>
 					Note that there is only one instance of a cell editor active at any time. The editor must be registered 
 					against the cell label as follows:
@@ -82,6 +83,7 @@
 						<li>TextCellEditor - TextPainter</li>
 						<li>CheckBoxCellEditor - CheckBoxPainter</li>
 						<li>ComboBoxCellEditor - ComboBoxPainter</li>
+						<li>PasswordCellEditor - PasswordTextPainter</li>
 					</ul>
 					As <span class="code">TextCellEditor</span> and <span class="code">TextPainter</span> are configured
 					by default, you only have to check the cell painter for <span class="code">CheckBoxCellEditor</span> and
