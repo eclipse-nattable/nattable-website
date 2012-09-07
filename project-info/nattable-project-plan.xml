@@ -36,8 +36,8 @@
 		<theme name="NatTable">
 			<description><html:p></html:p></description> 
 			<committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?list_id=2848562&amp;classification=Technology&amp;query_format=advanced&amp;bug_status=CLOSED&amp;component=Core&amp;product=NatTable&amp;target_milestone=0.9.0"></committed>
-			<proposed bugzilla=""></proposed>
-			<deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?list_id=2848574&amp;classification=Technology&amp;query_format=advanced&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;component=Core&amp;product=NatTable&amp;target_milestone=---&amp;target_milestone=1.0.0"></deferred>
+			<proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?list_id=2848574&amp;classification=Technology&amp;query_format=advanced&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;component=Core&amp;product=NatTable&amp;target_milestone=---"></proposed>
+			<deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?list_id=2848574&amp;classification=Technology&amp;query_format=advanced&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;component=Core&amp;product=NatTable&amp;target_milestone=Future"></deferred>
 		</theme>
 	</themes_and_priorities>
 	<appendix name="Project Refactoring">
