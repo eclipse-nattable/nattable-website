@@ -40,4 +40,6 @@
 			<deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?list_id=2848574&classification=Technology&query_format=advanced&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&component=Core&product=NatTable&target_milestone=---&target_milestone=1.0.0"></deferred>
 		</theme>
 	</themes_and_priorities>
+	<appendix name="Project Refactoring">
+	</appendix>
 </plan>
