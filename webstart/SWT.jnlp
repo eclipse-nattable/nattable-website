@@ -15,7 +15,7 @@
       <nativelib href="org.eclipse.swt.win32.win32.x86_3.5.1.v3555a.jar"/>
       <jar href="org.eclipse.swt_3.5.1.v3555a.jar"/>
    </resources>
-   <resources os="Mac">
+   <resources os="Mac OS X" arch="x86_64">
       <nativelib href="org.eclipse.swt.cocoa.macosx.x86_64_3.5.1.v3555a.jar"/>
       <jar href="org.eclipse.swt_3.5.1.v3555a.jar"/>
    </resources>
