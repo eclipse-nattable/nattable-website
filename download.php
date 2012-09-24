@@ -33,6 +33,18 @@ Optional extensions:
    (<a href="http://build.eclipse.org/technology/nebula/nattable/releases/0.9.0/org.eclipse.nebula.widgets.nattable.extension.poi-0.9.0-sources.jar">sources</a>)</li>
 </ul>
 
+<h4>Release Notes</h4>
+<p>
+This is our first release as part of Eclipse Nebula. As such our package namespace is now org.eclipse.nebula.widgets.nattable.
+Our release numbering has also been reset to 0.9.0 in compliance with Eclipse conventions for incubation projects. This release is the successor to the last NatTable release on SourceForge, version 2.3.2.
+</p>
+<p>
+This release contains ~40 bugfixes and new features. There is also one notable API change:
+</p>
+<ul>
+<li>API calls that used to contain references to the concrete class LayerCell have been changed to reference the ILayerCell interface instead. If you have implemented any of these APIs (e.g. callbacks), please substitute ILayerCell for LayerCell when migrating to this release.</li>
+<ul>
+
 <!--
 <h3>Helios - Eclipse 3.6 (unreleased)</h3>
 <p><b>Update site:</b> http://download.eclipse.org/myproject/<br />
