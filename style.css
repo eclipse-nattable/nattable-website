@@ -281,3 +281,7 @@ a strong {
 #tryIt {
 	vertical-align: middle;
 }
+
+#tryIt img {
+	vertical-align: inherit;
+}
