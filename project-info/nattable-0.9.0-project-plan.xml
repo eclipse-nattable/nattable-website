@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
 <plan plan-format="1.0" xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml" name="NatTable">
-	<release projectid="technology.nebula.nattable" version="1.0.0" />
+	<release projectid="technology.nebula.nattable" version="0.9.0" />
 	<introduction>
 		<html:div>NatTable project plan</html:div>
 	</introduction>
@@ -12,8 +12,8 @@
 		<preamble>
 			<html:div></html:div>
 		</preamble>
-		<milestone date="1/15/2013" milestone="1.0.0">
-			<html:div>First non-incubation release of NatTable at Eclipse</html:div>
+		<milestone date="9/15/2012" milestone="0.9.0">
+			<html:div>First release of NatTable at Eclipse</html:div>
 		</milestone>
 		<postamble>
 			<html:div></html:div>
@@ -26,7 +26,7 @@
 		</internationalization>
 	</target_environments>
 	<compatibility_with_previous_releases>
-		<html:div></html:div>
+		<html:div>Package names have changed from net.sourceforge (where NatTable was previously hosted) to </html:div>
 	</compatibility_with_previous_releases>
 	<themes_and_priorities>
 		<preamble>
@@ -35,7 +35,7 @@
 
 		<theme name="NatTable">
 			<description><html:p></html:p></description> 
-			<committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?list_id=2848562&amp;classification=Technology&amp;query_format=advanced&amp;bug_status=CLOSED&amp;component=Core&amp;product=NatTable&amp;target_milestone=1.0.0"></committed>
+			<committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?list_id=2848562&amp;classification=Technology&amp;query_format=advanced&amp;bug_status=CLOSED&amp;component=Core&amp;product=NatTable&amp;target_milestone=0.9.0"></committed>
 			<proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?list_id=2848574&amp;classification=Technology&amp;query_format=advanced&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;component=Core&amp;product=NatTable&amp;target_milestone=---"></proposed>
 			<deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?list_id=2848574&amp;classification=Technology&amp;query_format=advanced&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;component=Core&amp;product=NatTable&amp;target_milestone=Future"></deferred>
 		</theme>
