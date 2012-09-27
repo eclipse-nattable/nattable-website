@@ -33,6 +33,10 @@ Optional extensions:
    (<a href="http://build.eclipse.org/technology/nebula/nattable/releases/0.9.0/org.eclipse.nebula.widgets.nattable.extension.poi-0.9.0-sources.jar">sources</a>)</li>
 </ul>
 
+Examples:
+<li><a href="http://build.eclipse.org/technology/nebula/nattable/releases/0.9.0/NatTableExamples-0.9.0.jar">NatTableExamples-0.9.0.jar</a></li>
+</ul>
+
 <h4>Release Notes</h4>
 <p>
 This is our first release as part of Eclipse Nebula. As such our package namespace is now org.eclipse.nebula.widgets.nattable.
