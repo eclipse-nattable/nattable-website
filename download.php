@@ -38,9 +38,11 @@ Optional extensions:
 </ul>
 
 Examples:
+<ul>
 <li><a href="http://build.eclipse.org/technology/nebula/nattable/releases/0.9.0/NatTableExamples-0.9.0.jar">NatTableExamples-0.9.0.jar</a></li>
 </ul>
 
+<div class="homeitem">
 <h4>Release Notes</h4>
 <p>
 This is our first release as part of Eclipse Nebula. As such our package namespace is now org.eclipse.nebula.widgets.nattable.
@@ -52,6 +54,7 @@ This release contains ~40 bugfixes and new features. There is also one notable A
 <ul>
 <li>API calls that used to contain references to the concrete class LayerCell have been changed to reference the ILayerCell interface instead. If you have implemented any of these APIs (e.g. callbacks), please substitute ILayerCell for LayerCell when migrating to this release.</li>
 <ul>
+</div>
 
 <!--
 <h3>Helios - Eclipse 3.6 (unreleased)</h3>
@@ -62,5 +65,8 @@ This release contains ~40 bugfixes and new features. There is also one notable A
 </div>
 EOHTML;
 	# Generate the web page
+	$App->AddExtraHtmlHeader("<style>
+.homeitem p {margin-bottom : 5px;}
+</style>");
 	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
