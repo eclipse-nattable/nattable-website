@@ -60,6 +60,32 @@ configRegistry.registerConfigAttribute(
 
 			</p>
 			
+			<h6>How to autoresize columns programmatically?</h6>
+			<p>
+				NatTable supports the autoresize feature on double clicking cell edges. Unfortunately the
+				existing commands related to that feature doesn't work if they are fired programmatically.
+				This is because when firing the command, the NatTable isn't rendered yet, so the calculation
+				of the width is returning the wrong values.<br/><br/>
+				But there is another possibility how to achieve autoresizing columns. The <span class="code">TextPainter</span>
+				which is used for rendering cell content as text, can be configured to calculate the column width/row height.
+				Modifying the default configuration the following way will resize the columns on rendering the content, so the 
+				content can be shown completely. Also note that if the content contains line breaks, the row height will be 
+				calculated also.
+				<div class="codeBlock">NatTable natTable = new NatTable(tableComposite, grid, false);
+//as the autoconfiguration of the NatTable is turned off, we have to add the 
+//DefaultNatTableStyleConfiguration and the ConfigRegistry manually	
+natTable.setConfigRegistry(configRegistry);
+natTable.addConfiguration(new DefaultNatTableStyleConfiguration() {
+	{
+		cellPainter = new LineBorderDecorator(
+						new TextPainter(false, true, 5, true));
+	}
+});
+natTable.configure();</div>
+				<p class="subline">Modifying the DefaultNatTableStyleConfiguration to use a TextPainter that calculates cell width/height as cell painter</p>
+				
+			</p>
+			
 			<h6>How to add NatTable commands to eclipse menus?</h6>
 			TODO
 			
