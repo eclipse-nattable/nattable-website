@@ -63,9 +63,9 @@ configRegistry.registerConfigAttribute(
 			<h6>How to autoresize columns programmatically?</h6>
 			<p>
 				NatTable supports the autoresize feature on double clicking cell edges. Unfortunately the
-				existing commands related to that feature doesn't work if they are fired programmatically.
-				This is because when firing the command, the NatTable isn't rendered yet, so the calculation
-				of the width is returning the wrong values.<br/><br/>
+				existing commands related to that feature doesn't work if they are fired programmatically
+				on building the NatTable. This is because when firing the command, the NatTable isn't rendered 
+				yet, so the calculation of the width is returning the wrong values.<br/><br/>
 				But there is another possibility how to achieve autoresizing columns. The <span class="code">TextPainter</span>
 				which is used for rendering cell content as text, can be configured to calculate the column width/row height.
 				Modifying the default configuration the following way will resize the columns on rendering the content, so the 
@@ -83,7 +83,41 @@ natTable.addConfiguration(new DefaultNatTableStyleConfiguration() {
 });
 natTable.configure();</div>
 				<p class="subline">Modifying the DefaultNatTableStyleConfiguration to use a TextPainter that calculates cell width/height as cell painter</p>
+			</p>
+			<p>
+				The <span class="code">TextPainter</span> solution has one downsite. If the cell content is not a 
+				long text but a long word that can't be wrapped, it is not possible to manually resize the cell 
+				anymore to show the content cutted.<br/>
+				There is another downsite if the table is editable. The cells will automatically resize if the cell
+				content which defines the cell width is modified to be longer/shorter. In fact this can also be a
+				requirement, but compared to other well known grids, this behaviour is rather unexpected.<br/><br/>
+				In the SourceForge forum <b>josecho2005</b> found a solution that only does the autoresize after rendering
+				is finished. With some slight modifications it looks like this. You can find the original post 
+				<a href="http://sourceforge.net/projects/nattable/forums/forum/744994/topic/5245501" title="SourceForge forum topic on autoresize">here</a>. 
+				<div class="codeBlock">NatTable natTable = new NatTable(tableComposite, grid);
+natTable.addListener(SWT.Paint, new Listener(){ 
+			
+	@Override public void handleEvent(Event arg0) { 
+		for (int i=0; i < natTable.getColumnCount(); i++) { 
+			InitializeAutoResizeColumnsCommand columnCommand = 
+					new InitializeAutoResizeColumnsCommand(
+						natTable, i, natTable.getConfigRegistry(), 
+						new GCFactory(natTable)); 
+			natTable.doCommand(columnCommand); 
+		} 
 				
+		for (int i=0; i < natTable.getRowCount(); i++) { 
+			InitializeAutoResizeRowsCommand rowCommand = 
+					new InitializeAutoResizeRowsCommand(natTable, i, 
+					natTable.getConfigRegistry(), 
+					new GCFactory(natTable)); 
+			natTable.doCommand(rowCommand); 
+		} 
+				
+		natTable.removeListener(SWT.Paint, this);
+	} 
+});</div>
+				<p class="subline">Adding a listener that autoresizes the NatTable after rendering is finished and removes itself after that</p>
 			</p>
 			
 			<h6>How to add NatTable commands to eclipse menus?</h6>
