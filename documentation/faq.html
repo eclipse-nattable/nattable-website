@@ -60,7 +60,7 @@ configRegistry.registerConfigAttribute(
 
 			</p>
 			
-			<h6>How to autoresize columns programmatically?</h6>
+			<h6>How to autoresize columns/rows programmatically?</h6>
 			<p>
 				NatTable supports the autoresize feature on double clicking cell edges. Unfortunately the
 				existing commands related to that feature doesn't work if they are fired programmatically
@@ -109,8 +109,8 @@ natTable.addListener(SWT.Paint, new Listener(){
 		for (int i=0; i < natTable.getRowCount(); i++) { 
 			InitializeAutoResizeRowsCommand rowCommand = 
 					new InitializeAutoResizeRowsCommand(natTable, i, 
-					natTable.getConfigRegistry(), 
-					new GCFactory(natTable)); 
+						natTable.getConfigRegistry(), 
+						new GCFactory(natTable)); 
 			natTable.doCommand(rowCommand); 
 		} 
 				
@@ -118,6 +118,76 @@ natTable.addListener(SWT.Paint, new Listener(){
 	} 
 });</div>
 				<p class="subline">Adding a listener that autoresizes the NatTable after rendering is finished and removes itself after that</p>
+			</p>
+			
+			<p>
+				In the Eclipse forum <b>Jay Norwood</b> posted a similar solution which also works for larger tables
+				where you need to scroll the content. To understand why this is needed, you have to remember
+				that the NatTable is a virtual table. This means that only the content is processed that is 
+				visible. So you can't do an autoresize on columns that aren't visible. So the following solution
+				is remembering which columns/rows where already autoresized. This way the autoresize isn't
+				called again for the same column/row if you scroll or resize the view that contains the NatTable.
+				The listener need to be active all the time and shouldn't be removed then.<br/>
+				This solution also introduces the <span class="code">IOverlayPainter</span> of the NatTable.
+				Implementations of this interface can be added to the NatTable. They will be called after
+				the rendering of the NatTable is finished.
+				You can find the original post 
+				<a href="http://www.eclipse.org/forums/index.php/t/369717/" title="Eclipse forum topic on autoresize">here</a>.
+				<div class="codeBlock">NatTable natTable = new NatTable(tableComposite, grid);
+natTable.addOverlayPainter(new IOverlayPainter() {
+	
+	private HashSet<Integer> rowset = new HashSet<Integer>();
+	private HashSet<Integer> colset = new HashSet<Integer>();
+			
+	@Override
+	public void paintOverlay(GC gc, ILayer layer) { 
+		int count = natTable.getColumnCount();
+		for (int i=0; i < count; i++) {
+			if (natTable.isColumnPositionResizable(i) == false) {
+				continue;
+			}
+	
+			int pos = natTable.getColumnIndexByPosition(i);
+			if (colset.contains(pos)) {
+				continue;
+			}
+	
+			colset.add(pos);
+	
+			InitializeAutoResizeColumnsCommand columnCommand = 
+				new InitializeAutoResizeColumnsCommand(natTable, i, 
+						natTable.getConfigRegistry(), 
+						new GCFactory(natTable));
+			natTable.doCommand(columnCommand);
+		}
+		
+		count = natTable.getRowCount();
+		for (int i=0; i < count; i++) {
+			if (natTable.isRowPositionResizable(i) == false){
+				continue;
+			}
+	
+			int pos = natTable.getRowIndexByPosition(i);
+			if (rowset.contains(pos)) {
+				continue;
+			}
+			
+			rowset.add(pos);
+			
+			InitializeAutoResizeRowsCommand rowCommand = 
+				new InitializeAutoResizeRowsCommand(natTable, i, 
+					natTable.getConfigRegistry(), 
+					new GCFactory(natTable));
+			natTable.doCommand(rowCommand);
+		}	
+	} 
+});</div>
+				<p class="subline">Adding an IOverlayPainter that autoresizes the NatTable after rendering is finished and on scrolling</p>
+				
+				Although this solution works for larger tables, this is not a usual use case and can cause
+				some side effects or unexpected behaviour in resizing. We suggest to don't do automatic resizing
+				on larger tables where the user needs to scroll. Other well known grid/table applications doesn't
+				support that either and leave the sizing of columns/rows to the user who is looking at it.
 			</p>
 			
 			<h6>How to add NatTable commands to eclipse menus?</h6>
