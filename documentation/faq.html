@@ -133,7 +133,7 @@ natTable.addListener(SWT.Paint, new Listener(){
 				the rendering of the NatTable is finished.
 				You can find the original post 
 				<a href="http://www.eclipse.org/forums/index.php/t/369717/" title="Eclipse forum topic on autoresize">here</a>.
-				<div class="codeBlock">NatTable natTable = new NatTable(tableComposite, grid);
+				<div class="codeBlock">final NatTable natTable = new NatTable(tableComposite, grid);
 natTable.addOverlayPainter(new IOverlayPainter() {
 	
 	private HashSet<Integer> rowset = new HashSet<Integer>();
