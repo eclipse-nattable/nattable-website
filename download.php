@@ -17,7 +17,7 @@
 <h2>$pageTitle</h2>
 <p>All downloads are provided under the terms and conditions of the <a href="/legal/epl/notice.php">Eclipse Foundation Software User Agreement</a> unless otherwise specified.</p>
 
-<h3>NatTable 0.9.0 (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=NatTable&target_milestone=0.9.0&order=Last%20Changed">changelog</a>)</h3> 
+<h3>NatTable (Incubation) 0.9.0 (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=NatTable&target_milestone=0.9.0&order=Last%20Changed">changelog</a>)</h3> 
 NatTable Core:
 <ul>
 <li><a href="http://build.eclipse.org/technology/nebula/nattable/releases/0.9.0/org.eclipse.nebula.widgets.nattable.core-0.9.0.jar">org.eclipse.nebula.widgets.nattable.core</a>
@@ -61,6 +61,19 @@ This release contains ~40 bugfixes and new features. There is also one notable A
 <p><b>Update site:</b> http://download.eclipse.org/myproject/<br />
 <b>ZIP file: </b><a href="/downloads/download.php?file=/myproject/file.zip">file.zip</a> (10 MiB)</p>
 -->
+
+</div>
+
+<div id="rightcolumn">
+
+  <div class="sideitem">
+    <h6>Incubation</h6>
+      <div align="center">
+        <a href="/projects/what-is-incubation.php">
+          <img align="middle" src="images/egg-incubation.png" border="0" alt="Incubation" />
+        </a>
+      </div>
+  </div>
 
 </div>
 EOHTML;
