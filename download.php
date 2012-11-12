@@ -20,17 +20,17 @@
 <h3>NatTable (Incubation) 0.9.0 (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=NatTable&target_milestone=0.9.0&order=Last%20Changed">changelog</a>)</h3> 
 NatTable Core:
 <ul>
-<li><a href="http://build.eclipse.org/technology/nebula/nattable/releases/0.9.0/org.eclipse.nebula.widgets.nattable.core-0.9.0.jar">org.eclipse.nebula.widgets.nattable.core</a>
-   (<a href="http://build.eclipse.org/technology/nebula/nattable/releases/0.9.0/org.eclipse.nebula.widgets.nattable.core-0.9.0-sources.jar">sources</a>)</li>
+<li><a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/0.9.0/org.eclipse.nebula.widgets.nattable.core-0.9.0.jar">org.eclipse.nebula.widgets.nattable.core</a>
+   (<a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/0.9.0/org.eclipse.nebula.widgets.nattable.core-0.9.0-sources.jar">sources</a>)</li>
 </ul>
 
 Optional extensions:
 <ul>
-<li><a href="http://build.eclipse.org/technology/nebula/nattable/releases/0.9.0/org.eclipse.nebula.widgets.nattable.extension.glazedlists-0.9.0.jar">org.eclipse.nebula.widgets.nattable.extension.glazedlists</a>
-   (<a href="http://build.eclipse.org/technology/nebula/nattable/releases/0.9.0/org.eclipse.nebula.widgets.nattable.extension.glazedlists-0.9.0-sources.jar">sources</a>)</li>
+<li><a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/0.9.0/org.eclipse.nebula.widgets.nattable.extension.glazedlists-0.9.0.jar">org.eclipse.nebula.widgets.nattable.extension.glazedlists</a>
+   (<a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/0.9.0/org.eclipse.nebula.widgets.nattable.extension.glazedlists-0.9.0-sources.jar">sources</a>)</li>
 
-<li><a href="http://build.eclipse.org/technology/nebula/nattable/releases/0.9.0/org.eclipse.nebula.widgets.nattable.extension.poi-0.9.0.jar">org.eclipse.nebula.widgets.nattable.extension.poi</a>
-   (<a href="http://build.eclipse.org/technology/nebula/nattable/releases/0.9.0/org.eclipse.nebula.widgets.nattable.extension.poi-0.9.0-sources.jar">sources</a>)<br/>
+<li><a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/0.9.0/org.eclipse.nebula.widgets.nattable.extension.poi-0.9.0.jar">org.eclipse.nebula.widgets.nattable.extension.poi</a>
+   (<a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/0.9.0/org.eclipse.nebula.widgets.nattable.extension.poi-0.9.0-sources.jar">sources</a>)<br/>
    <b>NOTE:</b> The poi extension has been re-released to address a major issue that resulted in an exception if the table was exported more than once (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=390522">bug 390522</a>).
    <b>If you downloaded the poi extension prior to 2012/11/12 please download it again and use the updated version.</b> You can verify you have the correct version by inspecting the META-INF/MANIFEST.MF inside the jar.
    The updated version has Bundle-Version: 0.9.0.201210040001. None of the other 0.9.0 release artifacts were affected.
@@ -39,7 +39,7 @@ Optional extensions:
 
 Examples:
 <ul>
-<li><a href="http://build.eclipse.org/technology/nebula/nattable/releases/0.9.0/NatTableExamples-0.9.0.jar">NatTableExamples-0.9.0.jar</a></li>
+<li><a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/0.9.0/NatTableExamples-0.9.0.jar">NatTableExamples-0.9.0.jar</a></li>
 </ul>
 
 <div class="homeitem">
