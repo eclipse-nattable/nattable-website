@@ -49,12 +49,13 @@
 				
 				<p><b>Note:</b> we will refer to the location where you checked out the NatTable trunk code as <b>NATTABLE_TRUNK</b></p>
 
-				<p>To build from the command line, first execute the following commands from the NATTABLE_TRUNK/nattable directory:</p>
+				<p>To build from the command line, you need to execute the following command from the NATTABLE_TRUNK/nattable directory:</p>
 
-				<p><span class="code">mvn -f deps/pom.xml clean install<br>
-				mvn -f org.eclipse.nebula.widgets.nattable.parent/pom.xml clean install</span></p>
+				<p><span class="code">mvn -f org.eclipse.nebula.widgets.nattable.parent/pom.xml clean install</span></p>
 
-				<p>The first command is to wrap non-OSGi jar dependencies (Apache Poi) as OSGi bundles. The second actually builds NatTable.</p>
+				<p>If you are working on a codebase prior 1.0.0 you will need to execute the following command before you are 
+				trying to build NatTable the first time. It is needed to wrap non-OSGi jar dependencies (Apache Poi) as OSGi bundles.</p>
+				<span class="code">mvn -f deps/pom.xml clean install</span>
 
 				<h6>Importing projects into Eclipse</h6>
 
