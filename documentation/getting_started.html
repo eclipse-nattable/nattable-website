@@ -4,14 +4,20 @@
 		<div class="chapter">
 			<h5>Install</h5>
 			<div class="content">
+				<!--
 				<p>You can install NatTable to your environment by using the 
 				<a href="http://www.eclipse.org/nebula/downloads.php" title="Nebula Update Site">Nebula Update Site</a> or 
 				by simply downloading it <a href="/nattable/download.php" title="NatTable download">here</a> and putting it into 
 				the dropins folder manually.</p>
+				-->
 				
-				<p>Note that currently NatTable is not included in Nebula releases and the download section is under construction.
-				Please use the <a href="http://sourceforge.net/projects/nattable/files/" title="NatTable on Sourceforge">Sourceforge version</a> 
-				until the move to Nebula is finished completely.</p>
+				<p>You can install NatTable to your environment by simply downloading it 
+				<a href="/nattable/download.php" title="NatTable download">here</a> and putting it into the dropins folder manually.</p>
+
+				<p>Note that currently NatTable is not included in Nebula releases and the p2 Update Site is not finished yet.
+				You need to download and install the NatTable JARs manually until we solved the dependency issues with the
+				help of the Orbit team. We hope this will soon be fixed and we can provide a fully functional p2 Update Site
+				for Nebula NatTable.</p>
 			</div>
 		</div>
 		<div class="chapter">
@@ -27,7 +33,7 @@
 				<p>Note that the NatTableExamples jar does not contain SWT, so you need to include the appropriate SWT jars for your 
 				platform on the command line, e.g.:</p>
 
-				<p><span class="code">java -jar org.eclipse.swt_.jar;org.eclipse.swt.win32.win32.x86_.jar;NatTableExamples.jar org.eclipse.nebula.widgets.nattable.examples.NatTableExamples</span></p>
+				<p><span class="code">java -cp org.eclipse.swt.win32.win32.x86_.jar;NatTableExamples.jar org.eclipse.nebula.widgets.nattable.examples.NatTableExamples</span></p>
 			</div>
 		</div>
 		<div class="chapter">
@@ -36,7 +42,7 @@
 				<p>You can also download the source code and contribute it to NatTable. The following information will help you set up
 				your development environment. The development tools with minimum versions that are used by the NatTable team are listed below. 
 					<ul>
-						<li>JDK 1.5</li>
+						<li>JDK 1.6</li>
 						<li>Eclipse 3.5</li>
 						<li>Maven 3 with Tycho</li>
 						<li>Git</li>
@@ -48,12 +54,13 @@
 				
 				<p><b>Note:</b> we will refer to the location where you checked out the NatTable trunk code as <b>NATTABLE_TRUNK</b></p>
 
-				<p>To build from the command line, first execute the following commands from the NATTABLE_TRUNK/nattable directory:</p>
+				<p>To build from the command line, you need to execute the following command from the NATTABLE_TRUNK/nattable directory:</p>
 
-				<p><span class="code">mvn -f deps/pom.xml clean install<br>
-				mvn -f org.eclipse.nebula.widgets.nattable.parent/pom.xml clean install</span></p>
+				<p><span class="code">mvn -f org.eclipse.nebula.widgets.nattable.parent/pom.xml clean install</span></p>
 
-				<p>The first command is to wrap non-OSGi jar dependencies (Apache Poi) as OSGi bundles. The second actually builds NatTable.</p>
+				<p>If you are working on a codebase prior 1.0.0 you will need to execute the following command before you are 
+				trying to build NatTable the first time. It is needed to wrap non-OSGi jar dependencies (Apache Poi) as OSGi bundles.</p>
+				<span class="code">mvn -f deps/pom.xml clean install</span>
 
 				<h6>Importing projects into Eclipse</h6>
 
