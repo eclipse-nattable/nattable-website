@@ -57,7 +57,7 @@ This release contains ~40 bugfixes and new features. There is also one notable A
 </div>
 
 <h3>Development Snapshot Builds</h3>
-Development snapshot builds are available here: http://download.eclipse.org/nattable/snapshots/
+Development snapshot builds are available here: <a href="http://download.eclipse.org/nattable/snapshots/">http://download.eclipse.org/nattable/snapshots/</a>
 
 <!--
 <h3>Helios - Eclipse 3.6 (unreleased)</h3>
