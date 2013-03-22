@@ -12,7 +12,7 @@
 		<preamble>
 			<html:div></html:div>
 		</preamble>
-		<milestone date="1/15/2013" milestone="1.0.0">
+		<milestone date="3/23/2013" milestone="1.0.0">
 			<html:div>First non-incubation release of NatTable at Eclipse</html:div>
 		</milestone>
 		<postamble>
