@@ -264,6 +264,22 @@ a strong {
 	font-family: "Courier New", monospace;
 }
 
+#doccontent table {
+	vertical-align: top;
+	border: 1px solid black;
+}
+
+#doccontent table td, th {
+	vertical-align: top;
+	border: 1px solid black;
+}
+
+#doccontent table th {
+	padding: 5px;
+	font-weight: bold;
+	background-color: #d4d4dd;
+}
+
 #doccontent .codeBlock {
 	white-space: pre;
 	font-family: "Courier New", monospace;
