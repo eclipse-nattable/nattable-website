@@ -67,7 +67,7 @@ gridLayer.registerCommandHandler(handler);</div>
 	</li>
 	<li>Major refactoring of the editing behaviour<br>
 		We cleaned up the API to prepare for the next generation and made things clearer and stabilized the process for additional features, e.g. creating editors that open in subdialogs, even making 
-		use of SWT and JFace dialogs. Additionally with several bugfixes these are quite some tickets that have been fixed. In this forum topic you can find a list of what has been done at this point: 
+		use of SWT and JFace dialogs (e.g. <span class="code">FileDialogCellEditor</span> which opens the SWT <span class="code">FileDialog</span>). Additionally with several bugfixes these are quite some tickets that have been fixed. In this forum topic you can find a list of what has been done at this point: 
 		<a href="http://www.eclipse.org/forums/index.php/t/452211/">http://www.eclipse.org/forums/index.php/t/452211/</a><br>
 		You should only notice these changes in your code if you implemented custom editors. If you created custom editors than check the <span class="code">ICellEditor</span> interface, the <span class="code">AbstractCellEditor</span> and the <span class="code">AbstractDialogCellEditor</span> for details.</li>
 	<li>Added new <span class="code">EditConfigAttributes</span>
@@ -100,6 +100,7 @@ gridLayer.registerCommandHandler(handler);</div>
 		</table>
 	</li>
 	<li>Enhanced the <span class="code">NatCombo</span> to support free editing and multiple selection with and without checkboxes in the dropdown part. These configuration can be applied via style bits <span class="code">SWT.READ_ONLY</span> for not enabling free editing, <span class="code">SWT.MULTI</span> for multi selection behaviour and <span class="code">SWT.CHECK</span> for rendering checkboxes. <span class="code">ComboBoxCellEditor</span>s need to be configured via boolean properties <span class="code">freeEdit</span>, <span class="code">multiselect</span> and <span class="code">useCheckbox</span>.</li>
+	<li>Deprecation of <span class="code">BodyCellEditorMouseEventMatcher</span> which needed to be registered in the edit bindings for every <span class="code">ICellEditor</span> implementation and replaced it with a more general <span class="code">CellEditorMouseEventMatcher</span>. Doing this allows to add new <span class="code">ICellEditor</span>s more easily without needing to modify the edit bindings everytime.</li>
 	<li>Corrected and enhanced the tick update handling that is added to NatTable instances with the <span class="code">DefaultTickUpdateConfiguration</span> that is part of the <span class="code">DefaultSelectionLayerConfiguration</span>. This one allows to increase/decrease number values by using the + and - keys of your keypad.</li>
 	<li>Excel like filter row<br>
 		With this you are able to add a filter row to your NatTable that looks like in Excel, providing the same functionality. It collects all available values in the columns and will filter those values that are not checked in the dropdown.<br>
