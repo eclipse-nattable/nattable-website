@@ -16,8 +16,8 @@
 	
 	# Define these here, or in _projectCommon.php for site-wide values
 	$pageKeywords	= "eclipse, project, nattable, grid";
-	$pageAuthor		= "Dirk Fauth, Stephan Wahlbrink";
-	$pageTitle 		= "NatTable";
+	$pageAuthor		= "Dirk Fauth, Edwin Park, Stephan Wahlbrink";
+	$pageTitle 		= "Nebula NatTable";
 	
 	
 	// 	# Paste your HTML content between the EOHTML markers!

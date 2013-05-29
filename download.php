@@ -22,15 +22,15 @@
 
 <p><b>Please read the <a href="http://eclipse.org/nattable/nandn/nandn_100.php">New and Noteworthy</a> for this release.</b></p>
 
-<p>Release artifacts can be obtained from the following p2 repository: <a href="http://download.eclipse.org/nattable/releases/1.0.0/repository/">http://download.eclipse.org/nattable/releases/1.0.0/repository/</a><br/>
-A zipped p2 repository is also available here: <a href="/downloads/download.php?file=/nattable/releases/1.0.0/repository.zip">repository.zip</a></p>
+<p>Release artifacts can be obtained from the following p2 repository: <a href="http://download.eclipse.org/nattable/releases/1.0.0/repository/">http://download.eclipse.org/nattable/releases/1.0.0/repository/</a></p>
+<p>A zipped p2 repository is also available here: <a href="/downloads/download.php?file=/nattable/releases/1.0.0/repository.zip">repository.zip</a></p>
 
 <p>The examples jar can be downloaded here: <a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.0.0/NatTableExamples-1.0.0.jar">NatTableExamples-1.0.0.jar</a><br/>
 Please read the Examples section of the <a href="http://eclipse.org/nattable/documentation.php?page=getting_started">Getting Started</a> page for info on how to run the examples jar.</p>
 
 
 <h3>Development Snapshot Builds</h3>
-Development snapshot builds are available here: <a href="http://download.eclipse.org/nattable/snapshots/">http://download.eclipse.org/nattable/snapshots/</a>
+<p>Development snapshot builds are available here:<br> <a href="http://download.eclipse.org/nattable/snapshots/">http://download.eclipse.org/nattable/snapshots/</a></p>
 
 
 <h3>Old Releases</h3>
@@ -78,14 +78,6 @@ This release contains ~40 bugfixes and new features. There is also one notable A
 
 <div id="rightcolumn">
 
-  <div class="sideitem">
-    <h6>Incubation</h6>
-      <div align="center">
-        <a href="/projects/what-is-incubation.php">
-          <img align="middle" src="images/egg-incubation.png" border="0" alt="Incubation" />
-        </a>
-      </div>
-  </div>
 
 </div>
 EOHTML;
