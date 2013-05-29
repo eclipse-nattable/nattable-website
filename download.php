@@ -1,15 +1,15 @@
 <?php  																														require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());    # All on the same line to unclutter the user's desktop'
 /*******************************************************************************
- * Copyright (c) 2009 
+ * Copyright (c) 2009
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  *
  * Contributors:
- *    
+ *
  *******************************************************************************/
-	
+
 	$pageTitle 		= "NatTable - Download";
 
 	$html  = <<<EOHTML
@@ -17,7 +17,25 @@
 <h2>$pageTitle</h2>
 <p>All downloads are provided under the terms and conditions of the <a href="/legal/epl/notice.php">Eclipse Foundation Software User Agreement</a> unless otherwise specified.</p>
 
-<h3>NatTable (Incubation) 0.9.0 (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=NatTable&target_milestone=0.9.0&order=Last%20Changed">changelog</a>)</h3> 
+
+<h3>NatTable 1.0.0 (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=NatTable&target_milestone=1.0.0&order=Last%20Changed">changelog</a>)</h3>
+
+<p><b>Please read the <a href="http://eclipse.org/nattable/nandn/nandn_100.php">New and Noteworthy</a> for this release.</b></p>
+
+<p>Release artifacts can be obtained from the following p2 repository: <a href="http://download.eclipse.org/nattable/releases/1.0.0/repository/">http://download.eclipse.org/nattable/releases/1.0.0/repository/</a><br/>
+A zipped p2 repository is also available here: <a href="/downloads/download.php?file=/nattable/releases/1.0.0/repository.zip">repository.zip</a></p>
+
+<p>The examples jar can be downloaded here: <a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.0.0/NatTableExamples-1.0.0.jar">NatTableExamples-1.0.0.jar</a><br/>
+Please read the Examples section of the <a href="http://eclipse.org/nattable/documentation.php?page=getting_started">Getting Started</a> page for info on how to run the examples jar.</p>
+
+
+<h3>Development Snapshot Builds</h3>
+Development snapshot builds are available here: <a href="http://download.eclipse.org/nattable/snapshots/">http://download.eclipse.org/nattable/snapshots/</a>
+
+
+<h3>Old Releases</h3>
+
+<h4>NatTable (Incubation) 0.9.0 (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=NatTable&target_milestone=0.9.0&order=Last%20Changed">changelog</a>)</h4>
 NatTable Core:
 <ul>
 <li><a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/0.9.0/org.eclipse.nebula.widgets.nattable.core-0.9.0.jar">org.eclipse.nebula.widgets.nattable.core</a>
@@ -43,7 +61,7 @@ Examples:
 </ul>
 
 <div class="homeitem">
-<h4>Release Notes</h4>
+<h5>Release Notes</h5>
 <p>
 This is our first release as part of Eclipse Nebula. As such our package namespace is now org.eclipse.nebula.widgets.nattable.
 Our release numbering has also been reset to 0.9.0 in compliance with Eclipse conventions for incubation projects. This release is the successor to the last NatTable release on SourceForge, version 2.3.2.
@@ -55,15 +73,6 @@ This release contains ~40 bugfixes and new features. There is also one notable A
 <li>API calls that used to contain references to the concrete class LayerCell have been changed to reference the ILayerCell interface instead. If you have implemented any of these APIs (e.g. callbacks), please substitute ILayerCell for LayerCell when migrating to this release.</li>
 <ul>
 </div>
-
-<h3>Development Snapshot Builds</h3>
-Development snapshot builds are available here: <a href="http://download.eclipse.org/nattable/snapshots/">http://download.eclipse.org/nattable/snapshots/</a>
-
-<!--
-<h3>Helios - Eclipse 3.6 (unreleased)</h3>
-<p><b>Update site:</b> http://download.eclipse.org/myproject/<br />
-<b>ZIP file: </b><a href="/downloads/download.php?file=/myproject/file.zip">file.zip</a> (10 MiB)</p>
--->
 
 </div>
 
