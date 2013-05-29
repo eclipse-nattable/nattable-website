@@ -7,30 +7,30 @@
  * http://www.eclipse.org/legal/epl-v10.html
  *
  * Contributors:
- *    
+ *
  *******************************************************************************/
 
 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());
-	
+
 	$localVersion = false;
-	
+
 	# Define these here, or in _projectCommon.php for site-wide values
 	$pageKeywords	= "eclipse, project, nattable, grid";
 	$pageAuthor		= "Dirk Fauth, Stephan Wahlbrink";
 	$pageTitle 		= "NatTable - Documentation";
-	
+
 	$page = 'start';
 	if (isset($_GET["page"])) {
 		$page = $_GET["page"];
 	}
-	
+
 	// 	# Paste your HTML content between the EOHTML markers!
 	$html = file_get_contents('documentation/' . $page . '.html');
 
 	#$html .= file_get_contents('documentation/navigation.html');
-	
+
 	$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="style.css"/>');
-	
+
 	# Generate documentation navigation
 	$Nav->addNavSeparator('Documentation', '/nattable/documentation.php');
 	$Nav->addCustomNav('Getting started', '/nattable/documentation.php?page=getting_started', '_self', 3);
@@ -54,8 +54,8 @@
 	$Nav->addCustomNav('Examples', '/nattable/documentation.php?page=examples', '_self', 4);
 	$Nav->addCustomNav('FAQ', '/nattable/documentation.php?page=faq', '_self', 4);
 	$Nav->addCustomNav('Related articles', '/nattable/documentation.php?page=articles', '_self', 4);
-	$Nav->addCustomNav('API Javadoc', '/nattable/documentation.php?page=api', '_self', 4);
-	
+	$Nav->addCustomNav('API Javadoc', 'http://download.eclipse.org/nattable/releases/1.0.0/apidocs', '_self', 4);
+
 	# Generate the web page
 	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 
