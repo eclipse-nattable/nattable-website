@@ -25,8 +25,10 @@
 <p>Release artifacts can be obtained from the following p2 repository: <a href="http://download.eclipse.org/nattable/releases/1.0.0/repository/">http://download.eclipse.org/nattable/releases/1.0.0/repository/</a></p>
 <p>A zipped p2 repository is also available here: <a href="/downloads/download.php?file=/nattable/releases/1.0.0/repository.zip">repository.zip</a></p>
 
-<p>Note that if you want to use the NatTable extensions for GlazedLists and/or Apache POI, you need to install the necessary bundles from <a href="http://www.eclipse.org/orbit/">Eclipse Orbit</a> yourself before.
-The GlazedLists and Apache POI OSGi bundles can be found in the latest recommended build repository:<br>
+<p>Note that if you want to use the NatTable extensions for GlazedLists and/or Apache POI, the necessary OSGi bundles for those third-party dependencies need to be available for the installation process.
+These bundles are available in the latest recommended release build of <a href="http://www.eclipse.org/orbit/">Eclipse Orbit</a>.
+You can either install those bundles manually prior installing the NatTable extensions or simply add the Eclipse Orbit Update Site to the list of Available Software Sites so the installation process is able to resolve the dependencies itself.
+The following update site is at the time writing this document the latest recommended Eclipse Orbit build repository:<br>
 <a href="http://download.eclipse.org/tools/orbit/downloads/drops/R20130517111416/repository/">http://download.eclipse.org/tools/orbit/downloads/drops/R20130517111416/repository/</a></p>
 
 <p>The examples jar can be downloaded here: <a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.0.0/NatTableExamples-1.0.0.jar">NatTableExamples-1.0.0.jar</a><br/>
