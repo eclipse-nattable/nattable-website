@@ -35,7 +35,7 @@ There are several infrastructural changes in Nebula NatTable.
 	<li>Providing a fully functional p2 update site for NatTable core, its extensions and the corresponding source bundles. 
 		See the <a href="http://eclipse.org/nattable/download.php">download section</a> for details</li>
 	<li>Providing p2 update sites for <a href="http://download.eclipse.org/nattable/snapshots/">SNAPSHOT builds</a> that are created after changes in the repository occured</li>
-	<li>Publishing the API Javadoc. Still not complete</li>
+	<li>Publishing the <a href="http://download.eclipse.org/nattable/releases/1.0.0/apidocs/">API Javadoc</a>. Still not complete</li>
 </ul>
 
 <h3>Enhancements and new features</h3>
