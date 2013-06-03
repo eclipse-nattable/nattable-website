@@ -117,7 +117,8 @@ gridLayer.registerCommandHandler(handler);</div>
 		<ul>
 			<li><span class="code">RowReorderLayer</span></li>
 			<li><span class="code">RowHideShowLayer</span></li>
-			<li><span class="code">GlazedListsRowHideShowLayer</span> to support hiding of rows in a GlazedLists manner</li>
+			<li><span class="code">GlazedListsRowHideShowLayer</span> to support hiding of rows in a GlazedLists manner.<br>
+			As this layer operates with filters based on row id's, this layer introduced the dependency to <span class="code">org.apache.commons.codec</span> and <span class="code">org.apache.commons.codec.binary</span>to support persistance of states.</li>
 			<li><span class="code">DetailGlazedListsEventLayer</span> to transport detail information on GlazedLists changes</li>
 		</ul>
 	</li>
