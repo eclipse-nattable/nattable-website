@@ -35,7 +35,7 @@ There are several infrastructural changes in Nebula NatTable.
 	<li>Providing a fully functional p2 update site for NatTable core, its extensions and the corresponding source bundles. 
 		See the <a href="http://eclipse.org/nattable/download.php">download section</a> for details</li>
 	<li>Providing p2 update sites for <a href="http://download.eclipse.org/nattable/snapshots/">SNAPSHOT builds</a> that are created after changes in the repository occured</li>
-	<li>Publishing the API Javadoc. Still not complete</li>
+	<li>Publishing the <a href="http://download.eclipse.org/nattable/releases/1.0.0/apidocs/">API Javadoc</a>. Still not complete</li>
 </ul>
 
 <h3>Enhancements and new features</h3>
@@ -117,7 +117,8 @@ gridLayer.registerCommandHandler(handler);</div>
 		<ul>
 			<li><span class="code">RowReorderLayer</span></li>
 			<li><span class="code">RowHideShowLayer</span></li>
-			<li><span class="code">GlazedListsRowHideShowLayer</span> to support hiding of rows in a GlazedLists manner</li>
+			<li><span class="code">GlazedListsRowHideShowLayer</span> to support hiding of rows in a GlazedLists manner.<br>
+			As this layer operates with filters based on row id's, this layer introduced the dependency to <span class="code">org.apache.commons.codec</span> and <span class="code">org.apache.commons.codec.binary</span>to support persistance of states.</li>
 			<li><span class="code">DetailGlazedListsEventLayer</span> to transport detail information on GlazedLists changes</li>
 		</ul>
 	</li>
