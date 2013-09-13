@@ -216,9 +216,156 @@
 			</div>
 		</div>
 		<div class="chapter">
-			<h5>SummaryRowLayer</h5>
+			<a name="summaryrowlayer"></a><h5>SummaryRowLayer</h5>
 			<div class="content">
-			...
+			<p>
+			NatTable supports adding a summary row to the table composition. For this the <span class="code">SummaryRowLayer</span> 
+			needs to be added to the layer stack. Typically it should be set on top of the <span class="code">DataLayer</span> or at 
+			least before other layers are added to the layer stack that are able to transform indexes and positions.
+			</p>
+			<div class="codeBlock">...
+bodyDataLayer = new DataLayer(dataProvider);
+glazedListsEventLayer = 
+	new GlazedListsEventLayer&lt;NumberValues&gt;(bodyDataLayer, valuesToShow);
+summaryRowLayer = new SummaryRowLayer(glazedListsEventLayer, configRegistry, false);
+summaryRowLayer.addConfiguration(
+	new CalculatingSummaryRowConfiguration(bodyDataLayer.getDataProvider()));
+columnReorderLayer = new ColumnReorderLayer(summaryRowLayer);
+columnHideShowLayer = new ColumnHideShowLayer(columnReorderLayer);
+selectionLayer = new SelectionLayer(columnHideShowLayer);
+viewportLayer = new ViewportLayer(selectionLayer);
+...</div>
+				<p class="subline">Adding the SummaryRowLayer to the body layer stack</p>
+				<p>
+				If your NatTable is composed as a grid you should also consider using the 
+				<span class="code">DefaultSummaryRowHeaderDataProvider</span> for your row header layer stack. 
+				This is necessary because the <span class="code">SummaryRowLayer</span> adds a row to the body, 
+				therefore the row header also needs to add an additional row.
+				</p>
+				<p>
+				As you can see in the example above, it is necessary to provide a configuration for the <span class="code">SummaryRowLayer</span>. 
+				There is a default configuration available, but using it without modification will simply show ... 
+				instead of a calculated summary row value. This is because the <span class="code">SummaryRowLayer</span> does not know about the 
+				data model structure and the values that are shown.
+				</p>
+				<p>
+				To configure the <span class="code">SummaryRowLayer</span> contents, you need to create an 
+				<span class="code">ISummaryProvider</span> that knows about the data structure and how to 
+				calculate the summary to show. NatTable comes with the <span class="code">SummationSummaryProvider</span> 
+				that sums the values in a column if they are of type <span class="code">Number</span>.
+				</p>
+				<p>
+				Implementing a custom <span class="code">ISummaryProvider</span> is quite straight forward. You simply 
+				need to implement the <span class="code">summarize(int)</span> method the way that fits your needs. 
+				Usually you need to provide access to the data in some kind of way, either by giving access to the 
+				<span class="code">DataLayer</span> or the <span class="code">IDataProvider</span> to your 
+				<span class="code">ISummaryProvider</span>.
+				</p>
+				<div class="codeBlock">public class AverageSummaryProvider implements ISummaryProvider {
+	private final IDataProvider dataProvider;
+
+	public AverageSummaryProvider(IDataProvider dataProvider) {
+		this.dataProvider = dataProvider;
+	}
+
+	@Override
+	public Object summarize(int columnIndex) {
+		double total = 0;
+		int rowCount = dataProvider.getRowCount();
+
+		for (int rowIndex = 0; rowIndex < rowCount; rowIndex++) {
+			Object dataValue = 
+				dataProvider.getDataValue(columnIndex, rowIndex);
+			total = total + Double.parseDouble(dataValue.toString());
+		}
+		return total / rowCount;
+	}
+}</div>
+				<p class="subline">Implementing a custom ISummaryProvider that calculates the average value in a column</p>
+			
+				<p>
+				The <span class="code">ISummaryProvider</span> needs to be registered for the 
+				<span class="code">SummaryRowConfigAttribute.SUMMARY_PROVIDER</span> config attribute. You can 
+				either register the same <span class="code">ISummaryProvider</span> for the whole summary row by 
+				using the <span class="code">SummaryRowLayer.DEFAULT_SUMMARY_ROW_CONFIG_LABEL</span> or register 
+				a special <span class="code">ISummaryProvider</span> per column by using the 
+				<span class="code">SummaryRowLayer.DEFAULT_SUMMARY_COLUMN_CONFIG_LABEL_PREFIX</span> + &lt;column index&gt;
+				</p>
+				
+				<h6>Labels</h6>
+				<p>The <span class="code">SummaryRowLayer</span> automatically adds the following labels to the label stack of the cells in the summary row:</p>
+				<table>
+					<tr>
+						<th>Label</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>SummaryRowLayer.DEFAULT_SUMMARY_ROW_CONFIG_LABEL</td>
+						<td>Added to every cell of the summary row.</td>
+					</tr>
+					<tr>
+						<td>SummaryRowLayer.DEFAULT_SUMMARY_COLUMN_CONFIG_LABEL_PREFIX + &lt;column index&gt;</td>
+						<td>Added to the summary row cells per column to configure every column cell in the summary row differently.</td>
+					</tr>
+				</table>
+				
+				<h6>Configuration attributes</h6>
+				<p>The following <span class="code">ConfigAttribute</span>s are interpreted by the <span class="code">SummaryRowLayer</span> and need to be set in order to make it work correctly:</p>
+				<table>
+					<tr>
+						<th>ConfigAttribute</th>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>SummaryRowConfigAttributes.SUMMARY_PROVIDER</td>
+						<td>ISummaryProvider</td>
+						<td>Configure the ISummaryProvider that should be used to calculate the sum of a column.</td>
+					</tr>
+				</table>
+
+				<h6>Bindings</h6>
+				<p>The <span class="code">SummaryRowLayer</span> does not add bindings to the NatTable.</p>
+				
+				<p>Have a look at the <span class="code">DefaultSummaryRowConfiguration</span> for an example summary row configuration.</p>
+				
+				<h6>Commands</h6>
+				<table>
+					<tr>
+						<th>ILayerCommand</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>RowResizeCommand</td>
+						<td>Executing this command for the summary row index allows resizing the summary row programmatically.</td>
+					</tr>
+					<tr>
+						<td>CalculateSummaryRowValuesCommand</td>
+						<td>Executing this command will trigger the synchronous calculation of all summary row values. 
+						By default the values will be calculated asynchronously when they are requested the first time. This command is used internally to calculate the values before printing or exporting a NatTable to ensure the values are calculated correctly.</td>
+					</tr>
+				</table>
+				<p><b>Note that the <span class="code">CalculateSummaryRowValuesCommand</span> will be introduced with the next NatTable release
+				and is currently only available in the latest development SNAPSHOTs.</b></p>
+
+				<h6>Events</h6>
+				<table>
+					<tr>
+						<th>ILayerEvent</th>
+						<th>Action</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>IVisualChangeEvent</td>
+						<td>handle</td>
+						<td>For performance reasons the calculated sum values are cached in the SummaryRowLayer. Receiving an IVisualChangeEvent will clear the cache and trigger recalculating the sum values.</td>
+					</tr>
+					<tr>
+						<td>RowUpdateEvent</td>
+						<td>fire</td>
+						<td>As the sum calculation is performed in a separate thread, a RowUpdateEvent is fired when the calculation is done.</td>
+					</tr>
+				</table>
 			</div>
 		</div>
 		<div class="chapter">
