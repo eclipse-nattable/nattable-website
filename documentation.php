@@ -55,6 +55,7 @@
 	$Nav->addCustomNav('FAQ', '/nattable/documentation.php?page=faq', '_self', 4);
 	$Nav->addCustomNav('Related articles', '/nattable/documentation.php?page=articles', '_self', 4);
 	$Nav->addCustomNav('API Javadoc', 'http://download.eclipse.org/nattable/releases/1.0.0/apidocs', '_self', 4);
+	$Nav->addCustomNav('Contribution Guide', '/nattable/documentation.php?page=contribution_guide', '_self', 4);
 
 	# Generate the web page
 	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);

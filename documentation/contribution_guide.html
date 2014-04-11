@@ -1,0 +1,157 @@
+<div id="midcolumn">
+	<h3>Contribution Guide</h3>
+	<div>
+		<p>
+			You can download the source code and contribute bugfixes or enhancements to NatTable. 
+			The following information will help you set up your development environment in order to be able to contribute.
+		</p>
+
+		<p><b>Note:</b> we will refer to the location where you checked out the NatTable trunk code as <b>NATTABLE_TRUNK</b></p>
+	</div>
+	<div id="doccontent">
+		<div class="chapter">
+			<h5>Environment</h5>
+			<div class="content">
+				<p>The development tools with minimum versions that are used by the NatTable team are: 
+					<ul>
+						<li>JDK 1.6</li>
+						<li>Eclipse 3.5</li>
+						<li>Maven 3 with Tycho</li>
+						<li>Git</li>
+						<li>Gerrit</li>
+					</ul>
+				</p>
+				<p>
+					You can of course use a newer version of Eclipse, which is what the project team members are also doing.
+					The dependency to Eclipse 3.5 is later set via target platform.
+				</p>
+			</div>
+		</div>
+		<div class="chapter">
+			<h5>Obtaining sources and importing projects into Eclipse</h5>
+			<div class="content">
+				The NatTable sources are hosted in Git. To get the sources you need to clone the repository either via
+				command line or via EGit Eclipse integration.
+
+				<h6>Cloning via command line</h6>
+				<p>To clone the sources via command line, you need to execute the following Git command:</p>
+				<p><span class="code">git clone ssh://git.eclipse.org/gitroot/nattable/org.eclipse.nebula.widgets.nattable.git</span></p>
+				<p>After that, import the projects into Eclipse</p>
+				<ul>
+				    <li>File -> Import</li>
+				    <li>General -> Existing Projects into Workspace</li>
+				    <li>Next</li>
+				    <li>Select root directory: (NATTABLE_TRUNK/nattable)</li>
+				    <li>Finish</li>
+				</ul>
+
+				<h6>Cloning via EGit</h6>
+				<p>First, verify that the default repository folder as set on the main Git preference page is to your liking.</p>
+				<p>Then, clone the repository and import the projects: </p>
+				<ul>
+				    <li>File -> Import</li>
+				    <li>Git -> Projects from Git</li>
+				    <li>Select <i>Clone URI</i></li>
+				    <li>Enter the URI <br>
+				    	<span class="code">ssh://git.eclipse.org/gitroot/nattable/org.eclipse.nebula.widgets.nattable.git</span></li>
+				    <li>Import existing projects into the workspace from the newly created working directory </li>
+				</ul>
+				
+				<h6>Source code organization</h6>
+				<p>The NatTable source is divided into the following main projects:
+				<ul>
+					<li>org.eclipse.nebula.widgets.nattable.core - NatTable Core code
+					<li>org.eclipse.nebula.widgets.nattable.core.test - NatTable Core test code
+					<li>org.eclipse.nebula.widgets.nattable.extension.glazedlists - NatTable extensions for GlazedLists
+					<li>org.eclipse.nebula.widgets.nattable.extension.glazedlists.test - NatTable extensions for GlazedLists tests
+					<li>org.eclipse.nebula.widgets.nattable.extension.poi - NatTable extensions for Apache POI
+					<li>org.eclipse.nebula.widgets.examples - NatTable example application containing several examples
+				</ul>
+				</p>
+    
+				<p>
+					In addition there are also various feature projects necessary for release engineering. 
+					All of these projects are packaged as Eclipse plugins/OSGi bundles.
+				</p>
+			</div>
+		</div>
+		
+		<div class="chapter">
+			<h5>Development IDE Configuration</h5>
+			<div class="content">
+				<h6>Tools</h6>
+				<p>
+					Although not required you might want to install m2e together with the Tycho connector in order
+					to be able to build out of the IDE. This step is optional.
+				</p>
+
+				<h6>Java Requirements</h6>
+				<p>
+					NatTable has a Java 6 and Eclipse Platform 3.5 (Galileo) as minimum requirements, 
+					so dependencies to newer Java and platform versions must be avoided. 
+				</p>
+
+				<h6>Dependencies</h6>
+				<p>
+					After importing the NatTable projects in Eclipse, they will not compile due to missing dependencies.
+					NatTable provides a target platform definition that should be activated in order to resolve the
+					missing dependencies.
+				</p>
+
+				<ul>
+				    <li>Open the <i>target-platform</i> project</li>
+				    <li>Open the <i>target-platform.target</i> file 
+				    	(this may take a while as it downloads the indexes of the p2 repositories the target platform refers to) </li>
+				    <li>In the resulting editor, click on the <i>Set as Target Platform</i> link at the top right 
+				    	(this may also take a while) </li>
+				</ul>
+				
+				<p>
+					After that, the workspace should build cleanly. If not, try Project > Clean... > All. 
+					If this also doesn't help open Preferences > Plug-In Development > Target Platform, 
+					select the checked target platform and click "Reload..." this will flush PDE's bundle 
+					cache and re-download the artifacts listed in the target platform.
+				</p>
+			</div>
+		</div>
+		<div class="chapter">
+			<h5>Build</h5>
+			<div class="content">
+				<p>To build from the command line, you need to execute the following command from the <i>NATTABLE_TRUNK/nattable</i> directory:</p>
+
+				<p><span class="code">mvn -f org.eclipse.nebula.widgets.nattable.parent/pom.xml clean install</span></p>
+				
+				<p>
+					After the build successfully finished, you will find an Update Site archive in 
+				</p>
+				<p>
+					<i>NATTABLE_TRUNK/nattable/org.eclipse.nebula.widgets.nattable.updatesite/target</i>
+				</p>
+				<p>
+					that you can use for example in a local target definition. 
+				</p>
+			</div>
+		</div>
+		<div class="chapter">
+			<h5>Contributing Patches </h5>
+			<div class="content">
+				<p>
+					We use Gerrit for reviewing and accepting patches. Please have a look at the 
+					<a href="https://wiki.eclipse.org/Gerrit#Doing_Code_Reviews_with_Gerrit">Eclipse Gerrit Guide.</a>
+				</p>
+					<ul>
+						<li> Make small logical changes.</li>
+						<li> Provide a meaningful commit message. It should contain the name of the related bug ticket. 
+							(See <a rel="nofollow" class="external text" href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">A Note About Git Commit Messages</a> for guidelines.)</li>
+						<li> Review and follow the Eclipse Due Diligence Process
+							<ul>
+								<li> <a rel="nofollow" class="external free" href="http://www.eclipse.org/projects/dev_process/ip-process-in-cartoons.php">http://www.eclipse.org/projects/dev_process/ip-process-in-cartoons.php</a></li>
+								<li> <a rel="nofollow" class="external free" href="http://www.eclipse.org/legal/EclipseLegalProcessPoster.pdf">http://www.eclipse.org/legal/EclipseLegalProcessPoster.pdf</a></li>
+							</ul>
+						</li>
+					</ul>
+			</div>
+		</div>
+		
+	</div>
+</div>
