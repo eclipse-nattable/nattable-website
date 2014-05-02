@@ -48,7 +48,7 @@ There are several enhancements and new features that were added to Nebula NatTab
 		<img align="middle" src="../images/search_dialog.png" border="0" alt="Enhanced Search Dialog"/>
 	</li>
 	<li>Contribution - GroupBy summary values
-		<p>With this contribution by Alexandre Pauzis it is now possible to add summary values for
+		<p>With this contribution by Alexandre Pauzies it is now possible to add summary values for
 		grouped items when the GroupBy feature is used in a NatTable grid.</p>
 		
 		<p>Similar to the summary row feature, the values are calculated by registering an instance
