@@ -71,68 +71,6 @@ a strong {
 	width: 30%;
 }
 	
-#bigbuttons {
-	position: relative;
-	left: 420px;
-	top: -170px;
-}
-#bigbuttons h3{
-	visibility: hidden;
-}
-
-#bigbuttons a {
-}
-
-#bigbuttons ul li {
-   display:block;
-   list-style-type:none;
-   background-color: red;
-   padding: 0;
-   margin: 0;
-}
-
-#bigbuttons a {
-   display: block;
-   height:77px; width:170px;
-   padding: 12px 12px 0 68px;
-   margin: 20px;
-   position: absolute;
-   
-   font-weight: normal;
-   color: black;
-}
-
-#bigbuttons a b {
-	font-size: 120%;
-	font-weight: bold;
-}
-
-#buttonDownload {
-   background:transparent url("images/buttonDownload.png") no-repeat 0 0;
-   top: 0px;
-   left: 0px;
-}
-
-#buttonDocumentation {
-   background:transparent url("images/buttonDocumentation.png") no-repeat 0 0;
-   top: 87px;
-   left: 0px;
-}
-
-#buttonSupport {
-   background:transparent url("images/buttonSupport.png") no-repeat 0 0;
-   top: 0px;
-   left: 280px;
-}
-
-#buttonInvolved {
-   background:transparent url("images/buttonInvolved.png") no-repeat 0 0;
-   top: 87px;
-   left: 280px;
-}
-
-#bigbuttons a * {
-}
 
 #headlines {
 }
