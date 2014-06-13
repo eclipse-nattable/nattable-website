@@ -159,6 +159,25 @@
 	background: url("images/backgroundMain.png") no-repeat white;
 	padding-top: 170px;
 }
+
+.codeBlock {
+	white-space: pre;
+	font-family: "Courier New", monospace;
+	padding: 0.5em;
+	background-color: #FFFF73;
+	border-style: dotted;
+	border-width: 1px;
+	border-color: black;
+}
+
+.subline {
+	font-size: 0.8em;
+}
+
+#tryIt {
+	text-align: center;
+}
+
 /*
 #screencast {
 	margin: 20px;

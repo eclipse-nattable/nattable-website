@@ -30,6 +30,7 @@
 	#$html .= file_get_contents('documentation/navigation.html');
 
 	$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="style.css"/>');
+	$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="style2.css"/>');
 
 	# Generate documentation navigation
 	$Nav->addNavSeparator('Documentation', '/nattable/documentation.php');

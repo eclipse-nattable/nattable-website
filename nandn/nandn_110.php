@@ -15,6 +15,7 @@
 	$pageTitle 		= "NatTable 1.1.0 - New &amp; Noteworthy";
 	
 	$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="../style.css"/>');
+	$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="../style2.css"/>');
 
 	$html  = <<<EOHTML
 <div id="midcolumn">
