@@ -1,241 +1,34 @@
-@CHARSET "UTF-8";
 #novaContent {
 	background: url("images/backgroundMain.png") no-repeat;
 	padding-top: 210px;
 }
 
 #midcolumn {
-	width: 640px;
+	width: 600px;
 	padding: 0 10px 10px 10px;
 }
 
 #rightcolumn {
-	width: 260px;
+	width: 300px;
 }
 
-div.sideitem p {
-	margin-bottom: 0px
+#padding {
+	height: 20px;
 }
-
 
 h3 {
 	clear: both;
+}
+
+h7 {
+	font-weight: bold;
+	padding: 5px;
 }
 
 a strong {
 	text-decoration: underline;
 }
 
-
-#novaContent {
-	background: url("images/backgroundMain.png") no-repeat white;
-	padding-top: 170px;
-}
-
-#introText p.left {
-	width: 48%;
-	float: left;
-}
-
-#introText p.right {
-	width: 48%;
-	float: right;
-}
-
-#feature_1 {
-	float: left;
-	width: 30%;
-	margin-right: 3%;
-}
-
-#feature_2 {
-	float: left;
-	width: 30%;
-	margin-right: 3%
-}
-
-#feature_3 {
-	float: left;
-	width: 30%;
-}
-
-#feature_4 {
-	clear: both;
-	float: left;
-	width: 63%;
-	margin-right: 3%;	
-}
-
-#feature_more {
-	float: left;
-	width: 30%;
-}
-	
-
-#headlines {
-}
-
-#headlines ul li {
-	margin: 0 0;
-	list-style-type: none;
-	list-style-image: none;
-}
-
-	
-#headlines div.title {
-	display: inline;
-	margin-right: 0.5em;
-}
-
-#headlines div.meta {
-	display: inline;
-	color: #444444;
-	font-size: smaller;  
-}
-
-#headlines div.item {
-	display: block;
-	}
-	
-#screencast {
-	margin-bottom: 10px;
-}
-
-#newAndNoteworthy a {
-   display: block;
-   width:218px; 
-   height:51px;
-   padding: 0;
-   text-indent: -9000px;
-   background:transparent url("images/bannerNewAndNoteworthy08M4.png") no-repeat 0 0;
-   margin-top: 10px;
-}
-
-#docnav
-{
+#rightcolumn ul {
 	margin-left: 10px;
-	margin-right: 20px;
-}
-#docnav li
-{
-	list-style-image: url('/eclipse.org-common/themes/Nova/images/leftNav.gif');
-	margin-left: 30px;
-	padding: 0px;
-}
-#docnav li a
-{
-	font-size: 12px;
-	line-height: 12px;
-}
-#docnav li.about
-{
-	list-style-image: none;
-	margin-left: 0;
-	padding-bottom: 10px;
-}
-#docnav li.about a
-{
-	color: #333333;
-	font-size: 12px;
-}
-#docnav li.separator
-{
-	border-top: 1px dotted #d4d4dd;
-	list-style-image: none;
-	margin-left: 0;
-	margin-top: 5px;
-	padding: 5px 0;
-	padding-top: 5px;
-}
-#docnav li.separator a
-{
-	color: #333333;
-	font-size: 12px;
-}
-
-#doccontent {
-	margin-bottom: 10px;
-}
-
-#doccontent .links li {
-	list-style-image: url('/eclipse.org-common/themes/Nova/images/leftNav.gif');
-	margin-left: 20px;
-	padding: 0px;
-}
-
-#doccontent .chapter h5 {
-	background-color: #e8e7dd;
-	border-bottom: 2px solid #FFF;
-	font-size: 14px;
-	font-weight: bold;
-	margin-bottom: 0px;
-	-moz-border-radius-topleft:3px;
-	-moz-border-radius-topright:3px;
-	padding: 8px 5px;
-}
-
-#doccontent .chapter h6 {
-	clear: both;
-	font-weight: bold;
-	padding-left: 0;
-	padding-top: 1.5em;
-	margin-bottom: 5px;
-}
-
-#doccontent .chapter .content {
-	padding: 8px 5px;
-}
-
-#doccontent .chapter .content ul {
-	padding-top: 0;
-	padding-bottom: 0;
-}
-
-#doccontent .chapter .content .simple li {
-	list-style-image: none;
-	list-style-type: disc;
-	margin-left: 20px;
-	padding: 0px;
-}
-
-#doccontent .code {
-	font-family: "Courier New", monospace;
-}
-
-#doccontent table {
-	vertical-align: top;
-	border: 1px solid black;
-}
-
-#doccontent table td, th {
-	vertical-align: top;
-	border: 1px solid black;
-}
-
-#doccontent table th {
-	padding: 5px;
-	font-weight: bold;
-	background-color: #d4d4dd;
-}
-
-#doccontent .codeBlock {
-	white-space: pre;
-	font-family: "Courier New", monospace;
-	padding: 0.5em;
-	background-color: #FFFF73;
-	border-style: dotted;
-	border-width: 1px;
-	border-color: black;
-}
-
-#doccontent .subline {
-	font-size: 0.8em;
-}
-
-#tryIt {
-	vertical-align: middle;
-}
-
-#tryIt img {
-	vertical-align: inherit;
 }

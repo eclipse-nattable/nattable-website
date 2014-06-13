@@ -151,7 +151,14 @@
 	visibility: hidden;
 }
 
+#screencast {
+	text-align: center;
+}
 
+#headerImage {
+	background: url("images/backgroundMain.png") no-repeat white;
+	padding-top: 170px;
+}
 /*
 #screencast {
 	margin: 20px;
