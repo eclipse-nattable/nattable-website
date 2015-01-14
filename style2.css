@@ -170,6 +170,10 @@
 	border-color: black;
 }
 
+.code {
+	font-family: "Courier New", monospace;
+}
+
 .subline {
 	font-size: 0.8em;
 }
