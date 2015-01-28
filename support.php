@@ -18,7 +18,10 @@
 
 <p>The support for NatTable at Eclipse.org is provided by the community on a 
 volunteer basis.</p>
-
+<p>
+We also provide sponsored development and support. Feel free to contact us via
+<a href="mailto:nattable-dev@eclipse.org">mailing list</a>. 
+</p>
 
 <div class="homeitem">
 <h3>Questions</h3>
