@@ -34,6 +34,7 @@
 
 	# Generate documentation navigation
 	$Nav->addNavSeparator('Documentation', '/nattable/documentation.php');
+	$Nav->addCustomNav('Contribution Guide', '/nattable/documentation.php?page=contribution_guide', '_self', 4);
 	$Nav->addCustomNav('Getting started', '/nattable/documentation.php?page=getting_started', '_self', 3);
 	$Nav->addCustomNav('Basics', '/nattable/documentation.php?page=basics', '_self', 4);
 	$Nav->addCustomNav('Layers', '/nattable/documentation.php?page=layer', '_self', 4);
@@ -56,7 +57,6 @@
 	$Nav->addCustomNav('FAQ', '/nattable/documentation.php?page=faq', '_self', 4);
 	$Nav->addCustomNav('Related articles', '/nattable/documentation.php?page=articles', '_self', 4);
 	$Nav->addCustomNav('API Javadoc', 'http://download.eclipse.org/nattable/releases/1.2.0/apidocs', '_self', 4);
-	$Nav->addCustomNav('Contribution Guide', '/nattable/documentation.php?page=contribution_guide', '_self', 4);
 
 	# Generate the web page
 	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);

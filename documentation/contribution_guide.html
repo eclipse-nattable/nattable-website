@@ -10,7 +10,7 @@
 	</div>
 	<div id="doccontent">
 		<div class="chapter">
-			<h5>Environment</h5>
+			<h4>Environment</h4>
 			<div class="content">
 				<p>The development tools with minimum versions that are used by the NatTable team are: 
 					<ul>
@@ -28,12 +28,12 @@
 			</div>
 		</div>
 		<div class="chapter">
-			<h5>Obtaining sources and importing projects into Eclipse</h5>
+			<h4>Obtaining sources and importing projects into Eclipse</h4>
 			<div class="content">
 				The NatTable sources are hosted in Git. To get the sources you need to clone the repository either via
 				command line or via EGit Eclipse integration.
 
-				<h6>Cloning via command line</h6>
+				<h5>Cloning via command line</h5>
 				<p>To clone the sources via command line, you need to execute the following Git command:</p>
 				<p><span class="code">git clone ssh://git.eclipse.org/gitroot/nattable/org.eclipse.nebula.widgets.nattable.git</span></p>
 				<p>After that, import the projects into Eclipse</p>
@@ -45,7 +45,7 @@
 				    <li>Finish</li>
 				</ul>
 
-				<h6>Cloning via EGit</h6>
+				<h5>Cloning via EGit</h5>
 				<p>First, verify that the default repository folder as set on the main Git preference page is to your liking.</p>
 				<p>Then, clone the repository and import the projects: </p>
 				<ul>
@@ -57,7 +57,7 @@
 				    <li>Import existing projects into the workspace from the newly created working directory </li>
 				</ul>
 				
-				<h6>Source code organization</h6>
+				<h5>Source code organization</h5>
 				<p>The NatTable source is divided into the following main projects:
 				<ul>
 					<li>org.eclipse.nebula.widgets.nattable.core - NatTable Core code
@@ -77,21 +77,21 @@
 		</div>
 		
 		<div class="chapter">
-			<h5>Development IDE Configuration</h5>
+			<h4>Development IDE Configuration</h4>
 			<div class="content">
-				<h6>Tools</h6>
+				<h5>Tools</h5>
 				<p>
 					Although not required you might want to install m2e together with the Tycho connector in order
 					to be able to build out of the IDE. This step is optional.
 				</p>
 
-				<h6>Java Requirements</h6>
+				<h5>Java Requirements</h5>
 				<p>
 					NatTable has a Java 6 and Eclipse Platform 3.5 (Galileo) as minimum requirements, 
 					so dependencies to newer Java and platform versions must be avoided. 
 				</p>
 
-				<h6>Dependencies</h6>
+				<h5>Dependencies</h5>
 				<p>
 					After importing the NatTable projects in Eclipse, they will not compile due to missing dependencies.
 					NatTable provides a target platform definition that should be activated in order to resolve the
@@ -112,10 +112,36 @@
 					select the checked target platform and click "Reload..." this will flush PDE's bundle 
 					cache and re-download the artifacts listed in the target platform.
 				</p>
+				
+				<h5>API Baseline</h5>
+				<p>
+					After importing the NatTable projects you should setup the API baseline if you intend to make changes to the code. 
+					This will help you detect the <i>gravity</i> of the changes you are making (major, minor, micro) according to
+					<a href="http://www.osgi.org/wiki/uploads/Links/SemanticVersioning.pdf" target="_blank">OSGi semantic versioning</a>
+				</p>
+				<p>
+					The baseline you have to set is provided in the folder <i>api-baseline</i>.
+				</p>
+				<p>
+					Open the workspace preferences (Window > Preferences) and head to Plug-in Development > API Baselines. 
+					There, hit <i>Add Baseline...</i> to define a new baseline. Choose any name you like (the version of the release the baseline 
+					represents might be suitable, i.e. <i>NatTable 1.2</i>). Then, press <i>Browse...</i> and choose the api-baseline folder 
+					within the NatTable git repository. Press <i>Finish</i> and apply the changes. This should trigger a workspace build.
+				</p>
+				<p>
+					From here on out the API tooling will highlight your code when your changes exceed the current margin given by the 
+					snapshot version (e.g. while working on the 1.3 snapshot with the <i>NatTable 1.2</i> baseline, major API changes will 
+					be marked as errors in the IDE). 
+					More information about the API tooling can be found <a href="http://wiki.eclipse.org/PDE/API_Tools/User_Guide">here</a>.
+				</p>
+				<p>
+					Note, that you should aspire to make changes of the magnitude <i>micro</i>. These can be release in a Bugfix-Release, 
+					while <i>minor</i> changes (new APIs) need a more elaborate release process. Currently, <i>major</i> changes will be generally rejected.
+				</p>
 			</div>
 		</div>
 		<div class="chapter">
-			<h5>Build</h5>
+			<h4>Build</h4>
 			<div class="content">
 				<p>To build from the command line, you need to execute the following command from the <i>NATTABLE_TRUNK/nattable</i> directory:</p>
 
@@ -133,7 +159,7 @@
 			</div>
 		</div>
 		<div class="chapter">
-			<h5>Contributing Patches </h5>
+			<h4>Contributing Patches</h4>
 			<div class="content">
 				<p>
 					We use Gerrit for reviewing and accepting patches. Please have a look at the 
