@@ -52,7 +52,7 @@ We would like to thank UBS for their commitment and support on developing the 1.
 		for column values in order to be able to sort a tree according to the configured sorting. 
 	</li>
 	<li>
-		Added <span class="code">ICellEditor#activateOnTraversal()IConfigRegistry, List<String>)</span> to be able to configure if an editor
+		Added <span class="code">ICellEditor#activateOnTraversal(IConfigRegistry, List<String>)</span> to be able to configure if an editor
 		should be activated on traversal or not. Necessary because a checkbox shouldn't change it's value when automatically activated after 
 		committing a value in an adjacent editor. The <span class="code">CheckBoxCellEditor</span> always returns <i>false</i>. The abstract
 		implementations will check the newly introduced <span class="code">EditConfigAttributes#ACTIVATE_EDITOR_ON_TRAVERSAL</span>
