@@ -18,10 +18,10 @@
 <p>All downloads are provided under the terms and conditions of the <a href="/legal/epl/notice.php">Eclipse Foundation Software User Agreement</a> unless otherwise specified.</p>
 
 
-<h3>NatTable 1.2.0 (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=NatTable&target_milestone=1.2.0&order=Last%20Changed">changelog</a>)</h3>
+<h3>NatTable 1.3.0 (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=NatTable&target_milestone=1.3.0&order=Last%20Changed">changelog</a>)</h3>
 
-<p>Release artifacts can be obtained from the following p2 repository: <a href="http://download.eclipse.org/nattable/releases/1.2.0/repository/">http://download.eclipse.org/nattable/releases/1.2.0/repository/</a></p>
-<p>A zipped p2 repository is also available here: <a href="/downloads/download.php?file=/nattable/releases/1.2.0/repository.zip">repository.zip</a></p>
+<p>Release artifacts can be obtained from the following p2 repository: <a href="http://download.eclipse.org/nattable/releases/1.3.0/repository/">http://download.eclipse.org/nattable/releases/1.3.0/repository/</a></p>
+<p>A zipped p2 repository is also available here: <a href="/downloads/download.php?file=/nattable/releases/1.3.0/repository.zip">repository.zip</a></p>
 
 <p>Note that if you want to use the NatTable extensions for GlazedLists and/or Apache POI, the necessary OSGi bundles for those third-party dependencies need to be available for the installation process.
 These bundles are available in the latest recommended release build of <a href="http://www.eclipse.org/orbit/">Eclipse Orbit</a>.
@@ -29,7 +29,7 @@ You can either install those bundles manually prior installing the NatTable exte
 The following update site is at the time writing this document the latest recommended Eclipse Orbit build repository:<br>
 <a href="http://download.eclipse.org/tools/orbit/downloads/drops/R20140525021250/repository/">http://download.eclipse.org/tools/orbit/downloads/drops/R20140525021250/repository/</a></p>
 
-<p>The examples jar can be downloaded here: <a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.2.0/NatTableExamples-1.2.0.jar">NatTableExamples-1.2.0.jar</a><br/>
+<p>The examples jar can be downloaded here: <a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.3.0/NatTableExamples-1.3.0.jar">NatTableExamples-1.3.0.jar</a><br/>
 Please read the Examples section of the <a href="http://eclipse.org/nattable/documentation.php?page=getting_started">Getting Started</a> page for info on how to run the examples jar.</p>
 
 
@@ -38,6 +38,13 @@ Please read the Examples section of the <a href="http://eclipse.org/nattable/doc
 
 
 <h3>Older Releases</h3>
+
+<h4>NatTable 1.2.0 (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=NatTable&target_milestone=1.2.0&order=Last%20Changed">changelog</a>)</h4>
+<ul>
+<li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/1.2.0/repository/">http://download.eclipse.org/nattable/releases/1.2.0/repository/</a> (<a href="/downloads/download.php?file=/nattable/releases/1.2.0/repository.zip">repository.zip</a>)</li>
+<li>Examples: <a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.2.0/NatTableExamples-1.2.0.jar">NatTableExamples-1.2.0.jar</a></li>
+<li><a href="http://eclipse.org/nattable/nandn/nandn_120.php">New and Noteworthy</a></li>
+</ul>
 
 <h4>NatTable 1.1.1 (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=NatTable&target_milestone=1.1.1&order=Last%20Changed">changelog</a>)</h4>
 <ul>
