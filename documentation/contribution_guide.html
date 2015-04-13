@@ -5,8 +5,6 @@
 			You can download the source code and contribute bugfixes or enhancements to NatTable. 
 			The following information will help you set up your development environment in order to be able to contribute.
 		</p>
-
-		<p><b>Note:</b> we will refer to the location where you checked out the NatTable trunk code as <b>NATTABLE_TRUNK</b></p>
 	</div>
 	<div id="doccontent">
 		<div class="chapter">
@@ -34,14 +32,15 @@
 				command line or via EGit Eclipse integration.
 
 				<h5>Cloning via command line</h5>
-				<p>To clone the sources via command line, you need to execute the following Git command:</p>
+				<p>Change to the directory where you want to store the local working copy of the NatTable repository (NATTABLE_REPO).</p>
+				<p>Clone the repository to that directory by executing the following Git command:</p>
 				<p><span class="code">git clone ssh://git.eclipse.org/gitroot/nattable/org.eclipse.nebula.widgets.nattable.git</span></p>
 				<p>After that, import the projects into Eclipse</p>
 				<ul>
 				    <li>File -> Import</li>
 				    <li>General -> Existing Projects into Workspace</li>
 				    <li>Next</li>
-				    <li>Select root directory: (NATTABLE_TRUNK/nattable)</li>
+				    <li>Select root directory: (NATTABLE_REPO/org.eclipse.nebula.widgets.nattable)</li>
 				    <li>Finish</li>
 				</ul>
 
@@ -137,6 +136,15 @@
 				<p>
 					Note, that you should aspire to make changes of the magnitude <i>micro</i>. These can be release in a Bugfix-Release, 
 					while <i>minor</i> changes (new APIs) need a more elaborate release process. Currently, <i>major</i> changes will be generally rejected.
+				</p>
+				
+				<h5>Workspace Preferences</h5>
+				<p>
+					Ensure to set the text file encoding to UTF-8.
+					<ul>
+						<li>Window -> Preferences -> General -> Workspace</li>
+						<li>Set 'Text file encoding' to 'Other' - 'UTF-8'</li>
+					</ul>
 				</p>
 			</div>
 		</div>
