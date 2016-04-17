@@ -32,3 +32,27 @@ a strong {
 #rightcolumn ul {
 	margin-left: 10px;
 }
+
+table {
+	width:100%;
+	border: 1px solid grey;
+	border-collapse: collapse;
+	vertical-align: middle;
+}
+
+thead {
+    vertical-align: middle;
+    background-color: rgb(216, 216, 216);
+}
+
+tbody {
+    vertical-align: top;
+}
+
+tr {
+	border: 1px solid grey;
+}
+
+td {
+	padding: 5px;
+}
