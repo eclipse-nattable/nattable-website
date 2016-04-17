@@ -594,6 +594,18 @@ public class DoubleFunction
 		not rendered because of rounding issues related to 1px grid lines.
 	</li>
 	<li>
+		<b>Auto resizing</b><br/>
+		The <span class="code">AutoResizeHelper</span> was introduced to perform in-memory pre-rendering. It is used to perform auto-resizing
+		with <span class="code">ICellPainter</span> that are configured to calculate the row height or column width based on the content.
+		<p>
+			The usage of the <span class="code">AutoResizeHelper</span> is important for printing if such dynamic size calculation painters are used
+			and is therefore executed by the <span class="code">LayerPrinter</span>.
+		</p>
+		<p>
+			<div class="codeBlock">AutoResizeHelper<br>&nbsp;&nbsp;&nbsp;&nbsp;.autoResize(natTable, natTable.getConfigRegistry());</div>
+		</p>
+	</li>
+	<li>
 		<b>Filterable comboboxes</b><br/>
 		The <span class="code">NatCombo</span> and the combo box cell editors that are based on <span class="code">NatCombo</span> now support filters 
 		similar to filterable viewers in JFace. Thanks to Ryan McHale who contributed that feature.
