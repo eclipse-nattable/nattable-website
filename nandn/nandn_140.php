@@ -1812,6 +1812,21 @@ void handleSelection(
 	</li>
 	<li>
 		<b>Extended Print Support</b><br/>
+		The following modifications and extension where added to the print function of NatTable:
+		<ul>
+			<li>
+				<i>Pre-rendering</i><br>
+				By default the new in-memory pre-rendering is enabled to ensure that content painters that dynamically calculate the row height or
+				content width based on the content of the cell trigger the resize before printing. This behavior can be disabled via 
+				<span class="code">LayerPrinter#disablePreRendering()</span> and enabled via <span class="code">LayerPrinter#enablePreRendering()</span>. 
+			</li>
+			<li>
+				<i>Increased grid line width</i><br>
+				On printing the grid line width will be increased to 2px in case no other explicit configuration is applied. This setting will be decreased
+				again afterwards. The increase of the grid line width is necessary to correct printing issues where grid lines where sometimes not 
+				rendered because of rounding issues.
+			</li>
+		</ul>
 	</li>
 </ul>
 </div>
