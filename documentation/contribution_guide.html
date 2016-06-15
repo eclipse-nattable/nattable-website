@@ -12,16 +12,12 @@
 			<div class="content">
 				<p>The development tools with minimum versions that are used by the NatTable team are: 
 					<ul>
-						<li>JDK 1.6</li>
-						<li>Eclipse 3.5</li>
-						<li>Maven 3 with Tycho</li>
+						<li>JDK 1.8</li>
+						<li>Eclipse 4.5</li>
+						<li>Maven 3.3 with Tycho 0.25</li>
 						<li>Git</li>
 						<li>Gerrit</li>
 					</ul>
-				</p>
-				<p>
-					You can of course use a newer version of Eclipse, which is what the project team members are also doing.
-					The dependency to Eclipse 3.5 is later set via target platform.
 				</p>
 			</div>
 		</div>
@@ -61,10 +57,14 @@
 				<ul>
 					<li>org.eclipse.nebula.widgets.nattable.core - NatTable Core code
 					<li>org.eclipse.nebula.widgets.nattable.core.test - NatTable Core test code
+					<li>org.eclipse.nebula.widgets.nattable.extension.e4 - NatTable extensions for Eclipse 4
 					<li>org.eclipse.nebula.widgets.nattable.extension.glazedlists - NatTable extensions for GlazedLists
 					<li>org.eclipse.nebula.widgets.nattable.extension.glazedlists.test - NatTable extensions for GlazedLists tests
+					<li>org.eclipse.nebula.widgets.nattable.extension.nebula - NatTable extensions for Nebula
 					<li>org.eclipse.nebula.widgets.nattable.extension.poi - NatTable extensions for Apache POI
 					<li>org.eclipse.nebula.widgets.examples - NatTable example application containing several examples
+					<li>org.eclipse.nebula.widgets.examples.e4 - NatTable examples for Eclipse 4
+					<li>org.eclipse.nebula.widgets.examples.e4.product - NatTable examples application as Eclipse 4 application
 				</ul>
 				</p>
     
@@ -86,8 +86,9 @@
 
 				<h5>Java Requirements</h5>
 				<p>
-					NatTable has a Java 6 and Eclipse Platform 3.5 (Galileo) as minimum requirements, 
-					so dependencies to newer Java and platform versions must be avoided. 
+					NatTable Core has a Java 6 and Eclipse Platform 3.5 (Galileo) as minimum requirements, 
+					so dependencies to newer Java and platform versions must be avoided. The Nebula extension 
+					has a dependency to Java 7 and Eclipse Luna, the E4 extension even requires Java 8 and Eclipse Neon.
 				</p>
 
 				<h5>Dependencies</h5>
@@ -129,7 +130,7 @@
 				</p>
 				<p>
 					From here on out the API tooling will highlight your code when your changes exceed the current margin given by the 
-					snapshot version (e.g. while working on the 1.3 snapshot with the <i>NatTable 1.2</i> baseline, major API changes will 
+					snapshot version (e.g. while working on the 1.5 snapshot with the <i>NatTable 1.4</i> baseline, major API changes will 
 					be marked as errors in the IDE). 
 					More information about the API tooling can be found <a href="http://wiki.eclipse.org/PDE/API_Tools/User_Guide">here</a>.
 				</p>
@@ -151,9 +152,11 @@
 		<div class="chapter">
 			<h4>Build</h4>
 			<div class="content">
-				<p>To build from the command line, you need to execute the following command from the <i>NATTABLE_TRUNK/nattable</i> directory:</p>
+				<p>
+				The NatTable build is based on pomless Tycho.
+				To build from the command line, you need to execute the following command from the <i>NATTABLE_TRUNK/nattable</i> directory:</p>
 
-				<p><span class="code">mvn -f org.eclipse.nebula.widgets.nattable.parent/pom.xml clean install</span></p>
+				<p><span class="code">mvn clean verify</span></p>
 				
 				<p>
 					After the build successfully finished, you will find an Update Site archive in 
