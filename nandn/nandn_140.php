@@ -1829,6 +1829,7 @@ void handleSelection(
 		</ul>
 	</li>
 </ul>
+	</div>
 </div>
 
 <div id="rightcolumn">

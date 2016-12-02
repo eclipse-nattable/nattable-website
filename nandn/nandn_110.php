@@ -7,7 +7,7 @@
  * http://www.eclipse.org/legal/epl-v10.html
  *
  * Contributors:
- *    Dirk Fauth <dirk.fauth@gmail.com> - initial API and implementation
+ *    Dirk Fauth <dirk.fauth@googlemail.com> - initial API and implementation
  *******************************************************************************/ 
 
 	$pageKeywords	= "eclipse, project, nattable, grid";
@@ -298,6 +298,7 @@ configRegistry.registerConfigAttribute(
 		in the src root folder so it gets re-created. This is necessary because the examples structure has changed!
 	</li>
 </ul>
+	</div>
 </div>
 
 <div id="rightcolumn">

@@ -362,6 +362,7 @@ configRegistry.registerConfigAttribute(
 		See <a href="http://mailinator.blogspot.ch/2009/06/beautiful-race-condition.html">here</a> for a more detailed description on that issue.
 	</li>
 </ul>
+	</div>
 </div>
 
 <div id="rightcolumn">

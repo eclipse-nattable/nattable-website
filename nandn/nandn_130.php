@@ -62,6 +62,7 @@ requested by the community in order to make the NatTable API more extensible.</p
 		OSGi semantic versioning.
 	</li>
 </ul>
+	</div>
 </div>
 
 <div id="rightcolumn">
