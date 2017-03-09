@@ -40,8 +40,44 @@ Despite the enhancements and new features there are numerous bugfixes related to
 <ul>
 	<li>Several modifications were made to increase the extensibility of NatTable.
 	Some additional methods are added and the visibility of some existing methods is increased. 
-	There are no breaking changes, so existing code should work unchanged.<br>
+	Existing code should work unchanged.<br>
 	The details can be found in the <i>Enhancements and new features</i> section.
+	</li>
+	<li>
+	Since Eclipse Oxygen M5 added fields are also reported as API break. The reason is that adopters that extend such classes might themselves added new fields with the same name.
+	Therefore adding a field with the same name in the base class could lead to issues in the sub-class. The NatTable project did never consider adding new public or protected fields
+	to a class as a breaking change, and therefore it was used widely to extend the functionality. In order to help adopters to check if they would be affected, we list the added fields
+	here. The explanations can be taken from the sections below.
+	<ul>
+	<li><span class="code">AbstractTextPainter#lineSpacing</span></li>
+	<li><span class="code">AbstractTextPainter#wordWrapping</span></li>
+	<li><span class="code">AutoResizeHelper#prevArea</span></li>
+	<li><span class="code">ColumnReorderLayer#indexPositionMapping</span></li>
+	<li><span class="code">DefaultNatTableThemeConfiguration#copyBorderStyle</span></li>
+	<li><span class="code">DefaultNatTableThemeConfiguration#fillHandleBorderStyle</span></li>
+	<li><span class="code">DefaultNatTableThemeConfiguration#fillHandleColor</span></li>
+	<li><span class="code">DefaultNatTableThemeConfiguration#fillHandleRegionBorderStyle</span></li>
+	<li><span class="code">FileOutputStreamProvider#extFilterIndex</span></li>
+	<li><span class="code">NatExporter#exportSucceeded</span></li>
+	<li><span class="code">NatExporter#openResult</span></li>
+	<li><span class="code">NatExporter#preRender</span></li>
+	<li><span class="code">NatTable#eventListenerLock</span></li>
+	<li><span class="code">PopupMenuBuilder#EXPORT_IMAGE_MENU_ITEM_ID</span></li>
+	<li><span class="code">RichTextCellEditor#editorConfiguration</span></li>
+	<li><span class="code">RichTextCellPainter#calculateByTextHeight</span></li>
+	<li><span class="code">RichTextCellPainter#calculateByTextLength</span></li>
+	<li><span class="code">RowReorderLayer#indexPositionMapping</span></li>
+	</ul>
+	</li>
+</ul>
+
+<h3>Behavioural changes</h3>
+<ul>
+	<li>We added auto-scrolling support for column and row reordering, cell selection and fill handle dragging.
+	For column reordering the existing behavior so far was to start auto-scrolling if the mouse cursor was moved on dragging to the
+	table edges, where the area was about 10 pixels that triggered auto-scrolling. Instead the auto-scrolling is now triggered if you move to
+	the borders, where the area has increased to 25 pixels, where the amount of pixels is scaled to the DPI settings of the screen. Additionally
+	the scrolling speed is increased the more the mouse cursor moves over the border of the table.
 	</li>
 </ul>
 
