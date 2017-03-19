@@ -1,25 +1,25 @@
 <div id="midcolumn">
-	<h3>FAQ</h3>
+	<h2>FAQ</h2>
 	
 	<div id="doccontent">
 		<div class="chapter">
-			<h5>General Questions</h5>
+			<h3>General Questions</h3>
 			
-			<h6>Why is it called NatTable?</h6>
+			<h4>Why is it called NatTable?</h4>
 			<p>NatTable was originally written by Andy Tsoi and dedicated to his girlfriend, Natalie.</p>
 			<p>We also sometimes think of 'Nat' as an acronym for 'Not A Table' given that it's really
 				more of a data grid, or a tool for building tables/grids.</p>
 			
-			<h6>How much data can you put behind it?</h6>
+			<h4>How much data can you put behind it?</h4>
 			<p>As much as you want, pretty much. The only practical limit right now is that the number 
 			of columns, rows, width and height of your table must be able to be represented as 32-bit 
 			integers. We test against virtual data sets of 1 million columns by 1 million rows.</p>
 		</div>
 		
 		<div class="chapter">
-			<h5>How To...</h5>
+			<h3>How To...</h3>
 			
-			<h6>How to create ComboBoxCellEditors with dynamic content?</h6>
+			<h4>How to create ComboBoxCellEditors with dynamic content?</h4>
 			<p>
 				You can either create an instance of <span class="code">ComboBoxCellEditor</span> with a given list of values 
 				(which results in a static combobox) or with an instance of a custom <span class="code">IComboBoxDataProvider</span>. 
@@ -60,7 +60,7 @@ configRegistry.registerConfigAttribute(
 
 			</p>
 			
-			<h6>How to autoresize columns/rows programmatically?</h6>
+			<h4>How to autoresize columns/rows programmatically?</h4>
 			<p>
 				NatTable supports the autoresize feature on double clicking cell edges. Unfortunately the
 				existing commands related to that feature doesn't work if they are fired programmatically
@@ -190,10 +190,10 @@ natTable.addOverlayPainter(new IOverlayPainter() {
 				support that either and leave the sizing of columns/rows to the user who is looking at it.
 			</p>
 			
-			<h6>How to add NatTable commands to eclipse menus?</h6>
+			<h4>How to add NatTable commands to eclipse menus?</h4>
 			TODO
 			
-			<h6>How to access NatTable icons?</h6>
+			<h4>How to access NatTable icons?</h4>
 			TODO
 		</div>
 	</div>

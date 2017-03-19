@@ -1,5 +1,5 @@
 <div id="midcolumn">
-	<h3>Contribution Guide</h3>
+	<h2>Contribution Guide</h2>
 	<div>
 		<p>
 			You can download the source code and contribute bugfixes or enhancements to NatTable. 
@@ -8,7 +8,7 @@
 	</div>
 	<div id="doccontent">
 		<div class="chapter">
-			<h4>Environment</h4>
+			<h3>Environment</h3>
 			<div class="content">
 				<p>The development tools with minimum versions that are used by the NatTable team are: 
 					<ul>
@@ -22,12 +22,12 @@
 			</div>
 		</div>
 		<div class="chapter">
-			<h4>Obtaining sources and importing projects into Eclipse</h4>
+			<h3>Obtaining sources and importing projects into Eclipse</h3>
 			<div class="content">
 				The NatTable sources are hosted in Git. To get the sources you need to clone the repository either via
 				command line or via EGit Eclipse integration.
 
-				<h5>Cloning via command line</h5>
+				<h4>Cloning via command line</h4>
 				<p>Change to the directory where you want to store the local working copy of the NatTable repository (NATTABLE_REPO).</p>
 				<p>Clone the repository to that directory by executing the following Git command:</p>
 				<p><span class="code">git clone ssh://git.eclipse.org/gitroot/nattable/org.eclipse.nebula.widgets.nattable.git</span></p>
@@ -40,7 +40,7 @@
 				    <li>Finish</li>
 				</ul>
 
-				<h5>Cloning via EGit</h5>
+				<h4>Cloning via EGit</h4>
 				<p>First, verify that the default repository folder as set on the main Git preference page is to your liking.</p>
 				<p>Then, clone the repository and import the projects: </p>
 				<ul>
@@ -52,7 +52,7 @@
 				    <li>Import existing projects into the workspace from the newly created working directory </li>
 				</ul>
 				
-				<h5>Source code organization</h5>
+				<h4>Source code organization</h4>
 				<p>The NatTable source is divided into the following main projects:
 				<ul>
 					<li>org.eclipse.nebula.widgets.nattable.core - NatTable Core code
@@ -76,22 +76,22 @@
 		</div>
 		
 		<div class="chapter">
-			<h4>Development IDE Configuration</h4>
+			<h3>Development IDE Configuration</h3>
 			<div class="content">
-				<h5>Tools</h5>
+				<h4>Tools</h4>
 				<p>
 					Although not required you might want to install m2e together with the Tycho connector in order
 					to be able to build out of the IDE. This step is optional.
 				</p>
 
-				<h5>Java Requirements</h5>
+				<h4>Java Requirements</h4>
 				<p>
 					NatTable Core has a Java 6 and Eclipse Platform 3.5 (Galileo) as minimum requirements, 
 					so dependencies to newer Java and platform versions must be avoided. The Nebula extension 
 					has a dependency to Java 7 and Eclipse Luna, the E4 extension even requires Java 8 and Eclipse Neon.
 				</p>
 
-				<h5>Dependencies</h5>
+				<h4>Dependencies</h4>
 				<p>
 					After importing the NatTable projects in Eclipse, they will not compile due to missing dependencies.
 					NatTable provides a target platform definition that should be activated in order to resolve the
@@ -113,7 +113,7 @@
 					cache and re-download the artifacts listed in the target platform.
 				</p>
 				
-				<h5>API Baseline</h5>
+				<h4>API Baseline</h4>
 				<p>
 					After importing the NatTable projects you should setup the API baseline if you intend to make changes to the code. 
 					This will help you detect the <i>gravity</i> of the changes you are making (major, minor, micro) according to
@@ -139,7 +139,7 @@
 					while <i>minor</i> changes (new APIs) need a more elaborate release process. Currently, <i>major</i> changes will be generally rejected.
 				</p>
 				
-				<h5>Workspace Preferences</h5>
+				<h4>Workspace Preferences</h4>
 				<p>
 					Ensure to set the text file encoding to UTF-8.
 					<ul>
@@ -150,7 +150,7 @@
 			</div>
 		</div>
 		<div class="chapter">
-			<h4>Build</h4>
+			<h3>Build</h3>
 			<div class="content">
 				<p>
 				The NatTable build is based on pomless Tycho.
@@ -170,7 +170,7 @@
 			</div>
 		</div>
 		<div class="chapter">
-			<h4>Contributing Patches</h4>
+			<h3>Contributing Patches</h3>
 			<div class="content">
 				<p>
 					We use Gerrit for reviewing and accepting patches. Please have a look at the 
