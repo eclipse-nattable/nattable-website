@@ -470,7 +470,7 @@ natTable.addConfiguration(new DefaultNatTableStyleConfiguration() {
 		</p>
 		<p>
 			The NatTable Examples Application contains a new example to show the configuration and possible usage of the <span class="code">MarkupDisplayConverter</span> extension:<br>
-			<i><b>Tutorial Examples -&gt; GlazedLists -&gt; Filter -&gt; SingleFieldFilterExample/b></i>
+			<i><b>Tutorial Examples -&gt; GlazedLists -&gt; Filter -&gt; SingleFieldFilterExample</b></i>
 		</p>
 		<p>
 			<img align="middle" src="../images/single_field_filter.png" border="0" alt="Single Field Filter Example"/>
