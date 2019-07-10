@@ -14,11 +14,19 @@
 					<ul>
 						<li>JDK 1.8</li>
 						<li>Eclipse 4.5</li>
-						<li>Maven 3.3 with Tycho 0.25</li>
+						<li>Maven 3.3 with Tycho 1.0.0</li>
 						<li>Git</li>
 						<li>Gerrit</li>
 					</ul>
 				</p>
+			</div>
+		</div>
+		<div class="chapter">
+			<h3>Gerrit server configuration</h3>
+			<div class="content">
+				To be able to contribute to the project, patches need to be provided via Gerrit. You therefore need a Gerrit account and configure
+				the authentication there. This is explained for example 
+				<a href="https://www.vogella.com/tutorials/EclipsePlatformDevelopment/article.html#exericse-eclipse-user-creation-and-gerrit-server-configuration" target="blank">here</a>.
 			</div>
 		</div>
 		<div class="chapter">
@@ -30,7 +38,7 @@
 				<h4>Cloning via command line</h4>
 				<p>Change to the directory where you want to store the local working copy of the NatTable repository (NATTABLE_REPO).</p>
 				<p>Clone the repository to that directory by executing the following Git command:</p>
-				<p><span class="code">git clone ssh://git.eclipse.org/gitroot/nattable/org.eclipse.nebula.widgets.nattable.git</span></p>
+				<p><span class="code">git clone ssh://&lt;user_id&gt;@git.eclipse.org:29418/nattable/org.eclipse.nebula.widgets.nattable</span></p>
 				<p>After that, import the projects into Eclipse</p>
 				<ul>
 				    <li>File -> Import</li>
@@ -48,7 +56,7 @@
 				    <li>Git -> Projects from Git</li>
 				    <li>Select <i>Clone URI</i></li>
 				    <li>Enter the URI <br>
-				    	<span class="code">ssh://git.eclipse.org/gitroot/nattable/org.eclipse.nebula.widgets.nattable.git</span></li>
+				    	<span class="code">ssh://&lt;user_id&gt;@git.eclipse.org:29418/nattable/org.eclipse.nebula.widgets.nattable</span></li>
 				    <li>Import existing projects into the workspace from the newly created working directory </li>
 				</ul>
 				
@@ -187,6 +195,34 @@
 							</ul>
 						</li>
 					</ul>
+			</div>
+		</div>
+		<div class="chapter">
+			<h3>Contributing to the NatTable website</h3>
+			<div class="content">
+				<p>
+					To contribute to the website the following repositories need to be cloned:</a>
+					<ul>
+						<li><span class="code">git clone ssh://&lt;user_id&gt;@git.eclipse.org:29418/www.eclipse.org/nattable</span></li>
+						<li><span class="code">git clone ssh://&lt;user_id&gt;@git.eclipse.org:29418/www.eclipse.org/eclipse.org-common</span></li>
+					</ul>
+				</p>
+				<p>
+					To test locally we recommend a local webserver installation with PHP support, e.g. <a href="https://www.apachefriends.org/de/index.html" target="_blank">XAMPP</a>.
+				</p>
+				<p>
+					If XAMPP is used, ensure that the two cloned repositories are accessible in the webserver. This can be done for example by
+					setting symbolic links in the <i>htdocs</i> directory of XAMPP.
+					<ul>
+						<li>Open a Windows console as Administrator</li>
+						<li>Change directory: <span class="code">&lt;install_dir&gt;\xampp\htdocs</span></li>
+						<li><span class="code">mklink /D nattable &lt;clone_dir&gt;\nattable</span></li>
+						<li><span class="code">mklink /D "eclipse.org-common" &lt;clone_dir&gt;\eclipse.org-common</span></li>
+					</ul>
+				</p>
+				<p>
+					Once the symbolic links are in place, start XAMPP via control center and open <i>localhost/nattable</i> in a browser.
+				</p>
 			</div>
 		</div>
 		
