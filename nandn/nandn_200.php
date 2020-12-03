@@ -142,6 +142,7 @@ In this section the API additions that resulted from the Sonar analysis results 
 		<p>
 			<ul>
 				<li><span class="code">BodyMenuConfigurationNatTable, ILayer)</span></li>
+				<li><span class="code">ColumnGroupGroupHeaderLayer</span> - Removed the unused <span class="code">SelectionLayer</span> parameter</li>
 				<li><span class="code">ColumnGroupHeaderTextPainter</span> - All constructors with <span class="code">ColumnGroupModel</span> parameter</li>
 				<li><span class="code">ColumnReorderEvent</span> - All constructors without explicit index parameters</li>
 				<li><span class="code">ColumnSelectionEvent(SelectionLayer, int)</span></li>
@@ -191,6 +192,78 @@ In this section the API additions that resulted from the Sonar analysis results 
 			<ul>
 				<li><span class="code">ComboBoxFilterRowConfiguration(ICellEditor, ImagePainter)</span></li>
 				<li><span class="code">HierarchicalWrapper(HierarchicalWrapper)</span></li>
+			</ul>
+		</p>
+	</li>
+	<li>
+		<b>Modified helper classes and constants interfaces</b><br/>
+		<p>
+			According to best practices all helper classes with static helper methods are now final and have a private default constructor to avoid sub-classing and instantiating.
+			Additionally all constants interfaces are changed to constants classes to avoid that these interfaces are implemented.
+		</p>
+		<p>
+			If the helper classes and constants interfaces were used as intended, this change should not affect users. If those classes were extended or the interfaces implemented (which was never the intended usage) you will need to adjust your code.
+		</p>
+		<p>
+			At least two changes will cause compilation errors if you are using the according feature:
+			<ul>
+				<li><span class="code">RowOnlySelectionConfiguration</span> - removed the unnecessary generic</li>
+				<li><span class="code">FreezeConfigAttributes</span> - renamed to <span class="code">FreezeConfigAttributes</span></li>
+			</ul>
+		</p>
+		<p>
+			The following list contains all modified interfaces and classes:
+		</p>
+		<p>
+			<ul>
+				<li><span class="code">ArrayUtil</span></li>
+				<li><span class="code">BlinkConfigAttributes</span></li>
+				<li><span class="code">CellConfigAttributes</span></li>
+				<li><span class="code">CellDisplayConversionUtils</span></li>
+				<li><span class="code">CellDisplayValueSearchUtil</span></li>
+				<li><span class="code">CellEdgeDetectUtil</span></li>
+				<li><span class="code">CellEditDialogFactory</span></li>
+				<li><span class="code">CellStyleAttributes</span></li>
+				<li><span class="code">ColorPersistor</span></li>
+				<li><span class="code">ColumnChooserUtils</span></li>
+				<li><span class="code">ColumnGroupUtils</span></li>
+				<li><span class="code">EditConfigAttributes</span></li>
+				<li><span class="code">EditConfigHelper</span></li>
+				<li><span class="code">EditConstants</span></li>
+				<li><span class="code">EditController</span></li>
+				<li><span class="code">ExportConfigAttributes</span></li>
+				<li><span class="code">FillHandleConfigAttributes</span></li>
+				<li><span class="code">FilterRowConfigAttributes</span></li>
+				<li><span class="code">FilterRowUtils</span></li>
+				<li><span class="code">FreezeHelper</span></li>
+				<li><span class="code">GraphicsUtils</span></li>
+				<li><span class="code">GridRegion</span></li>
+				<li><span class="code">GroupByConfigAttributes</span></li>
+				<li><span class="code">GUIHelper</span></li>
+				<li><span class="code">IFreezeConfigAttributes</span></li>
+				<li><span class="code">InvertUtil</span></li>
+				<li><span class="code">LayerCommandUtil</span></li>
+				<li><span class="code">LayerUtil</span></li>
+				<li><span class="code">MaxCellBoundsHelper</span></li>
+				<li><span class="code">MenuItemProviders</span></li>
+				<li><span class="code">Mode</span></li>
+				<li><span class="code">MouseEventHelper</span></li>
+				<li><span class="code">NatTableCSSConstants</span></li>
+				<li><span class="code">NatTableCSSHelper</span></li>
+				<li><span class="code">ObjectUtils</span></li>
+				<li><span class="code">PersistenceHelper</span></li>
+				<li><span class="code">PersistenceUtils</span></li>
+				<li><span class="code">PrintConfigAttributes</span></li>
+				<li><span class="code">RowGroupUtils</span></li>
+				<li><span class="code">SelectionConfigAttributes</span></li>
+				<li><span class="code">SelectionStyleLabels</span></li>
+				<li><span class="code">SelectionUtils</span></li>
+				<li><span class="code">SortConfigAttributes</span></li>
+				<li><span class="code">StructuralChangeEventHelper</span></li>
+				<li><span class="code">StylePersistor</span></li>
+				<li><span class="code">SummaryRowConfigAttributes</span></li>
+				<li><span class="code">TickUpdateConfigAttributes</span></li>
+				<li><span class="code">TreeConfigAttributes</span></li>
 			</ul>
 		</p>
 	</li>
@@ -342,6 +415,76 @@ The following features were added to NatTable:
 		<p>
 		The <span class="code">LabelStack</span> is now a <span class="code">Collection</span>. With this it is possible to directly operate on the <span class="code">LabelStack</span> and it is not necessary
 		to use <span class="code">LabelStack#getLabels()</span> anymore, which was deprecated with this change.
+		</p>
+	</li>
+	<li>
+		<b><span class="code">DisplayMode</span> is now an enumeration</b><br/>
+		<p>
+			The <span class="code">DisplayMode</span> is used to determine the cell state (normal, selected, hovered, edit). It was for historical reasons a String that was defined in a constants class.
+			This was limiting the handling and also caused issues if people where using Strings instead of the pre-defined constants, as only those constants are handled internally. We therefore decided
+			to change the String constants into an enumeration to make the API more intuitive. Additionally we can now internally use <span class="code">EnumMap</span> to increase performance when searching 
+			for values in the <span class="code">ConfigRegistry.</span> 
+		</p>
+		<p>
+			Most users should not be affected by this change. Only users that create custom layers and do not extend the existing abstract implementations will have to adjust <span class="code">getDisplayModeByPosition(int, int)</span>
+			to return <span class="code">DisplayMode</span> instead of <span class="code">String</span>.
+		</p>
+		<p>
+			The following classes/interfaces were changed for the implementation:
+			<ul>
+				<li><span class="code">AbstractIndexLayerTransform</span></li>
+				<li><span class="code">AbstractLayer</span></li>
+				<li><span class="code">AbstractLayerCell</span></li>
+				<li><span class="code">AbstractLayerTransform</span></li>
+				<li><span class="code">CellStyleProxy</span></li>
+				<li><span class="code">CellStyleUtil</span></li>
+				<li><span class="code">ConfigRegistry</span></li>
+				<li><span class="code">DefaultDisplayModeOrdering</span></li>
+				<li><span class="code">DisplayMode</span></li>
+				<li><span class="code">IConfigRegistry</span></li>
+				<li><span class="code">IDisplayModeOrdering</span></li>
+				<li><span class="code">ILayer</span></li>
+				<li><span class="code">ILayerCell</span></li>
+				<li><span class="code">NatTableCSSHelper</span></li>
+				<li><span class="code">StyleProxy</span></li>
+			</ul>
+			... and all <span class="code">ILayer</span> and <span class="code">ILayerCell</span> implementations that override <span class="code">ILayer#getDisplayModeByPosition(int, int)</span>/<span class="code">ILayerCell#getDisplayMode()</span>
+		</p>
+	</li>
+	<li>
+		<b><span class="code">Mode</span> is now an enumeration</b><br/>
+		<p>
+			The <span class="code">Mode</span> is used to switch between UI interaction modes, like from click to drag. As the classes in charge are only used internally, this should not affect users.
+		</p>
+		<p>
+			The following classes were changed for the implementation:
+			<ul>
+				<li><span class="code">AbstractModeEventHandler</span></li>
+				<li><span class="code">Mode</span></li>
+				<li><span class="code">ModeSupport</span></li>
+			</ul>
+		</p>
+	</li>
+	<li>
+		<b><span class="code">ISearchDirection</span> is now an enumeration</b><br/>
+		<p>
+			The <span class="code">ISearchDirection</span> is used internally while searching for values in a NatTable. As there are only two directions possible, we changed the String constants into an enumeration.
+			To follow the Java naming conventions we also renamed it to <span class="code">SearchDirection</span>.
+		</p>
+		<p>
+			Users should only be affected by this change if they implemented custom search strategies or trigger <span class="code">SearchCommand</span>s programmatically.
+		</p>
+		<p>
+			The following classes were changed for the implementation:
+			<ul>
+				<li><span class="code">AbstractSearchStrategy</span></li>
+				<li><span class="code">ColumnSearchStrategy</span></li>
+				<li><span class="code">GridSearchStrategy</span></li>
+				<li><span class="code">RowSearchStrategy</span></li>
+				<li><span class="code">SearchCommand</span></li>
+				<li><span class="code">SearchDirection</span></li>
+				<li><span class="code">SelectionSearchStrategy</span></li>
+			</ul>
 		</p>
 	</li>
 	<li>
