@@ -325,6 +325,9 @@ The following features were added to NatTable:
 		<p>
 			The blog post <a href="http://blog.vogella.com/2020/06/25/nattable-eclipse-collections-performance-memory-improvements/">NatTable + Eclipse Collections = Performance & Memory improvements ?</a> explains the details.
 		</p>
+		<p>
+			We also noticed that the performance of the <span class="code">ListDataProvider</span> improves if a <span class="code">MutableList</span> is used as the input <span class="code">List</span> instead of an <span class="code">ArrayList</span> that is used mostly in our examples.
+		</p>
 	</li>
 	<li>
 		<b>Dynamic scaling at runtime</b><br/>
