@@ -497,7 +497,8 @@ The following features were added to NatTable:
 		Before the whole <span class="code">ISpanningDataProvider</span> interface needed to be implemented. 
 		</p>
 		<p>
-			<div class="codeBlock">ISpanningDataProvider dataProvider = new WrappingSpanningDataProvider(bodyDataProvider) {
+			<div class="codeBlock">ISpanningDataProvider dataProvider 
+    = new WrappingSpanningDataProvider(bodyDataProvider) {
 
     @Override
     public DataCell getCellByPosition(int columnPosition, int rowPosition) {
@@ -543,7 +544,8 @@ DefaultGlazedListsStaticFilterStrategy<ExtendedPersonWithAddress> filterStrategy
                 columnPropertyAccessor,
                 configRegistry);
 // connect row hide/show with filtering
-filterStrategy.addStaticFilter(bodyLayerStack.getRowHideShowLayer().getHideRowMatcherEditor());</div>
+filterStrategy.addStaticFilter(
+    bodyLayerStack.getRowHideShowLayer().getHideRowMatcherEditor());</div>
 		<p>
 			The following example shows the usage:<br>
 			<i><b>Tutorial Examples -&gt; Integration -&gt; EditableSortableGroupByWithFilterExample</b></i><br>
@@ -562,7 +564,8 @@ filterStrategy.addStaticFilter(bodyLayerStack.getRowHideShowLayer().getHideRowMa
 		</p>
 		<p>
 			<div class="codeBlock">// register a date converter for the birthday column
-DefaultDateDisplayConverter converter = new DefaultDateDisplayConverter("yyyy-MM-dd");
+DefaultDateDisplayConverter converter 
+    = new DefaultDateDisplayConverter("yyyy-MM-dd");
 configRegistry.registerConfigAttribute(
         CellConfigAttributes.DISPLAY_CONVERTER,
         converter,
