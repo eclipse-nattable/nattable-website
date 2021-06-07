@@ -44,7 +44,7 @@ The following update site is at the time writing this document the latest recomm
 <li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/2.0.0/repository/">http://download.eclipse.org/nattable/releases/2.0.0/repository/</a> (<a href="/downloads/download.php?file=/nattable/releases/2.0.0/repository.zip">repository.zip</a>)</li>
 <li>Examples:
 <ul>
-<li><a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.0.0/NatTableExamples-2.0.0.jar">NatTableExamples-2.0.0.jar</a></li>
+<li><a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.0.0/NatTableExamples.jar">NatTableExamples.jar</a></li>
 <li><a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.0.0/org.eclipse.nebula.widgets.nattable.examples.e4.product-linux.gtk.x86_64.tar.gz">Linux GTK x86_64</a></li>
 <li><a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.0.0/org.eclipse.nebula.widgets.nattable.examples.e4.product-macosx.cocoa.x86_64.tar.gz">Mac OSX Cocoa x86_64</a></li>
 <li><a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.0.0/org.eclipse.nebula.widgets.nattable.examples.e4.product-win32.win32.x86_64.zip">Windows x86_64</a></li>
@@ -58,7 +58,7 @@ The following update site is at the time writing this document the latest recomm
 <li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/1.6.0/repository/">http://download.eclipse.org/nattable/releases/1.6.0/repository/</a> (<a href="/downloads/download.php?file=/nattable/releases/1.6.0/repository.zip">repository.zip</a>)</li>
 <li>Examples:
 <ul>
-<li><a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.6.0/NatTableExamples-1.6.0.jar">NatTableExamples-1.6.0.jar</a></li>
+<li><a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.6.0/NatTableExamples.jar">NatTableExamples.jar</a></li>
 <li><a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.6.0/org.eclipse.nebula.widgets.nattable.examples.e4.product-linux.gtk.x86.tar.gz">Linux GTK x86</a></li>
 <li><a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.6.0/org.eclipse.nebula.widgets.nattable.examples.e4.product-linux.gtk.x86_64.tar.gz">Linux GTK x86_64</a></li>
 <li><a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.6.0/org.eclipse.nebula.widgets.nattable.examples.e4.product-macosx.cocoa.x86_64.tar.gz">Mac OSX Cocoa x86_64</a></li>
@@ -74,7 +74,7 @@ The following update site is at the time writing this document the latest recomm
 <li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/1.5.0/repository/">http://download.eclipse.org/nattable/releases/1.5.0/repository/</a> (<a href="/downloads/download.php?file=/nattable/releases/1.5.0/repository.zip">repository.zip</a>)</li>
 <li>Examples:
 <ul>
-<li><a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.5.0/NatTableExamples-1.5.0.jar">NatTableExamples-1.5.0.jar</a></li>
+<li><a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.5.0/NatTableExamples.jar">NatTableExamples.jar</a></li>
 <li><a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.5.0/org.eclipse.nebula.widgets.nattable.examples.e4.product-linux.gtk.x86.tar.gz">Linux GTK x86</a></li>
 <li><a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.5.0/org.eclipse.nebula.widgets.nattable.examples.e4.product-linux.gtk.x86_64.tar.gz">Linux GTK x86_64</a></li>
 <li><a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.5.0/org.eclipse.nebula.widgets.nattable.examples.e4.product-macosx.cocoa.x86_64.tar.gz">Mac OSX Cocoa x86_64</a></li>
