@@ -35,6 +35,12 @@ Despite the enhancements and new features there are several bugfixes related to 
 <p>Almost every change in code is tracked via ticket in Bugzilla, so if you are curious about the details and all the bugs that are fixed and enhancements that were added with the 2.2.0 release, have a look 
 <a href="https://bugs.eclipse.org/bugs/buglist.cgi?classification=Technology&list_id=8836815&product=NatTable&query_format=advanced&resolution=FIXED&target_milestone=2.2.0">here</a>.</p>
 
+<h3>Maven Central</h3>
+<p>
+Because of a mistake in the publishing process, the 2.2.0 artefacts in Maven Central are incorrect. To consume the correct NatTable 2.2.0 artefacts, you
+need to consume version 2.2.0.1, e.g. <a href="https://repo1.maven.org/maven2/org/eclipse/nebula/widgets/nattable/org.eclipse.nebula.widgets.nattable.core/2.2.0.1/>NatTable Core 2.2.0.1</a>". 
+</p>
+
 <h3>API changes</h3>
 <ul>
 	<li>
