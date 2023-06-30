@@ -38,7 +38,7 @@ Despite the enhancements and new features there are several bugfixes related to 
 <h3>Maven Central</h3>
 <p>
 Because of a mistake in the publishing process, the 2.2.0 artefacts in Maven Central are incorrect. To consume the correct NatTable 2.2.0 artefacts, you
-need to consume version 2.2.0.1, e.g. <a href="https://repo1.maven.org/maven2/org/eclipse/nebula/widgets/nattable/org.eclipse.nebula.widgets.nattable.core/2.2.0.1/>NatTable Core 2.2.0.1</a>". 
+need to consume version 2.2.0.1, e.g. <a href="https://repo1.maven.org/maven2/org/eclipse/nebula/widgets/nattable/org.eclipse.nebula.widgets.nattable.core/2.2.0.1/">NatTable Core 2.2.0.1</a>". 
 </p>
 
 <h3>API changes</h3>
