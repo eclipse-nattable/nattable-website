@@ -12,7 +12,7 @@
 
 	$pageKeywords	= "eclipse, project, nattable, grid";
 	$pageAuthor		= "Dirk Fauth";
-	$pageTitle 		= "NatTable 2.1.0 - New &amp; Noteworthy";
+	$pageTitle 		= "NatTable 2.2.0 - New &amp; Noteworthy";
 	
 	$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="../style.css"/>');
 	$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="../style2.css"/>');
