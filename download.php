@@ -21,7 +21,7 @@
 <h3>NatTable 2.2.0 (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=NatTable&target_milestone=2.2.0&order=Last%20Changed">changelog</a>)</h3>
 
 <p>Release artifacts can be obtained from the following p2 repository: <a href="http://download.eclipse.org/nattable/releases/2.2.0/repository/">http://download.eclipse.org/nattable/releases/2.2.0/repository/</a></p>
-<p>A zipped p2 repository is also available here: <a href="/downloads/download.php?file=/nattable/releases/2.2.0/repository.zip">repository.zip</a></p>
+<p>A zipped p2 repository is also available here: <a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.2.0/repository.zip">repository.zip</a></p>
 
 <p>The NatTable Examples Application can be downloaded from the<br/><a href="/nattable/documentation.php?page=examples_application" title="NatTable Examples Application">NatTable Examples Application</a> page.</p>
 
@@ -41,7 +41,7 @@ The following update site is at the time writing this document the latest recomm
 
 <h4>NatTable 2.1.0 (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=NatTable&target_milestone=2.1.0&order=Last%20Changed">changelog</a>)</h4>
 <ul>
-<li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/2.1.0/repository/">http://download.eclipse.org/nattable/releases/2.1.0/repository/</a> (<a href="/downloads/download.php?file=/nattable/releases/2.1.0/repository.zip">repository.zip</a>)</li>
+<li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/2.1.0/repository/">http://download.eclipse.org/nattable/releases/2.1.0/repository/</a> (<a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.1.0/repository.zip">repository.zip</a>)</li>
 <li>Examples:
 <ul>
 <li><a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.1.0/NatTableExamples.jar">NatTableExamples.jar</a></li>
@@ -56,7 +56,7 @@ The following update site is at the time writing this document the latest recomm
 
 <h4>NatTable 2.0.5 (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=NatTable&target_milestone=2.0.5&order=Last%20Changed">changelog</a>)</h4>
 <ul>
-<li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/2.0.5/repository/">http://download.eclipse.org/nattable/releases/2.0.5/repository/</a> (<a href="/downloads/download.php?file=/nattable/releases/2.0.5/repository.zip">repository.zip</a>)</li>
+<li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/2.0.5/repository/">http://download.eclipse.org/nattable/releases/2.0.5/repository/</a> (<a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.0.5/repository.zip">repository.zip</a>)</li>
 <li>Examples:
 <ul>
 <li><a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.0.5/NatTableExamples.jar">NatTableExamples.jar</a></li>
@@ -71,7 +71,7 @@ The following update site is at the time writing this document the latest recomm
 
 <h4>NatTable 2.0.4 (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=NatTable&target_milestone=2.0.4&order=Last%20Changed">changelog</a>)</h4>
 <ul>
-<li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/2.0.4/repository/">http://download.eclipse.org/nattable/releases/2.0.4/repository/</a> (<a href="/downloads/download.php?file=/nattable/releases/2.0.4/repository.zip">repository.zip</a>)</li>
+<li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/2.0.4/repository/">http://download.eclipse.org/nattable/releases/2.0.4/repository/</a> (<a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.0.4/repository.zip">repository.zip</a>)</li>
 <li>Examples:
 <ul>
 <li><a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.0.4/NatTableExamples.jar">NatTableExamples.jar</a></li>
@@ -85,7 +85,7 @@ The following update site is at the time writing this document the latest recomm
 
 <h4>NatTable 2.0.3 (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=NatTable&target_milestone=2.0.3&order=Last%20Changed">changelog</a>)</h4>
 <ul>
-<li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/2.0.3/repository/">http://download.eclipse.org/nattable/releases/2.0.3/repository/</a> (<a href="/downloads/download.php?file=/nattable/releases/2.0.3/repository.zip">repository.zip</a>)</li>
+<li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/2.0.3/repository/">http://download.eclipse.org/nattable/releases/2.0.3/repository/</a> (<a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.0.3/repository.zip">repository.zip</a>)</li>
 <li>Examples:
 <ul>
 <li><a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.0.3/NatTableExamples.jar">NatTableExamples.jar</a></li>
@@ -99,7 +99,7 @@ The following update site is at the time writing this document the latest recomm
 
 <h4>NatTable 2.0.2 (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=NatTable&target_milestone=2.0.2&order=Last%20Changed">changelog</a>)</h4>
 <ul>
-<li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/2.0.2/repository/">http://download.eclipse.org/nattable/releases/2.0.2/repository/</a> (<a href="/downloads/download.php?file=/nattable/releases/2.0.2/repository.zip">repository.zip</a>)</li>
+<li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/2.0.2/repository/">http://download.eclipse.org/nattable/releases/2.0.2/repository/</a> (<a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.0.2/repository.zip">repository.zip</a>)</li>
 <li>Examples:
 <ul>
 <li><a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.0.2/NatTableExamples.jar">NatTableExamples.jar</a></li>
@@ -113,7 +113,7 @@ The following update site is at the time writing this document the latest recomm
 
 <h4>NatTable 2.0.1 (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=NatTable&target_milestone=2.0.1&order=Last%20Changed">changelog</a>)</h4>
 <ul>
-<li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/2.0.1/repository/">http://download.eclipse.org/nattable/releases/2.0.1/repository/</a> (<a href="/downloads/download.php?file=/nattable/releases/2.0.1/repository.zip">repository.zip</a>)</li>
+<li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/2.0.1/repository/">http://download.eclipse.org/nattable/releases/2.0.1/repository/</a> (<a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.0.1/repository.zip">repository.zip</a>)</li>
 <li>Examples:
 <ul>
 <li><a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.0.1/NatTableExamples.jar">NatTableExamples.jar</a></li>
@@ -127,7 +127,7 @@ The following update site is at the time writing this document the latest recomm
 
 <h4>NatTable 2.0.0 (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=NatTable&target_milestone=2.0.0&order=Last%20Changed">changelog</a>)</h4>
 <ul>
-<li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/2.0.0/repository/">http://download.eclipse.org/nattable/releases/2.0.0/repository/</a> (<a href="/downloads/download.php?file=/nattable/releases/2.0.0/repository.zip">repository.zip</a>)</li>
+<li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/2.0.0/repository/">http://download.eclipse.org/nattable/releases/2.0.0/repository/</a> (<a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.0.0/repository.zip">repository.zip</a>)</li>
 <li>Examples:
 <ul>
 <li><a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.0.0/NatTableExamples.jar">NatTableExamples.jar</a></li>
@@ -141,7 +141,7 @@ The following update site is at the time writing this document the latest recomm
 
 <h4>NatTable 1.6.0 (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=NatTable&target_milestone=1.6.0&order=Last%20Changed">changelog</a>)</h4>
 <ul>
-<li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/1.6.0/repository/">http://download.eclipse.org/nattable/releases/1.6.0/repository/</a> (<a href="/downloads/download.php?file=/nattable/releases/1.6.0/repository.zip">repository.zip</a>)</li>
+<li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/1.6.0/repository/">http://download.eclipse.org/nattable/releases/1.6.0/repository/</a> (<a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.6.0/repository.zip">repository.zip</a>)</li>
 <li>Examples:
 <ul>
 <li><a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.6.0/NatTableExamples.jar">NatTableExamples.jar</a></li>
@@ -157,7 +157,7 @@ The following update site is at the time writing this document the latest recomm
 
 <h4>NatTable 1.5.0 (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=NatTable&target_milestone=1.5.0&order=Last%20Changed">changelog</a>)</h4>
 <ul>
-<li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/1.5.0/repository/">http://download.eclipse.org/nattable/releases/1.5.0/repository/</a> (<a href="/downloads/download.php?file=/nattable/releases/1.5.0/repository.zip">repository.zip</a>)</li>
+<li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/1.5.0/repository/">http://download.eclipse.org/nattable/releases/1.5.0/repository/</a> (<a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.5.0/repository.zip">repository.zip</a>)</li>
 <li>Examples:
 <ul>
 <li><a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.5.0/NatTableExamples.jar">NatTableExamples.jar</a></li>
@@ -173,48 +173,48 @@ The following update site is at the time writing this document the latest recomm
 
 <h4>NatTable 1.4.0 (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=NatTable&target_milestone=1.4.0&order=Last%20Changed">changelog</a>)</h4>
 <ul>
-<li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/1.4.0/repository/">http://download.eclipse.org/nattable/releases/1.4.0/repository/</a> (<a href="/downloads/download.php?file=/nattable/releases/1.4.0/repository.zip">repository.zip</a>)</li>
+<li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/1.4.0/repository/">http://download.eclipse.org/nattable/releases/1.4.0/repository/</a> (<a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.4.0/repository.zip">repository.zip</a>)</li>
 <li>Examples: <a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.4.0/NatTableExamples-1.4.0.jar">NatTableExamples-1.4.0.jar</a></li>
 <li><a href="http://eclipse.org/nattable/nandn/nandn_140.php">New and Noteworthy</a></li>
 </ul>
 
 <h4>NatTable 1.3.0 (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=NatTable&target_milestone=1.3.0&order=Last%20Changed">changelog</a>)</h4>
 <ul>
-<li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/1.3.0/repository/">http://download.eclipse.org/nattable/releases/1.3.0/repository/</a> (<a href="/downloads/download.php?file=/nattable/releases/1.3.0/repository.zip">repository.zip</a>)</li>
+<li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/1.3.0/repository/">http://download.eclipse.org/nattable/releases/1.3.0/repository/</a> (<a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.3.0/repository.zip">repository.zip</a>)</li>
 <li>Examples: <a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.3.0/NatTableExamples-1.3.0.jar">NatTableExamples-1.3.0.jar</a></li>
 <li><a href="http://eclipse.org/nattable/nandn/nandn_130.php">New and Noteworthy</a></li>
 </ul>
 
 <h4>NatTable 1.2.0 (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=NatTable&target_milestone=1.2.0&order=Last%20Changed">changelog</a>)</h4>
 <ul>
-<li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/1.2.0/repository/">http://download.eclipse.org/nattable/releases/1.2.0/repository/</a> (<a href="/downloads/download.php?file=/nattable/releases/1.2.0/repository.zip">repository.zip</a>)</li>
+<li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/1.2.0/repository/">http://download.eclipse.org/nattable/releases/1.2.0/repository/</a> (<a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.2.0/repository.zip">repository.zip</a>)</li>
 <li>Examples: <a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.2.0/NatTableExamples-1.2.0.jar">NatTableExamples-1.2.0.jar</a></li>
 <li><a href="http://eclipse.org/nattable/nandn/nandn_120.php">New and Noteworthy</a></li>
 </ul>
 
 <h4>NatTable 1.1.1 (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=NatTable&target_milestone=1.1.1&order=Last%20Changed">changelog</a>)</h4>
 <ul>
-<li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/1.1.1/repository/">http://download.eclipse.org/nattable/releases/1.1.1/repository/</a> (<a href="/downloads/download.php?file=/nattable/releases/1.1.1/repository.zip">repository.zip</a>)</li>
+<li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/1.1.1/repository/">http://download.eclipse.org/nattable/releases/1.1.1/repository/</a> (<a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.1.1/repository.zip">repository.zip</a>)</li>
 <li>Examples: <a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.1.1/NatTableExamples-1.1.1.jar">NatTableExamples-1.1.1.jar</a></li>
 <li><a href="http://eclipse.org/nattable/nandn/nandn_111.php">New and Noteworthy</a></li>
 </ul>
 
 <h4>NatTable 1.1.0 (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=NatTable&target_milestone=1.1.0&order=Last%20Changed">changelog</a>)</h4>
 <ul>
-<li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/1.1.0/repository/">http://download.eclipse.org/nattable/releases/1.1.0/repository/</a> (<a href="/downloads/download.php?file=/nattable/releases/1.1.0/repository.zip">repository.zip</a>)</li>
+<li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/1.1.0/repository/">http://download.eclipse.org/nattable/releases/1.1.0/repository/</a> (<a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.1.0/repository.zip">repository.zip</a>)</li>
 <li>Examples: <a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.1.0/NatTableExamples-1.1.0.jar">NatTableExamples-1.1.0.jar</a></li>
 <li><a href="http://eclipse.org/nattable/nandn/nandn_110.php">New and Noteworthy</a></li>
 </ul>
 
 <h4>NatTable 1.0.1 (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=NatTable&target_milestone=1.0.1&order=Last%20Changed">changelog</a>)</h4>
 <ul>
-<li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/1.0.1/repository/">http://download.eclipse.org/nattable/releases/1.0.1/repository/</a> (<a href="/downloads/download.php?file=/nattable/releases/1.0.1/repository.zip">repository.zip</a>)</li>
+<li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/1.0.1/repository/">http://download.eclipse.org/nattable/releases/1.0.1/repository/</a> (<a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.0.1/repository.zip">repository.zip</a>)</li>
 <li>Examples: <a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.0.1/NatTableExamples-1.0.1.jar">NatTableExamples-1.0.1.jar</a></li>
 </ul>
 
 <h4>NatTable 1.0.0 (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=NatTable&target_milestone=1.0.0&order=Last%20Changed">changelog</a>)</h4>
 <ul>
-<li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/1.0.0/repository/">http://download.eclipse.org/nattable/releases/1.0.0/repository/</a> (<a href="/downloads/download.php?file=/nattable/releases/1.0.0/repository.zip">repository.zip</a>)</li>
+<li>p2 repo: <a href="http://download.eclipse.org/nattable/releases/1.0.0/repository/">http://download.eclipse.org/nattable/releases/1.0.0/repository/</a> (<a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.0.0/repository.zip">repository.zip</a>)</li>
 <li>Examples: <a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.0.0/NatTableExamples-1.0.0.jar">NatTableExamples-1.0.0.jar</a></li>
 <li><a href="http://eclipse.org/nattable/nandn/nandn_100.php">New and Noteworthy</a></li>
 </ul>
