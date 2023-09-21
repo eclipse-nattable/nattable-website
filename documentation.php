@@ -34,7 +34,7 @@
 
 	# Generate documentation navigation
 	$Nav->addNavSeparator('Documentation', '/nattable/documentation.php');
-	$Nav->addCustomNav('Contribution Guide', '/nattable/documentation.php?page=contribution_guide', '_self', 4);
+	$Nav->addCustomNav('Contribution Guide', 'https://github.com/eclipse-nebula-nattable/nattable/blob/master/CONTRIBUTING.md', '_self', 4);
 	$Nav->addCustomNav('Getting started', '/nattable/documentation.php?page=getting_started', '_self', 3);
 	$Nav->addCustomNav('Basics', '/nattable/documentation.php?page=basics', '_self', 4);
 	$Nav->addCustomNav('Layers', '/nattable/documentation.php?page=layer', '_self', 4);
