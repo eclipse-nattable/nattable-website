@@ -21,11 +21,14 @@
 <h3>NatTable 2.2.1 (<a href="https://github.com/eclipse-nattable/nattable/milestone/1?closed=1">changelog</a>)</h3>
 
 <p>Release artifacts can be obtained from the following p2 repository: <a href="http://download.eclipse.org/nattable/releases/2.2.1/repository/">http://download.eclipse.org/nattable/releases/2.2.1/repository/</a></p>
-<p>A zipped p2 repository is also available here: <a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.2.1/repository.zip">repository.zip</a></p>
+<p>NatTable is also published via <a href="https://central.sonatype.com/namespace/org.eclipse.nebula.widgets.nattable">Maven Central</a>.</p>
 
+<p>A zipped p2 repository is also available here: <a href="http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.2.1/repository.zip">repository.zip</a></p>
+		
 <p>The NatTable Examples Application can be downloaded from the<br/><a href="/nattable/documentation.php?page=examples_application" title="NatTable Examples Application">NatTable Examples Application</a> page.</p>
 
-
+<p>The downloadable release artifacts can also be obtained from <a href="https://github.com/eclipse-nattable/nattable/releases">NatTable GitHub Releases</a></p>
+		
 <h3>Development Snapshot Builds</h3>
 <p>Development snapshot builds are available here:<br> <a href="http://download.eclipse.org/nattable/snapshots/">http://download.eclipse.org/nattable/snapshots/</a></p>
 
