@@ -1,6 +1,6 @@
 <?php
 /*******************************************************************************
- * Copyright (c) 2009 -2023 Eclipse Foundation and others.
+ * Copyright (c) 2009 -2024 Eclipse Foundation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -56,7 +56,7 @@
 	$Nav->addCustomNav('Examples', '/nattable/documentation.php?page=examples', '_self', 4);
 	$Nav->addCustomNav('FAQ', '/nattable/documentation.php?page=faq', '_self', 4);
 	$Nav->addCustomNav('Related articles', '/nattable/documentation.php?page=articles', '_self', 4);
-	$Nav->addCustomNav('API Javadoc', 'http://download.eclipse.org/nattable/releases/2.3.0/apidocs', '_self', 4);
+	$Nav->addCustomNav('API Javadoc', 'http://download.eclipse.org/nattable/releases/2.4.0/apidocs', '_self', 4);
 
 	# Generate the web page
 	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
