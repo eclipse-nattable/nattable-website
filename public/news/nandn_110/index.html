@@ -7,17 +7,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>News | Nebula NatTable</title>
-<meta property="og:title" content="News | Nebula NatTable" />
-<meta name="twitter:title" content="News | Nebula NatTable" />
+<title>NatTable 1.1.0 - New &amp; Noteworthy | Nebula NatTable</title>
+<meta property="og:title" content="NatTable 1.1.0 - New &amp; Noteworthy | Nebula NatTable" />
+<meta name="twitter:title" content="NatTable 1.1.0 - New &amp;Amp; Noteworthy | Nebula NatTable" />
 
-<meta name="description" content="NatTable is a powerful and flexible SWT table/grid widget that is built to handle very large data sets, real-time updates, dynamic styling, and more.">
-<meta property="og:description" content="NatTable is a powerful and flexible SWT table/grid widget that is built to handle very large data sets, real-time updates, dynamic styling, and more.">
-<meta name="twitter:description" content="NatTable is a powerful and flexible SWT table/grid widget that is built to handle very large data sets, real-time updates, dynamic styling, and more.">
+<meta name="description" content="Nebula NatTable 1.1.0 released">
+<meta property="og:description" content="Nebula NatTable 1.1.0 released">
+<meta name="twitter:description" content="Nebula NatTable 1.1.0 released">
 <link href='https://www.eclipse.org/favicon.ico' rel='icon' type='image/x-icon'/>
 
 <meta name="twitter:card" content="summary" />
-<meta property="og:url" content="https://eclipse.dev/nattable/news/" />
+<meta property="og:url" content="https://eclipse.dev/nattable/news/nandn_110/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Nebula NatTable" />
 <meta name="keywords" content="eclipse, project, plug-ins, plugins, swt, nattable, grid">
@@ -25,12 +25,10 @@
 
 <meta name="generator" content="Hugo 0.110.0">
 
-<link rel="canonical" href="https://eclipse.dev/nattable/news/" />
-
-<link rel="alternate" href="/nattable/news/index.xml" type="application/rss+xml" title="">
+<link rel="canonical" href="https://eclipse.dev/nattable/news/nandn_110/" />
 
 
-<link rel="stylesheet" href="https://eclipse.org/eclipse.org-common/themes/solstice/public/stylesheets/astro.min.css?v=1726146803">
+<link rel="stylesheet" href="https://eclipse.org/eclipse.org-common/themes/solstice/public/stylesheets/astro.min.css?v=1726146808">
   
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -1510,13 +1508,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             
               
             
+              
+            
             <li >
               <a href="https://eclipse.dev/nattable/">Nebula NatTable</a>
             </li>
           
             
-            <li  class="active" aria-current="page">
+            <li >
               <a href="https://eclipse.dev/nattable/news/">News</a>
+            </li>
+          
+            
+            <li  class="active" aria-current="page">
+              <a href="https://eclipse.dev/nattable/news/nandn_110/">NatTable 1.1.0 - New &amp; Noteworthy</a>
             </li>
           
           </ol>
@@ -1533,7 +1538,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
       <h1>
         
-          News
+          NatTable 1.1.0 - New &amp; Noteworthy
         
       </h1>
     
@@ -1541,122 +1546,305 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
   
-   
-  
-  
+  <p>There are several changes in the infrastructure, the API and the feature set of Nebula NatTable with the 1.1.0 release. Here are the most important ones.</p>
+<p>Almost every change in code is tracked via ticket in Bugzilla, so if you are curious about the details and all the bugs that are fixed and enhancements that were added with the 1.1.0 release, have a look <a href="https://bugs.eclipse.org/bugs/buglist.cgi?classification=Technology&amp;list_id=8836815&amp;product=NatTable&amp;query_format=advanced&amp;resolution=FIXED&amp;target_milestone=1.1.0">here</a>.</p>
+<h3 id="enhancements-and-new-features">Enhancements and new features</h3>
+<p>There are several enhancements and new features that were added to Nebula NatTable.</p>
+<ul>
+<li>
+<p>Contribution - Active cell editor reference moved to NatTable instance</p>
+<p>With this contribution by Michael Heiß the <code>ActiveCellEditorRegistry</code> is deprecated. The active cell editor reference is now stored as member of the NatTable instance to which the current active cell editor belongs to. This solves the issue of having a NatTable as editor control of a NatTable editor.</p>
+<p>If you are not using the <code>ActiveCellEditorRegistry</code> in code outside the NatTable, you shouldn&rsquo;t notice this change directly.</p>
+<p>The current active cell editor can be requested by calling</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>NatTable<span style="color:#960050;background-color:#1e0010">#</span>getActiveCellEditor<span style="color:#f92672">()</span>
+</span></span></code></pre></div><p>You can also directly try to commit and close a current active cell editor by calling</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>NatTable<span style="color:#960050;background-color:#1e0010">#</span>commitAndCloseActiveCellEditor<span style="color:#f92672">()</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Contribution - Enhanced Search Dialog</p>
+<p>With this contribution by Tom Hochstein, the search dialog that is shipped with NatTable to support searching within a table, is enhanced to look like the default search dialog in Eclipse. If a <code>SelectionLayer</code> is involved in your layer stack, you can open the search dialog via key combination CTRL+F</p>
+
     
-      
-<div class="news-list">
-  <a href=" /nattable/news/nandn_240/" class="media media-link match-height-item">
-    <p class="media-date">Thursday, May 23, 2024</p>
-    <h4 class="media-heading">NatTable 2.4.0 - New & Noteworthy</h4>
-    <p class="media-text">Nebula NatTable 2.4.0 released</p>
-  </a>
-</div>
+    <figure class="eclipsefdn-figure col-xs-24">
+        <img class="img img-responsive" src="search_dialog.png"
+             alt="Enhanced Search Dialog"/> 
+    </figure>
+
+</li>
+<li>
+<p>Contribution - GroupBy summary values</p>
+<p>With this contribution by Alexandre Pauzies it is now possible to add summary values for grouped items when the GroupBy feature is used in a NatTable grid.</p>
+<p>Similar to the summary row feature, the values are calculated by registering an instance of the new introduced <code>IGroupBySummaryProvider</code> (e.g. <code>SummationGroupBySummaryProvider</code>) for the config attribute <code>GroupByConfigAttributes#GROUP_BY_SUMMARY_PROVIDER</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>configRegistry<span style="color:#f92672">.</span><span style="color:#a6e22e">registerConfigAttribute</span><span style="color:#f92672">(</span> 
+</span></span><span style="display:flex;"><span>    GroupByConfigAttributes<span style="color:#f92672">.</span><span style="color:#a6e22e">GROUP_BY_SUMMARY_PROVIDER</span><span style="color:#f92672">,</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> SummationGroupBySummaryProvider<span style="color:#f92672">(</span>columnPropertyAccessor<span style="color:#f92672">),</span> 
+</span></span><span style="display:flex;"><span>    DisplayMode<span style="color:#f92672">.</span><span style="color:#a6e22e">NORMAL</span><span style="color:#f92672">,</span> 
+</span></span><span style="display:flex;"><span>    GroupByDataLayer<span style="color:#f92672">.</span><span style="color:#a6e22e">GROUP_BY_COLUMN_PREFIX</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">);</span>
+</span></span></code></pre></div><p>To be able to register different styles for the summary values, two new labels will be added to the label stack of the cell in case a <code>IGroupBySummaryProvider</code> is registered:</p>
+<ul>
+<li><code>GroupByDataLayer#GROUP_BY_SUMMARY</code></li>
+<li><code>GroupByDataLayer#GROUP_BY_SUMMARY_COLUMN_PREFIX + COLUMN_INDEX</code></li>
+</ul>
+<p>Additionally you are able to show the number of children in a group by configuring a pattern for the config attribute <code>GroupByConfigAttributes#GROUP_BY_CHILD_COUNT_PATTERN</code>. The specified pattern will be added to the groupBy value, where the placeholder {0} will be replaced with the number of children in the list, while the placeholder {1} will be replaced with the number of direct children (without sub-children).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>configRegistry<span style="color:#f92672">.</span><span style="color:#a6e22e">registerConfigAttribute</span><span style="color:#f92672">(</span> 
+</span></span><span style="display:flex;"><span>    GroupByConfigAttributes<span style="color:#f92672">.</span><span style="color:#a6e22e">GROUP_BY_CHILD_COUNT_PATTERN</span><span style="color:#f92672">,</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;\[{0}\] - ({1})&#34;</span><span style="color:#f92672">);</span>
+</span></span></code></pre></div>
     
-      
-<div class="news-list">
-  <a href=" /nattable/news/nandn_230/" class="media media-link match-height-item">
-    <p class="media-date">Monday, Feb 19, 2024</p>
-    <h4 class="media-heading">NatTable 2.3.0 - New & Noteworthy</h4>
-    <p class="media-text">Nebula NatTable 2.3.0 released</p>
-  </a>
-</div>
+    <figure class="eclipsefdn-figure col-xs-24">
+        <img class="img img-responsive" src="groupby_summary.png"
+             alt="GroupBy summary example"/> 
+    </figure>
+
+<p><strong>Note:</strong><br>
+To enable this new feature you need to use the <code>GroupByDataLayer</code> constructor that takes a <code>IConfigRegistry</code> parameter. This is necessary to enable the <code>GroupByDataLayer</code> to access the configured <code>IGroupBySummaryProvider</code></p>
+</li>
+<li>
+<p>Added GroupBy area configuration Added configuration attributes to be able to configure the GroupBy area.</p>
+<ul>
+<li><code>GroupByConfigAttributes#GROUP_BY_HINT</code><br>
+The text that should be rendered in the GroupBy area in case no grouping is applied.</li>
+<li><code>GroupByConfigAttributes#GROUP_BY_HINT_STYLE</code><br>
+The style that should be used to render the hint in the GroupBy area.</li>
+<li><code>GroupByConfigAttributes#GROUP_BY_HEADER_BACKGROUND_COLOR</code><br>
+The background color that should be used in the GroupBy area.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>configRegistry<span style="color:#f92672">.</span><span style="color:#a6e22e">registerConfigAttribute</span><span style="color:#f92672">(</span> 
+</span></span><span style="display:flex;"><span>    GroupByConfigAttributes<span style="color:#f92672">.</span><span style="color:#a6e22e">GROUP_BY_HINT</span><span style="color:#f92672">,</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Drag columns here&#34;</span><span style="color:#f92672">);</span> 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Style hintStyle <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Style<span style="color:#f92672">();</span> 
+</span></span><span style="display:flex;"><span>    hintStyle<span style="color:#f92672">.</span><span style="color:#a6e22e">setAttributeValue</span><span style="color:#f92672">(</span> 
+</span></span><span style="display:flex;"><span>        CellStyleAttributes<span style="color:#f92672">.</span><span style="color:#a6e22e">FONT</span><span style="color:#f92672">,</span> 
+</span></span><span style="display:flex;"><span>        GUIHelper<span style="color:#f92672">.</span><span style="color:#a6e22e">getFont</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> FontData<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Arial&#34;</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">10</span><span style="color:#f92672">,</span> SWT<span style="color:#f92672">.</span><span style="color:#a6e22e">ITALIC</span><span style="color:#f92672">)));</span> 
+</span></span><span style="display:flex;"><span>    configRegistry<span style="color:#f92672">.</span><span style="color:#a6e22e">registerConfigAttribute</span><span style="color:#f92672">(</span> 
+</span></span><span style="display:flex;"><span>        GroupByConfigAttributes<span style="color:#f92672">.</span><span style="color:#a6e22e">GROUP_BY_HINT_STYLE</span><span style="color:#f92672">,</span> 
+</span></span><span style="display:flex;"><span>        hintStyle<span style="color:#f92672">);</span>
+</span></span></code></pre></div>
     
-      
-<div class="news-list">
-  <a href=" /nattable/news/release-2-2-1/" class="media media-link match-height-item">
-    <p class="media-date">Wednesday, Nov 15, 2023</p>
-    <h4 class="media-heading">NatTable 2.2.1 released</h4>
-    <p class="media-text">NatTable 2.2.1 released</p>
-  </a>
-</div>
+    <figure class="eclipsefdn-figure col-xs-24">
+        <img class="img img-responsive" src="groupby_hint.png"
+             alt="GroupBy hint example"/> 
+    </figure>
+
+</li>
+<li>
+<p>Added functionality to collapse and expand all nodes in a tree<br>
+To execute that functionality the corresponding commands need to be fired through the layer stack:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">//collapse all nodes in a tree 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>natTable<span style="color:#f92672">.</span><span style="color:#a6e22e">doCommand</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> TreeCollapseAllCommand<span style="color:#f92672">());</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">//expand all nodes in a tree 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>natTable<span style="color:#f92672">.</span><span style="color:#a6e22e">doCommand</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> TreeExpandAllCommand<span style="color:#f92672">());</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Hover support Added two new DisplayModes to support hover styling:</p>
+<ul>
+<li><code>DisplayMode#HOVER</code><br>
+Applied by the HoverLayer when the mouse moves over a cell in NatTable.</li>
+<li><code>DisplayMode#SELECT_HOVER</code><br>
+Applied by the <code>SelectionLayer</code> when the mouse moves over a selected cell in NatTable and the <code>HoverLayer</code> is involved in the layer stack.</li>
+</ul>
+<p>Added the <code>HoverLayer</code> which applies the <code>DisplayMode#HOVER</code> when the mouse moves over a cell in NatTable and fires the necessary events to repaint that cell.</p>
+<p><code>IModeEventHandler</code> additionally implements <code>MouseTrackListener</code> so it is possible to register ui bindings on mouseHover, mouseEnter and mouseExit.</p>
+</li>
+<li>
+<p>Added theme styling support<br>
+Created the abstract <code>ThemeConfiguration</code> that specifies the theme configurations for NatTable core styling. It is technically a <code>AbstractRegistryConfiguration</code> and can be registered like any other configuration. For theme support and enabling changing the theme at runtime, a <code>ThemeConfiguration</code> should be set to a NatTable instance via</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>NatTable<span style="color:#960050;background-color:#1e0010">#</span>setTheme<span style="color:#f92672">(</span>ThemeConfiguration<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p><strong>Note:</strong><br>
+Calling <code>setTheme()</code> need to be done <strong>AFTER</strong> <code>NatTable#configure()</code> is called. Otherwise the theme styling configuration would get overriden by layer configurations.</p>
+<p>There are three default themes added to NatTable core:</p>
+<ul>
+<li><code>DefaultNatTableThemeConfiguration</code><br>
+This is the classic NatTable styling that is used by default for a long time.
+
+        
+        <figure class="eclipsefdn-figure col-xs-24">
+            <img class="img img-responsive" src="classic_theme.png"
+                 alt="Classic NatTable Theme"/> 
+        </figure>
+</li>
+<li><code>ModernNatTableThemeConfiguration</code><br>
+A more modern looking NatTable.
+
+        
+        <figure class="eclipsefdn-figure col-xs-24">
+            <img class="img img-responsive" src="modern_theme.png"
+                 alt="Modern NatTable Theme"/> 
+        </figure>
+</li>
+<li><code>DarkNatTableThemeConfiguration</code><br>
+A dark NatTable theme that extends the <code>ModernNatTableThemeConfiguration</code>.
+
+        
+        <figure class="eclipsefdn-figure col-xs-24">
+            <img class="img img-responsive" src="dark_theme.png"
+                 alt="Dark NatTable Theme"/> 
+        </figure>
+</li>
+</ul>
+<p>To create a custom theme you can directly extend the abstract <code>ThemeConfiguration</code> or extend one of the default theme configurations.</p>
+<p>You can add additional style information to a <code>ThemeConfiguration</code> via <code>IThemeExtensions</code>. This is useful for example to add conditional styling independent of a theme.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ConditionalStylingThemeExtension</span> <span style="color:#66d9ef">implements</span> IThemeExtension <span style="color:#f92672">{</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span> <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">registerStyles</span><span style="color:#f92672">(</span>IConfigRegistry configRegistry<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//add custom styling 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        IStyle femaleStyle <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Style<span style="color:#f92672">();</span> 
+</span></span><span style="display:flex;"><span>        femaleStyle<span style="color:#f92672">.</span><span style="color:#a6e22e">setAttributeValue</span><span style="color:#f92672">(</span> 
+</span></span><span style="display:flex;"><span>            CellStyleAttributes<span style="color:#f92672">.</span><span style="color:#a6e22e">BACKGROUND_COLOR</span><span style="color:#f92672">,</span> 
+</span></span><span style="display:flex;"><span>            GUIHelper<span style="color:#f92672">.</span><span style="color:#a6e22e">COLOR_YELLOW</span><span style="color:#f92672">);</span> 
+</span></span><span style="display:flex;"><span>        femaleStyle<span style="color:#f92672">.</span><span style="color:#a6e22e">setAttributeValue</span><span style="color:#f92672">(</span> 
+</span></span><span style="display:flex;"><span>            CellStyleAttributes<span style="color:#f92672">.</span><span style="color:#a6e22e">FOREGROUND_COLOR</span><span style="color:#f92672">,</span> 
+</span></span><span style="display:flex;"><span>            GUIHelper<span style="color:#f92672">.</span><span style="color:#a6e22e">COLOR_BLACK</span><span style="color:#f92672">);</span> 
+</span></span><span style="display:flex;"><span>        configRegistry<span style="color:#f92672">.</span><span style="color:#a6e22e">registerConfigAttribute</span><span style="color:#f92672">(</span> 
+</span></span><span style="display:flex;"><span>            CellConfigAttributes<span style="color:#f92672">.</span><span style="color:#a6e22e">CELL_STYLE</span><span style="color:#f92672">,</span> femaleStyle<span style="color:#f92672">,</span> 
+</span></span><span style="display:flex;"><span>            DisplayMode<span style="color:#f92672">.</span><span style="color:#a6e22e">NORMAL</span><span style="color:#f92672">,</span> FEMALE_LABEL<span style="color:#f92672">);</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span> 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span> <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">unregisterStyles</span><span style="color:#f92672">(</span>IConfigRegistry configRegistry<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//unregister custom styling 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        configRegistry<span style="color:#f92672">.</span><span style="color:#a6e22e">unregisterConfigAttribute</span><span style="color:#f92672">(</span> 
+</span></span><span style="display:flex;"><span>            CellConfigAttributes<span style="color:#f92672">.</span><span style="color:#a6e22e">CELL_STYLE</span><span style="color:#f92672">,</span> 
+</span></span><span style="display:flex;"><span>            DisplayMode<span style="color:#f92672">.</span><span style="color:#a6e22e">NORMAL</span><span style="color:#f92672">,</span> 
+</span></span><span style="display:flex;"><span>            FEMALE_LABEL<span style="color:#f92672">);</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span> 
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>ThemeConfiguration conditionalDarkTheme <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DarkNatTableThemeConfiguration<span style="color:#f92672">();</span> 
+</span></span><span style="display:flex;"><span>conditionalDarkTheme<span style="color:#f92672">.</span><span style="color:#a6e22e">addThemeExtension</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> ConditionalStylingThemeExtension<span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>natTable<span style="color:#f92672">.</span><span style="color:#a6e22e">setTheme</span><span style="color:#f92672">(</span>conditionalDarkTheme<span style="color:#f92672">);</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Enhanced the <code>ViewportLayer</code> to support multiple viewports in one layer composition. This is also called <em>split viewports</em>. For this the API was extended to support configuring the min and max column position the <code>ViewportLayer</code> should handle. Also the API was extended to support setting different scroller (e.g. <code>Slider</code> or <code>ScrollBar</code>) to the <code>ViewportLayer</code>.<br>
+As this is a advanced feature, please see the various new examples that were added to the NatTable examples application for further details.
+
     
-      
-<div class="news-list">
-  <a href=" /nattable/news/nandn_220/" class="media media-link match-height-item">
-    <p class="media-date">Friday, Jun 30, 2023</p>
-    <h4 class="media-heading">NatTable 2.2.0 - New & Noteworthy</h4>
-    <p class="media-text">Nebula NatTable 2.2.0 released</p>
-  </a>
-</div>
+    <figure class="eclipsefdn-figure col-xs-24">
+        <img class="img img-responsive" src="split_viewport_example.png"
+             alt="Split viewport example"/> 
+    </figure>
+</p>
+</li>
+<li>
+<p><code>VerticalTextPainter</code> update</p>
+<p>The <code>VerticalTextPainter</code> is rewritten to use <code>SWT.Transform</code> instead of rotating a temporary created image. This is to avoid shading effects on rendering.</p>
+<p>In case you are facing any issues you can still use the old implementation which is now accessible via <code>VerticalTextImagePainter</code>.</p>
+</li>
+<li>
+<p>Internal modification of several default painters to remove dependency to model objects<br>
+Instead of the hard dependency to model objects, the painters (e.g. <code>ColumnGroupHeaderTextPainter</code>, <code>TreeImagePainter</code>) inspect the label stack. This was necessary to support theme styling without model references.</p>
+</li>
+<li>
+<p>Internal modification of several default painters to add support whether the background should be painted by the painter directly or not. This is for example necessary if different background painter should be used but the wrapped painters by default also render the background (e.g. <code>PaddingDecorator</code>).</p>
+</li>
+<li>
+<p>Refactored export configuration attributes<br>
+Created <code>ExportConfigAttributes</code> that contain export related config attributes and removed the old config attributes:</p>
+<ul>
+<li><code>ExportConfigAttributes#EXPORTER</code><br>
+Configure the <code>ILayerExporter</code> that should be used to perform the export.<br>
+<strong><em>moved from ILayerExporter</em></strong></li>
+<li><code>ExportConfigAttributes#EXPORT_FORMATTER</code><br>
+Configure the export formatter to use.<br>
+<strong><em>moved from CellConfigAttributes</em></strong></li>
+<li><code>ExportConfigAttributes#DATE_FORMAT</code><br>
+New configuration attribute that allows specifying the date format that should be used on exporting.</li>
+</ul>
+<p>Also moved the default configuration for the formatter from <code>DefaultNatTableStyleConfiguration</code> to <code>DefaultExportBindings</code>.</p>
+</li>
+<li>
+<p>Extended the <code>PoiExcelExporter</code> to support configuration whether the background color should be applied or not and if vertical text should be also exported vertical.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>PoiExcelExporter exporter <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HSSFExcelExporter<span style="color:#f92672">();</span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//export vertical rendered text in NatTable also vertical to the export 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>exporter<span style="color:#f92672">.</span><span style="color:#a6e22e">setApplyVerticalTextConfiguration</span><span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">);</span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//do not apply the background color in the 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>export exporter<span style="color:#f92672">.</span><span style="color:#a6e22e">setApplyBackgroundColor</span><span style="color:#f92672">(</span><span style="color:#66d9ef">false</span><span style="color:#f92672">);</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Created <code>TableCellPainter</code> and <code>TableCellEditor</code> which allow rendering and editing of values that are contained in a flat collection or array in the data model.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">//register the TableCellPainter for the food collection in the data model 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>configRegistry<span style="color:#f92672">.</span><span style="color:#a6e22e">registerConfigAttribute</span><span style="color:#f92672">(</span> 
+</span></span><span style="display:flex;"><span>    CellConfigAttributes<span style="color:#f92672">.</span><span style="color:#a6e22e">CELL_PAINTER</span><span style="color:#f92672">,</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> TableCellPainter<span style="color:#f92672">(),</span> 
+</span></span><span style="display:flex;"><span>    DisplayMode<span style="color:#f92672">.</span><span style="color:#a6e22e">NORMAL</span><span style="color:#f92672">,</span> 
+</span></span><span style="display:flex;"><span>    _4222_CellPainterExample<span style="color:#f92672">.</span><span style="color:#a6e22e">COLUMN_ELEVEN_LABEL</span><span style="color:#f92672">);</span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//register the TableCellEditor for the food collection in the data model 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>configRegistry<span style="color:#f92672">.</span><span style="color:#a6e22e">registerConfigAttribute</span><span style="color:#f92672">(</span> 
+</span></span><span style="display:flex;"><span>    EditConfigAttributes<span style="color:#f92672">.</span><span style="color:#a6e22e">CELL_EDITOR</span><span style="color:#f92672">,</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> TableCellEditor<span style="color:#f92672">(),</span> 
+</span></span><span style="display:flex;"><span>    DisplayMode<span style="color:#f92672">.</span><span style="color:#a6e22e">NORMAL</span><span style="color:#f92672">,</span> 
+</span></span><span style="display:flex;"><span>    _4221_CellPainterExample<span style="color:#f92672">.</span><span style="color:#a6e22e">COLUMN_ELEVEN_LABEL</span><span style="color:#f92672">);</span>
+</span></span></code></pre></div></li>
+</ul>
+
+
+<figure class="eclipsefdn-figure col-xs-24">
+    <img class="img img-responsive" src="table_painter_editor.png"
+         alt="TableCellPainter/TableCellEditor example"/> 
+</figure>
+
+<ul>
+<li>
+<p>Added two new <code>CellConfigAttributes</code> to configure grid line rendering</p>
+<ul>
+<li><code>CellConfigAttributes#GRID_LINE_COLOR</code><br>
+The color that should be used to render the grid lines.</li>
+<li><code>CellConfigAttributes#RENDER_GRID_LINES</code><br>
+Flag to configure whether grid lines should be rendered or not. For example necessary to avoid rendering of grid lines when the <code>BeveledBorderDecorator</code> is used in the header (or render the grid lines for themes that doesn&rsquo;t use beveled borders)</li>
+</ul>
+</li>
+<li>
+<p>Created the <code>NatTableBorderOverlayPainter</code> which can be used to render a border around the NatTable. This is useful in case there are no headers as the layer painters do not render grid lines to the left and on top.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>natTable<span style="color:#f92672">.</span><span style="color:#a6e22e">addOverlayPainter</span><span style="color:#f92672">(</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> NatTableBorderOverlayPainter<span style="color:#f92672">(</span>GUIHelper<span style="color:#f92672">.</span><span style="color:#a6e22e">COLOR_RED</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">));</span>
+</span></span></code></pre></div><p><strong>Note:</strong><br>
+The <code>NatTableBorderOverlayPainter</code> also respects the newly introduced grid line color configuration that is set to the <code>ConfigRegistry</code>.
+
     
-      
-<div class="news-list">
-  <a href=" /nattable/news/nandn_210/" class="media media-link match-height-item">
-    <p class="media-date">Monday, Mar 27, 2023</p>
-    <h4 class="media-heading">NatTable 2.1.0 - New & Noteworthy</h4>
-    <p class="media-text">Nebula NatTable 2.1.0 released</p>
-  </a>
-</div>
+    <figure class="eclipsefdn-figure col-xs-24">
+        <img class="img img-responsive" src="NatTableBorderOverlayPainter_example.png"
+             alt="NatTableBorderOverlayPainter example"/> 
+    </figure>
+</p>
+</li>
+<li>
+<p>Extended the <code>NatGridLayerPainter</code> to render fake row grid lines in case a default row height is set.
+
     
-      
-<div class="news-list">
-  <a href=" /nattable/news/nandn_200/" class="media media-link match-height-item">
-    <p class="media-date">Wednesday, Dec 16, 2020</p>
-    <h4 class="media-heading">NatTable 2.0.0 - New & Noteworthy</h4>
-    <p class="media-text">Nebula NatTable 2.0.0 released</p>
-  </a>
-</div>
+    <figure class="eclipsefdn-figure col-xs-24">
+        <img class="img img-responsive" src="NatGridLayerPainter_example.png"
+             alt="NatGridLayerPainter example"/> 
+    </figure>
+</p>
+</li>
+<li>
+<p>Localization of default numeric converters<br>
+The <code>NumericDisplayConverter</code> is now using <code>NumberFormat</code> for conversion instead of calling <code>toString()</code>. You can also access and modify the set <code>NumberFormat</code> via</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>NumericDisplayConverter<span style="color:#960050;background-color:#1e0010">#</span>getNumberFormat<span style="color:#f92672">()</span>
+</span></span></code></pre></div><p>or set a different <code>NumberFormat</code> via</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>NumericDisplayConverter<span style="color:#960050;background-color:#1e0010">#</span>setNumberFormat<span style="color:#f92672">(</span>NumberFormat<span style="color:#f92672">)</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Introduced the <code>CalculatedValueCache</code> that is used to cache calculated values like summary values in the <code>SummaryRowLayer</code> or the groupBy summary values.</p>
+</li>
+<li>
+<p>Extended the NatTable examples app with additional examples. It now has two sections:</p>
+<ul>
+<li>Tutorial Examples<br>
+Examples that will be used in future tutorials and are mostly focused on one NatTable feature item.</li>
+<li>Classic Examples<br>
+Examples that are well known to NatTable users as they exist for a long time.</li>
+</ul>
+
     
-      
-<div class="news-list">
-  <a href=" /nattable/news/nandn_160/" class="media media-link match-height-item">
-    <p class="media-date">Wednesday, Sep 18, 2019</p>
-    <h4 class="media-heading">NatTable 1.6.0 - New & Noteworthy</h4>
-    <p class="media-text">Nebula NatTable 1.6.0 released</p>
-  </a>
-</div>
-    
-      
-<div class="news-list">
-  <a href=" /nattable/news/nandn_150/" class="media media-link match-height-item">
-    <p class="media-date">Monday, Mar 20, 2017</p>
-    <h4 class="media-heading">NatTable 1.5.0 - New & Noteworthy</h4>
-    <p class="media-text">Nebula NatTable 1.5.0 released</p>
-  </a>
-</div>
-    
-      
-<div class="news-list">
-  <a href=" /nattable/news/nandn_140/" class="media media-link match-height-item">
-    <p class="media-date">Wednesday, Jun 1, 2016</p>
-    <h4 class="media-heading">NatTable 1.4.0 - New & Noteworthy</h4>
-    <p class="media-text">Nebula NatTable 1.4.0 released</p>
-  </a>
-</div>
-    
-      
-<div class="news-list">
-  <a href=" /nattable/news/nandn_130/" class="media media-link match-height-item">
-    <p class="media-date">Saturday, Mar 28, 2015</p>
-    <h4 class="media-heading">NatTable 1.3.0 - New & Noteworthy</h4>
-    <p class="media-text">Nebula NatTable 1.3.0 released</p>
-  </a>
-</div>
-    
-    
-    <ul class="pagination pagination-default">
-      <li class="page-item disabled">
-        <a aria-disabled="true" aria-label="First" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;&laquo;</span></a>
-      </li>
-      <li class="page-item disabled">
-        <a aria-disabled="true" aria-label="Previous" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;</span></a>
-      </li>
-      <li class="page-item active">
-        <a aria-current="page" aria-label="Page 1" class="page-link" role="button">1</a>
-      </li>
-      <li class="page-item">
-        <a href="/nattable/news/page/2/" aria-label="Page 2" class="page-link" role="button">2</a>
-      </li>
-      <li class="page-item">
-        <a href="/nattable/news/page/2/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/nattable/news/page/2/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
-      </li>
-    </ul>
-  
+    <figure class="eclipsefdn-figure col-xs-24">
+        <img class="img img-responsive" src="examples_structure.png"
+             alt="NatTable examples structure"/> 
+    </figure>
+
+<p><strong>Note:</strong><br>
+If starting the new NatTable examples application out of Eclipse fails, delete the file <em>examples.index</em> in the src root folder so it gets re-created. This is necessary because the examples structure has changed!</p>
+</li>
+</ul>
+
 
   
 
@@ -2035,7 +2223,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   <div id="footer-js">
   
-  <script src="https://www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/astro.min.js?var=0.0.250?v=1726146803"></script>
+  <script src="https://www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/astro.min.js?var=0.0.250?v=1726146808"></script>
   
 
   

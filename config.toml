@@ -49,7 +49,7 @@ unsafe = true
   email = "nattable-dev@eclipse.org"
 
 [permalinks]
-  news = "/:sections/:year/:month/:day/:slug/"
+#  news = "/:sections/:year/:month/:day/:slug/"
 
 [blackfriday]
   plainIDAnchors = true

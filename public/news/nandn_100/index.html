@@ -7,17 +7,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>News | Nebula NatTable</title>
-<meta property="og:title" content="News | Nebula NatTable" />
-<meta name="twitter:title" content="News | Nebula NatTable" />
+<title>NatTable 1.0.0 - New &amp; Noteworthy | Nebula NatTable</title>
+<meta property="og:title" content="NatTable 1.0.0 - New &amp; Noteworthy | Nebula NatTable" />
+<meta name="twitter:title" content="NatTable 1.0.0 - New &amp;Amp; Noteworthy | Nebula NatTable" />
 
-<meta name="description" content="NatTable is a powerful and flexible SWT table/grid widget that is built to handle very large data sets, real-time updates, dynamic styling, and more.">
-<meta property="og:description" content="NatTable is a powerful and flexible SWT table/grid widget that is built to handle very large data sets, real-time updates, dynamic styling, and more.">
-<meta name="twitter:description" content="NatTable is a powerful and flexible SWT table/grid widget that is built to handle very large data sets, real-time updates, dynamic styling, and more.">
+<meta name="description" content="Nebula NatTable 1.0.0 released">
+<meta property="og:description" content="Nebula NatTable 1.0.0 released">
+<meta name="twitter:description" content="Nebula NatTable 1.0.0 released">
 <link href='https://www.eclipse.org/favicon.ico' rel='icon' type='image/x-icon'/>
 
 <meta name="twitter:card" content="summary" />
-<meta property="og:url" content="https://eclipse.dev/nattable/news/" />
+<meta property="og:url" content="https://eclipse.dev/nattable/news/nandn_100/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Nebula NatTable" />
 <meta name="keywords" content="eclipse, project, plug-ins, plugins, swt, nattable, grid">
@@ -25,12 +25,10 @@
 
 <meta name="generator" content="Hugo 0.110.0">
 
-<link rel="canonical" href="https://eclipse.dev/nattable/news/" />
-
-<link rel="alternate" href="/nattable/news/index.xml" type="application/rss+xml" title="">
+<link rel="canonical" href="https://eclipse.dev/nattable/news/nandn_100/" />
 
 
-<link rel="stylesheet" href="https://eclipse.org/eclipse.org-common/themes/solstice/public/stylesheets/astro.min.css?v=1726146803">
+<link rel="stylesheet" href="https://eclipse.org/eclipse.org-common/themes/solstice/public/stylesheets/astro.min.css?v=1726146808">
   
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -1510,13 +1508,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             
               
             
+              
+            
             <li >
               <a href="https://eclipse.dev/nattable/">Nebula NatTable</a>
             </li>
           
             
-            <li  class="active" aria-current="page">
+            <li >
               <a href="https://eclipse.dev/nattable/news/">News</a>
+            </li>
+          
+            
+            <li  class="active" aria-current="page">
+              <a href="https://eclipse.dev/nattable/news/nandn_100/">NatTable 1.0.0 - New &amp; Noteworthy</a>
             </li>
           
           </ol>
@@ -1533,7 +1538,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
       <h1>
         
-          News
+          NatTable 1.0.0 - New &amp; Noteworthy
         
       </h1>
     
@@ -1541,122 +1546,133 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
   
-   
-  
-  
+  <p>There are several changes in the infrastructure, the API and the feature set of Nebula NatTable with the 1.0.0 release. Here are the most important ones.</p>
+<p>Almost every change in code is tracked via ticket in Bugzilla, so if you are curious about the details and all the bugs that are fixed with the 1.0.0 release have a look <a href="https://bugs.eclipse.org/bugs/buglist.cgi?list_id=5573174&amp;resolution=FIXED&amp;classification=Technology&amp;query_format=advanced&amp;component=Core&amp;target_milestone=1.0.0&amp;product=NatTable">here</a></p>
+<h3 id="infrastructure">Infrastructure</h3>
+<p>There are several infrastructural changes in Nebula NatTable.</p>
+<ul>
+<li>Update of third-party dependency to <a href="http://www.glazedlists.com/">GlazedLists</a> 1.9</li>
+<li>Update of third-party dependency to <a href="http://poi.apache.org/">Apache POI</a> 3.9</li>
+<li>Modification of the target-platform to replace local library dependencies with Software Site dependencies. This is possible because GlazedLists and Apache POI are now integrated in <a href="http://www.eclipse.org/orbit/">Eclipse Orbit</a> as OSGi bundles</li>
+<li>Providing a fully functional p2 update site for NatTable core, its extensions and the corresponding source bundles. See the <a href="http://eclipse.org/nattable/download.php">download section</a> for details</li>
+<li>Providing p2 update sites for <a href="http://download.eclipse.org/nattable/snapshots/">SNAPSHOT builds</a> that are created after changes in the repository occured</li>
+<li>Publishing the <a href="http://download.eclipse.org/nattable/releases/1.0.0/apidocs/">API Javadoc</a>. Still not complete</li>
+</ul>
+<h3 id="enhancements-and-new-features">Enhancements and new features</h3>
+<p>There are several enhancements and new features that were added to Nebula NatTable.</p>
+<ul>
+<li>
+<p>Smooth/continuous scrolling of the viewport<br>
+Before 1.0.0 on scrolling the viewport jumped cell-wise, now scrolling is performed pixel-wise which increases the user experience on scrolling. It also enables the user to scroll large cells that does not fit into the viewport which was not possible before. You do not have to change any of your code to enable this enhancement.</p>
+</li>
+<li>
+<p>Introduced the <code>AbstractHeaderMenuConfiguration</code> to make it easier to create new header menus. This one also adds a corner header menu to solve the issue to restore from a state where all columns where hidden.</p>
+</li>
+<li>
+<p>Dialog for managing NatTable states<br>
+NatTable supports saving and loading of states via <code>saveState()</code> and <code>loadState()</code> which are working on <code>java.util.Properties</code> objects. With NatTable 1.0.0 the state handling was corrected for some layers and added to layers that did not support state handling before. For convenience also a dialog is added that can be used to manage different state sets. To make use of it you need to register the necessary command handler like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>DisplayPersistenceDialogCommandHandler handler <span style="color:#f92672">=</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> DisplayPersistenceDialogCommandHandler<span style="color:#f92672">();</span> 
+</span></span><span style="display:flex;"><span>gridLayer<span style="color:#f92672">.</span><span style="color:#a6e22e">registerCommandHandler</span><span style="color:#f92672">(</span>handler<span style="color:#f92672">);</span>
+</span></span></code></pre></div><p>To open the dialog you could add the corresponding menu item to the column header menu like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>natTable<span style="color:#f92672">.</span><span style="color:#a6e22e">addConfiguration</span><span style="color:#f92672">(</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> HeaderMenuConfiguration<span style="color:#f92672">(</span>natTable<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">@Override</span> <span style="color:#66d9ef">protected</span> PopupMenuBuilder <span style="color:#a6e22e">createColumnHeaderMenu</span><span style="color:#f92672">(</span>NatTable natTable<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">super</span><span style="color:#f92672">.</span><span style="color:#a6e22e">createColumnHeaderMenu</span><span style="color:#f92672">(</span>natTable<span style="color:#f92672">)</span> 
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">.</span><span style="color:#a6e22e">withStateManagerMenuItemProvider</span><span style="color:#f92672">();</span> <span style="color:#f92672">}</span> <span style="color:#f92672">});</span>
+</span></span></code></pre></div>
     
-      
-<div class="news-list">
-  <a href=" /nattable/news/nandn_240/" class="media media-link match-height-item">
-    <p class="media-date">Thursday, May 23, 2024</p>
-    <h4 class="media-heading">NatTable 2.4.0 - New & Noteworthy</h4>
-    <p class="media-text">Nebula NatTable 2.4.0 released</p>
-  </a>
-</div>
+    <figure class="eclipsefdn-figure col-xs-24">
+        <img class="img img-responsive" src="viewManagementDialog.png"
+             alt="View Configuration Management Dialog"/> 
+    </figure>
+
+</li>
+<li>
+<p>Major refactoring of the editing behaviour<br>
+We cleaned up the API to prepare for the next generation and made things clearer and stabilized the process for additional features, e.g. creating editors that open in subdialogs, even making use of SWT and JFace dialogs (e.g. FileDialogCellEditor which opens the SWT FileDialog). Additionally with several bugfixes these are quite some tickets that have been fixed. In this forum topic you can find a list of what has been done at this point: <a href="http://www.eclipse.org/forums/index.php/t/452211/">http://www.eclipse.org/forums/index.php/t/452211/</a><br>
+You should only notice these changes in your code if you implemented custom editors. If you created custom editors than check the ICellEditor interface, the AbstractCellEditor and the AbstractDialogCellEditor for details.</p>
+</li>
+<li>
+<p>Added new <code>EditConfigAttributes</code></p>
+<table>
+<thead>
+<tr>
+<th><code>EditConfigAttributes</code></th>
+<th>Datatype</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>OPEN_IN_DIALOG</code></td>
+<td><code>Boolean</code></td>
+<td>Configure if a cell should be edited inline or in a dialog. Default is <code>false</code> for editing inline.</td>
+</tr>
+<tr>
+<td><code>OPEN_ADJACENT_EDITOR</code></td>
+<td><code>Boolean</code></td>
+<td>Configure if the adjacent editor should be opened after committing the value in the current active editor. Will only be interpreted for inline editing. Default is <code>false</code> for not opening the adjacent editor.</td>
+</tr>
+<tr>
+<td><code>SUPPORT_MULTI_EDIT</code></td>
+<td><code>Boolean</code></td>
+<td>Configure if the editor supports multi-edit by pressing F2 when multiple cells are selected that have the same editor configured. Default is <code>true</code>, which will open a subdialog for multi-editing if the prerequisites match.</td>
+</tr>
+<tr>
+<td><code>EDIT_DIALOG_SETTINGS</code></td>
+<td><code>Map&lt;String, Object&gt;</code></td>
+<td>Configure the appearance of the subdialog that is used for editing. This includes shell title, icon, location, size, resizable state and a custom message. The keys that are supported by this map are specified in <code>ICellEditDialog</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Enhanced the <code>NatCombo</code> to support free editing and multiple selection with and without checkboxes in the dropdown part. These configuration can be applied via style bits <code>SWT.READ_ONLY</code> for not enabling free editing, <code>SWT.MULTI</code> for multi selection behaviour and <code>SWT.CHECK</code> for rendering checkboxes. <code>ComboBoxCellEditors</code> need to be configured via boolean properties <code>freeEdit</code>, <code>multiselect</code> and <code>useCheckbox</code>.</p>
+</li>
+<li>
+<p>Deprecation of <code>BodyCellEditorMouseEventMatcher</code> which needed to be registered in the edit bindings for every <code>ICellEditor</code> implementation and replaced it with a more general <code>CellEditorMouseEventMatcher</code>. Doing this allows to add new ICellEditors more easily without needing to modify the edit bindings everytime.</p>
+</li>
+<li>
+<p>Corrected and enhanced the tick update handling that is added to NatTable instances with the <code>DefaultTickUpdateConfiguration</code> that is part of the <code>DefaultSelectionLayerConfiguration</code>. This one allows to increase/decrease number values by using the + and - keys of your keypad.</p>
+</li>
+<li>
+<p>Excel like filter row<br>
+With this you are able to add a filter row to your NatTable that looks like in Excel, providing the same functionality. It collects all available values in the columns and will filter those values that are not checked in the dropdown.<br>
+
     
-      
-<div class="news-list">
-  <a href=" /nattable/news/nandn_230/" class="media media-link match-height-item">
-    <p class="media-date">Monday, Feb 19, 2024</p>
-    <h4 class="media-heading">NatTable 2.3.0 - New & Noteworthy</h4>
-    <p class="media-text">Nebula NatTable 2.3.0 released</p>
-  </a>
-</div>
-    
-      
-<div class="news-list">
-  <a href=" /nattable/news/release-2-2-1/" class="media media-link match-height-item">
-    <p class="media-date">Wednesday, Nov 15, 2023</p>
-    <h4 class="media-heading">NatTable 2.2.1 released</h4>
-    <p class="media-text">NatTable 2.2.1 released</p>
-  </a>
-</div>
-    
-      
-<div class="news-list">
-  <a href=" /nattable/news/nandn_220/" class="media media-link match-height-item">
-    <p class="media-date">Friday, Jun 30, 2023</p>
-    <h4 class="media-heading">NatTable 2.2.0 - New & Noteworthy</h4>
-    <p class="media-text">Nebula NatTable 2.2.0 released</p>
-  </a>
-</div>
-    
-      
-<div class="news-list">
-  <a href=" /nattable/news/nandn_210/" class="media media-link match-height-item">
-    <p class="media-date">Monday, Mar 27, 2023</p>
-    <h4 class="media-heading">NatTable 2.1.0 - New & Noteworthy</h4>
-    <p class="media-text">Nebula NatTable 2.1.0 released</p>
-  </a>
-</div>
-    
-      
-<div class="news-list">
-  <a href=" /nattable/news/nandn_200/" class="media media-link match-height-item">
-    <p class="media-date">Wednesday, Dec 16, 2020</p>
-    <h4 class="media-heading">NatTable 2.0.0 - New & Noteworthy</h4>
-    <p class="media-text">Nebula NatTable 2.0.0 released</p>
-  </a>
-</div>
-    
-      
-<div class="news-list">
-  <a href=" /nattable/news/nandn_160/" class="media media-link match-height-item">
-    <p class="media-date">Wednesday, Sep 18, 2019</p>
-    <h4 class="media-heading">NatTable 1.6.0 - New & Noteworthy</h4>
-    <p class="media-text">Nebula NatTable 1.6.0 released</p>
-  </a>
-</div>
-    
-      
-<div class="news-list">
-  <a href=" /nattable/news/nandn_150/" class="media media-link match-height-item">
-    <p class="media-date">Monday, Mar 20, 2017</p>
-    <h4 class="media-heading">NatTable 1.5.0 - New & Noteworthy</h4>
-    <p class="media-text">Nebula NatTable 1.5.0 released</p>
-  </a>
-</div>
-    
-      
-<div class="news-list">
-  <a href=" /nattable/news/nandn_140/" class="media media-link match-height-item">
-    <p class="media-date">Wednesday, Jun 1, 2016</p>
-    <h4 class="media-heading">NatTable 1.4.0 - New & Noteworthy</h4>
-    <p class="media-text">Nebula NatTable 1.4.0 released</p>
-  </a>
-</div>
-    
-      
-<div class="news-list">
-  <a href=" /nattable/news/nandn_130/" class="media media-link match-height-item">
-    <p class="media-date">Saturday, Mar 28, 2015</p>
-    <h4 class="media-heading">NatTable 1.3.0 - New & Noteworthy</h4>
-    <p class="media-text">Nebula NatTable 1.3.0 released</p>
-  </a>
-</div>
-    
-    
-    <ul class="pagination pagination-default">
-      <li class="page-item disabled">
-        <a aria-disabled="true" aria-label="First" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;&laquo;</span></a>
-      </li>
-      <li class="page-item disabled">
-        <a aria-disabled="true" aria-label="Previous" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;</span></a>
-      </li>
-      <li class="page-item active">
-        <a aria-current="page" aria-label="Page 1" class="page-link" role="button">1</a>
-      </li>
-      <li class="page-item">
-        <a href="/nattable/news/page/2/" aria-label="Page 2" class="page-link" role="button">2</a>
-      </li>
-      <li class="page-item">
-        <a href="/nattable/news/page/2/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/nattable/news/page/2/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
-      </li>
-    </ul>
-  
+    <figure class="eclipsefdn-figure col-xs-24">
+        <img class="img img-responsive" src="excelFilter.png"
+             alt="Excel like filter row"/> 
+    </figure>
+</p>
+<p>To add it to your NatTable use the following code that assumes your body layer stack contains a <code>GlazedListsEventLayer</code> and a <code>FilterList</code> that wraps the main list:</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>ComboBoxFilterRowHeaderComposite filterRowHeaderLayer <span style="color:#f92672">=</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> ComboBoxFilterRowHeaderComposite<span style="color:#f92672">(</span>
+</span></span><span style="display:flex;"><span>        bodyLayerStack<span style="color:#f92672">.</span><span style="color:#a6e22e">getFilterList</span><span style="color:#f92672">(),</span> 
+</span></span><span style="display:flex;"><span>        bodyLayerStack<span style="color:#f92672">.</span><span style="color:#a6e22e">getGlazedListsEventLayer</span><span style="color:#f92672">(),</span>
+</span></span><span style="display:flex;"><span>        bodyLayerStack<span style="color:#f92672">.</span><span style="color:#a6e22e">getSortedList</span><span style="color:#f92672">(),</span> 
+</span></span><span style="display:flex;"><span>        columnPropertyAccessor<span style="color:#f92672">,</span> 
+</span></span><span style="display:flex;"><span>        columnHeaderLayer<span style="color:#f92672">,</span> 
+</span></span><span style="display:flex;"><span>        columnHeaderDataProvider<span style="color:#f92672">,</span> 
+</span></span><span style="display:flex;"><span>        configRegistry<span style="color:#f92672">);</span>
+</span></span></code></pre></div><ul>
+<li>Added several layers to add support for row reordering and row hide/show according to the column functionality
+<ul>
+<li><code>RowReorderLayer</code></li>
+<li><code>RowHideShowLayer</code></li>
+<li><code>GlazedListsRowHideShowLayer</code> to support hiding of rows in a GlazedLists manner.<br>
+As this layer operates with filters based on row id&rsquo;s, this layer introduced the dependency to <code>org.apache.commons.codec</code> and <code>org.apache.commons.codec.binary</code> to support persistance of states.</li>
+<li><code>DetailGlazedListsEventLayer</code> to transport detail information on GlazedLists changes</li>
+</ul>
+</li>
+<li>Extended the API of the <code>TextPainter</code> and <code>VerticalTextPainter</code> to specify whether the height and/or width should be calculated by content. This is done by using new constructors that allow that explicit configuration.</li>
+<li>Corrected key modifier in default key bindings from <code>SWT.CONTROL</code> to <code>SWT.MOD1</code> to correct the key bindings on Mac</li>
+<li>Several API modifications to increase the flexibility on configuring and extending NatTable classes, e.g. setting the images for expand/collapse in trees. Such modifications are always documented via Javadoc, so have a look at the Javadoc or the detailed list of fixed tickets to find out more.</li>
+</ul>
+
 
   
 
@@ -2035,7 +2051,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   <div id="footer-js">
   
-  <script src="https://www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/astro.min.js?var=0.0.250?v=1726146803"></script>
+  <script src="https://www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/astro.min.js?var=0.0.250?v=1726146808"></script>
   
 
   

@@ -8,7 +8,7 @@ All downloads are provided under the terms and conditions of the [Eclipse Founda
 
 ## NatTable 2.4.0 ([changelog](https://github.com/eclipse-nattable/nattable/milestone/3?closed=1))
 
-Read the [New & Noteworthy](../nandn/nandn_240) for details about the release.
+Read the [New & Noteworthy](../news/nandn_240) for details about the release.
 
 Release artifacts can be obtained from the following p2 repository:  
 [http://download.eclipse.org/nattable/releases/2.4.0/repository/](http://download.eclipse.org/nattable/releases/2.4.0/repository/)
@@ -44,7 +44,7 @@ The following update site is at the time writing this document the latest recomm
   * [Linux GTK x86_64](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.3.0/org.eclipse.nebula.widgets.nattable.examples.e4.product-linux.gtk.x86_64.tar.gz)
   * [Mac OSX Cocoa x86_64](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.3.0/org.eclipse.nebula.widgets.nattable.examples.e4.product-macosx.cocoa.x86_64.tar.gz)
   * [Windows x86_64](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.3.0/org.eclipse.nebula.widgets.nattable.examples.e4.product-win32.win32.x86_64.zip)
-* [New and Noteworthy](../nandn/nandn_230)
+* [New and Noteworthy](../news/nandn_230)
 * [API Javadoc](https://download.eclipse.org/nattable/releases/2.3.0/apidocs/)
 
 ### NatTable 2.2.1 ([changelog](https://github.com/eclipse-nattable/nattable/milestone/1?closed=1))
@@ -66,7 +66,7 @@ The following update site is at the time writing this document the latest recomm
   * [Linux GTK x86_64](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.2.0/org.eclipse.nebula.widgets.nattable.examples.e4.product-linux.gtk.x86_64.tar.gz)
   * [Mac OSX Cocoa x86_64](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.2.0/org.eclipse.nebula.widgets.nattable.examples.e4.product-macosx.cocoa.x86_64.tar.gz)
   * [Windows x86_64](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.2.0/org.eclipse.nebula.widgets.nattable.examples.e4.product-win32.win32.x86_64.zip)
-* [New and Noteworthy](../nandn/nandn_220)
+* [New and Noteworthy](../news/nandn_220)
 * [API Javadoc](https://download.eclipse.org/nattable/releases/2.2.0/apidocs/)
 
 ### NatTable 2.1.0 ([changelog](https://bugs.eclipse.org/bugs/buglist.cgi?product=NatTable&target_milestone=2.1.0&order=Last%20Changed))
@@ -77,7 +77,7 @@ The following update site is at the time writing this document the latest recomm
   * [Linux GTK x86_64](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.1.0/org.eclipse.nebula.widgets.nattable.examples.e4.product-linux.gtk.x86_64.tar.gz)
   * [Mac OSX Cocoa x86_64](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.1.0/org.eclipse.nebula.widgets.nattable.examples.e4.product-macosx.cocoa.x86_64.tar.gz)
   * [Windows x86_64](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.1.0/org.eclipse.nebula.widgets.nattable.examples.e4.product-win32.win32.x86_64.zip)
-* [New and Noteworthy](../nandn/nandn_210)
+* [New and Noteworthy](../news/nandn_210)
 * [API Javadoc](https://download.eclipse.org/nattable/releases/2.1.0/apidocs/)
 
 ### NatTable 2.0.5 ([changelog](https://bugs.eclipse.org/bugs/buglist.cgi?product=NatTable&target_milestone=2.0.5&order=Last%20Changed))
@@ -138,7 +138,7 @@ The following update site is at the time writing this document the latest recomm
   * [Linux GTK x86_64](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.0.0/org.eclipse.nebula.widgets.nattable.examples.e4.product-linux.gtk.x86_64.tar.gz)
   * [Mac OSX Cocoa x86_64](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.0.0/org.eclipse.nebula.widgets.nattable.examples.e4.product-macosx.cocoa.x86_64.tar.gz)
   * [Windows x86_64](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.0.0/org.eclipse.nebula.widgets.nattable.examples.e4.product-win32.win32.x86_64.zip)
-* [New and Noteworthy](../nandn/nandn_200)
+* [New and Noteworthy](../news/nandn_200)
 * [API Javadoc](https://download.eclipse.org/nattable/releases/2.0.0/apidocs/)
 
 
@@ -152,7 +152,7 @@ The following update site is at the time writing this document the latest recomm
   * [Mac OSX Cocoa x86_64](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.6.0/org.eclipse.nebula.widgets.nattable.examples.e4.product-macosx.cocoa.x86_64.tar.gz)
   * [Windows x86](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.6.0/org.eclipse.nebula.widgets.nattable.examples.e4.product-win32.win32.x86.zip)
   * [Windows x86_64](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.6.0/org.eclipse.nebula.widgets.nattable.examples.e4.product-win32.win32.x86_64.zip)
-* [New and Noteworthy](../nandn/nandn_160)
+* [New and Noteworthy](../news/nandn_160)
 * [API Javadoc](https://download.eclipse.org/nattable/releases/1.6.0/apidocs/)
 
 
@@ -166,7 +166,7 @@ The following update site is at the time writing this document the latest recomm
   * [Mac OSX Cocoa x86_64](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.5.0/org.eclipse.nebula.widgets.nattable.examples.e4.product-macosx.cocoa.x86_64.tar.gz)
   * [Windows x86](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.5.0/org.eclipse.nebula.widgets.nattable.examples.e4.product-win32.win32.x86.zip)
   * [Windows x86_64](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.5.0/org.eclipse.nebula.widgets.nattable.examples.e4.product-win32.win32.x86_64.zip)
-* [New and Noteworthy](../nandn/nandn_150)
+* [New and Noteworthy](../news/nandn_150)
 * [API Javadoc](https://download.eclipse.org/nattable/releases/1.5.0/apidocs/)
 
 
@@ -174,7 +174,7 @@ The following update site is at the time writing this document the latest recomm
 
 * p2 repo: [http://download.eclipse.org/nattable/releases/1.4.0/repository/](http://download.eclipse.org/nattable/releases/1.4.0/repository/) ([repository.zip](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.4.0/repository.zip))
 * Examples: [NatTableExamples-1.4.0.jar](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.4.0/NatTableExamples-1.4.0.jar)
-* [New and Noteworthy](../nandn/nandn_140)
+* [New and Noteworthy](../news/nandn_140)
 * [API Javadoc](https://download.eclipse.org/nattable/releases/1.4.0/apidocs/)
 
 
@@ -182,7 +182,7 @@ The following update site is at the time writing this document the latest recomm
 
 * p2 repo: [http://archive.eclipse.org/nattable/releases/1.3.0/repository/](http://archive.eclipse.org/nattable/releases/1.3.0/repository/) ([repository.zip](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.3.0/repository.zip))
 * Examples: [NatTableExamples-1.3.0.jar](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.3.0/NatTableExamples-1.3.0.jar)
-* [New and Noteworthy](../nandn/nandn_130)
+* [New and Noteworthy](../news/nandn_130)
 * [API Javadoc](https://archive.eclipse.org/nattable/releases/1.3.0/apidocs/)
 
 
@@ -190,7 +190,7 @@ The following update site is at the time writing this document the latest recomm
 
 * p2 repo: [http://archive.eclipse.org/nattable/releases/1.2.0/repository/](http://archive.eclipse.org/nattable/releases/1.2.0/repository/) ([repository.zip](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.2.0/repository.zip))
 * Examples: [NatTableExamples-1.2.0.jar](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.2.0/NatTableExamples-1.2.0.jar)
-* [New and Noteworthy](../nandn/nandn_120)
+* [New and Noteworthy](../news/nandn_120)
 * [API Javadoc](https://archive.eclipse.org/nattable/releases/1.2.0/apidocs/)
 
 
@@ -205,7 +205,7 @@ The following update site is at the time writing this document the latest recomm
 
 * p2 repo: [http://archive.eclipse.org/nattable/releases/1.1.0/repository/](http://archive.eclipse.org/nattable/releases/1.1.0/repository/) ([repository.zip](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.1.0/repository.zip))
 * Examples: [NatTableExamples-1.1.0.jar](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.1.0/NatTableExamples-1.1.0.jar)
-* [New and Noteworthy](../nandn/nandn_110)
+* [New and Noteworthy](../news/nandn_110)
 * [API Javadoc](https://archive.eclipse.org/nattable/releases/1.1.0/apidocs/)
 
 
@@ -220,7 +220,7 @@ The following update site is at the time writing this document the latest recomm
 
 * p2 repo: [http://archive.eclipse.org/nattable/releases/1.0.0/repository/](http://archive.eclipse.org/nattable/releases/1.0.0/repository/) ([repository.zip](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.0.0/repository.zip))
 * Examples: [NatTableExamples-1.0.0.jar](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/1.0.0/NatTableExamples-1.0.0.jar)
-* [New and Noteworthy](../nandn/nandn_100)
+* [New and Noteworthy](../news/nandn_100)
 * [API Javadoc](https://archive.eclipse.org/nattable/releases/1.0.0/apidocs/)
 
 
