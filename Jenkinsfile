@@ -55,7 +55,7 @@ spec:
         dir('www') {
             sshagent(['github-bot-ssh']) {
                 sh '''
-                    git clone ssh://git@github.com:${PROJECT_GH_ORG}/${PROJECT_WEBSITE_REPO}.git .
+                    git clone ssh://git@github.com/${PROJECT_GH_ORG}/${PROJECT_WEBSITE_REPO}.git .
                     if [ "${BRANCH_NAME}" = "main" ]; then
                       git checkout master
                     else
