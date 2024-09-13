@@ -36,7 +36,7 @@ spec:
     PROJECT_BOT_NAME = "NatTable Bot" // Capitalize the name
     PROJECT_GH_ORG = "eclipse-nattable" // e.g. eclipse-hono
     PROJECT_WEBSITE_REPO = "nattable-website" // e.g. hono-website
-    BRANCH_NAME = "master"
+    DEPLOY_BRANCH_NAME = "deploy"
   }
 
   triggers { pollSCM('H/10 * * * *')
@@ -78,7 +78,7 @@ spec:
         }
       }
     }
-    stage('Push to $env.BRANCH_NAME branch') {
+    stage('Push to $env.DEPLOY_BRANCH_NAME branch') {
       when {
         anyOf {
           branch "master"
@@ -96,10 +96,10 @@ spec:
                   git config user.name "${PROJECT_BOT_NAME}"
                   git commit -m "Website build ${JOB_NAME}-${BUILD_NUMBER}"
                   git log --graph --abbrev-commit --date=relative -n 5
-                  if [ "${BRANCH_NAME}" = "main" ]; then
+                  if [ "${DEPLOY_BRANCH_NAME}" = "main" ]; then
                     git push origin HEAD:master
                   else
-                    git push origin HEAD:${BRANCH_NAME}
+                    git push origin HEAD:${DEPLOY_BRANCH_NAME}
                   fi
                 else
                   echo "No changes have been detected since last build, nothing to publish"
