@@ -56,20 +56,13 @@ spec:
             sshagent(['github-bot-ssh']) {
                 sh '''
                     git clone ssh://git@github.com/${PROJECT_GH_ORG}/${PROJECT_WEBSITE_REPO}.git .
-                    if [ "${BRANCH_NAME}" = "main" ]; then
-                      git checkout master
-                    else
-                      git checkout ${BRANCH_NAME}
-                    fi
-                '''
+                    git checkout -b ${DEPLOY_BRANCH_NAME}
+                  '''
             }
         }
       }
     }
     stage('Build website (master) with Hugo') {
-      when {
-        branch 'master'
-      }
       steps {
         container('hugo') {
             dir('hugo') {
@@ -79,11 +72,6 @@ spec:
       }
     }
     stage('Push to $env.DEPLOY_BRANCH_NAME branch') {
-      when {
-        anyOf {
-          branch "master"
-        }
-      }
       steps {
         sh 'rm -rf www/* && cp -Rvf hugo/public/* www/'
         dir('www') {
