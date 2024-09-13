@@ -55,8 +55,7 @@ spec:
         dir('www') {
             sshagent(['github-bot-ssh']) {
                 sh '''
-                    git clone ssh://git@github.com/${PROJECT_GH_ORG}/${PROJECT_WEBSITE_REPO}.git .
-                    git checkout -b ${DEPLOY_BRANCH_NAME}
+                    git clone -b ${DEPLOY_BRANCH_NAME} ssh://git@github.com/${PROJECT_GH_ORG}/${PROJECT_WEBSITE_REPO}.git .
                   '''
             }
         }
