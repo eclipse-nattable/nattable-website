@@ -64,49 +64,49 @@ unsafe = true
 [[menu.sidebar]]
   parent ="home"
   name = "About this Project"
-  url = "https://projects.eclipse.org/projects/technology.nebula.nattable"
+  url = "https://projects.eclipse.org/projects/technology.nebula.nattable/"
   weight = 1
   pre = "<i class=\"fa fa-caret-right fa-fw\"></i>"
 
 [[menu.sidebar]]
   parent ="home"
   name = "Downloads"
-  url = "/download"
+  url = "/download/"
   weight = 2
   pre = "<i class=\"fa fa-caret-right fa-fw\"></i>"
 
 [[menu.sidebar]]
   parent ="home"
   name = "News"
-  url = "/news"
+  url = "/news/"
   weight = 3
   pre = "<i class=\"fa fa-caret-right fa-fw\"></i>"
 
 [[menu.sidebar]]
   parent ="home"
   name = "Documentation"
-  url = "https://github.com/eclipse-nattable/nattable/wiki"
+  url = "https://github.com/eclipse-nattable/nattable/wiki/"
   weight = 4
   pre = "<i class=\"fa fa-caret-right fa-fw\"></i>"
 
 [[menu.sidebar]]
   parent ="home"
   name = "Publications"
-  url = "/Publications"
+  url = "/Publications/"
   weight = 5
   pre = "<i class=\"fa fa-caret-right fa-fw\"></i>"
 
 [[menu.sidebar]]
   parent ="home"
   name = "Support"
-  url = "/support"
+  url = "/support/"
   weight = 6
   pre = "<i class=\"fa fa-caret-right fa-fw\"></i>"
 
 [[menu.sidebar]]
   parent ="home"
   name = "Try it!"
-  url = "/examples"
+  url = "/examples/"
   weight = 7
   pre = "<i class=\"fa fa-caret-right fa-fw\"></i>"
 
