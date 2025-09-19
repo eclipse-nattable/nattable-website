@@ -10,6 +10,28 @@
     <webMaster>nattable-dev@eclipse.org (Dirk Fauth, Edwin Park, Stephan Wahlbrink)</webMaster>
     <lastBuildDate>Mon, 09 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://eclipse.dev/nattable/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>NatTable 2.6.0 - New &amp; Noteworthy</title>
+      <link>https://eclipse.dev/nattable/news/nandn_260/</link>
+      <pubDate>Fri, 19 Sep 2025 00:00:00 +0000</pubDate>
+      
+        <author>nattable-dev@eclipse.org (Dirk Fauth, Edwin Park, Stephan Wahlbrink)</author>
+      
+      <guid>https://eclipse.dev/nattable/news/nandn_260/</guid>
+      <description>Nebula NatTable 2.6.0 released</description>
+    </item>
+    
+    <item>
+      <title>NatTable Examples Application</title>
+      <link>https://eclipse.dev/nattable/examples/</link>
+      <pubDate>Fri, 19 Sep 2025 00:00:00 +0000</pubDate>
+      
+        <author>nattable-dev@eclipse.org (Dirk Fauth, Edwin Park, Stephan Wahlbrink)</author>
+      
+      <guid>https://eclipse.dev/nattable/examples/</guid>
+      <description>Download the NatTable Examples Application</description>
+    </item>
+    
+    <item>
       <title>NatTable 2.5.0 - New &amp; Noteworthy</title>
       <link>https://eclipse.dev/nattable/news/nandn_250/</link>
       <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
@@ -45,23 +67,12 @@
     <item>
       <title>NatTable Download</title>
       <link>https://eclipse.dev/nattable/download/</link>
-      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 19 Jan 2024 00:00:00 +0000</pubDate>
       
         <author>nattable-dev@eclipse.org (Dirk Fauth, Edwin Park, Stephan Wahlbrink)</author>
       
       <guid>https://eclipse.dev/nattable/download/</guid>
       <description>The Nebula NatTable download page</description>
-    </item>
-    
-    <item>
-      <title>NatTable Examples Application</title>
-      <link>https://eclipse.dev/nattable/examples/</link>
-      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      
-        <author>nattable-dev@eclipse.org (Dirk Fauth, Edwin Park, Stephan Wahlbrink)</author>
-      
-      <guid>https://eclipse.dev/nattable/examples/</guid>
-      <description>Download the NatTable Examples Application</description>
     </item>
     
     <item>
