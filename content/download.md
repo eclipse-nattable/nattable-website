@@ -1,31 +1,43 @@
 ---
 title: "NatTable Download"
-date: 2024-01-01T00:00:00-00:00
+date: 2024-01-19T00:00:00-00:00
 summary: "The Nebula NatTable download page"
 ---
 All downloads are provided under the terms and conditions of the [Eclipse Foundation Software User Agreement](https://www.eclipse.org/legal/epl/notice/) unless otherwise specified.
 
 
-## NatTable 2.5.0 ([changelog](https://github.com/eclipse-nattable/nattable/milestone/4?closed=1))
+## NatTable 2.6.0 ([changelog](https://github.com/eclipse-nattable/nattable/milestone/5?closed=1))
 
-Read the [New & Noteworthy](../news/nandn_250) for details about the release.
+Read the [New & Noteworthy](../news/nandn_260) for details about the release.
 
 Release artifacts can be obtained from the following p2 repository:  
-[http://download.eclipse.org/nattable/releases/2.5.0/repository/](http://download.eclipse.org/nattable/releases/2.5.0/repository/)
+[https://download.eclipse.org/nattable/releases/2.6.0/repository/](https://download.eclipse.org/nattable/releases/2.6.0/repository/)
 
 NatTable is also published via [Maven Central](https://central.sonatype.com/namespace/org.eclipse.nebula.widgets.nattable).
 
-A zipped p2 repository is also available here: [repository.zip](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.5.0/repository.zip)
+A zipped p2 repository is also available here: [repository.zip](https://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.6.0/repository.zip)
 		
 The NatTable Examples Application can be downloaded from the<br/>[NatTable Examples Application]({{< ref "../examples" >}}) page.
 
 The downloadable release artifacts can also be obtained from [NatTable GitHub Releases](https://github.com/eclipse-nattable/nattable/releases)
 		
-[API Javadoc](https://download.eclipse.org/nattable/releases/2.5.0/apidocs/)
+[API Javadoc](https://download.eclipse.org/nattable/releases/2.6.0/apidocs/)
+
+### NatTable RAP
+
+Release artifacts can be obtained from the following p2 repository:  
+[https://download.eclipse.org/nattable/nattable-rap/releases/2.6.0/repository/](https://download.eclipse.org/nattable/nattable-rap/releases/2.6.0/repository/)
+
+A zipped p2 repository is also available here: [repository.zip](https://www.eclipse.org/downloads/download.php?file=/nattable/nattable-rap/releases/2.6.0/repository.zip)
+
+The downloadable release artifacts can also be obtained from [NatTable RAP GitHub Releases](https://github.com/eclipse-nattable/nattable-rap/releases)
+		
+[API Javadoc](https://download.eclipse.org/nattable/nattable-rap/releases/2.6.0/apidocs/)
 
 ## Development Snapshot Builds
-Development snapshot builds are available here:<br> [http://download.eclipse.org/nattable/snapshots/](http://download.eclipse.org/nattable/snapshots/)
+Development snapshot builds are available here:<br> [https://download.eclipse.org/nattable/snapshots/](https://download.eclipse.org/nattable/snapshots/)
 
+The development snapshot builds of the NatTable RAP fragment are available here:<br> [https://download.eclipse.org/nattable/nattable-rap/snapshots/](https://download.eclipse.org/nattable/nattable-rap/snapshots/)
 
 ## Older Releases
 
@@ -36,9 +48,20 @@ The following update site is at the time writing this document the latest recomm
 [http://download.eclipse.org/tools/orbit/downloads/drops/R20160221192158/repository/](http://download.eclipse.org/tools/orbit/downloads/drops/R20160221192158/repository/)<br>
 
 
+### NatTable 2.5.0 ([changelog](https://github.com/eclipse-nattable/nattable/milestone/4?closed=1))
+
+* p2 repo: [http://download.eclipse.org/nattable/releases/2.5.0/repository/](https://download.eclipse.org/nattable/releases/2.5.0/repository/) ([repository.zip](https://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.5.0/repository.zip))
+* Examples:
+  * [NatTableExamples.jar](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.5.0/NatTableExamples.jar)
+  * [Linux GTK x86_64](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.5.0/org.eclipse.nebula.widgets.nattable.examples.e4.product-linux.gtk.x86_64.tar.gz)
+  * [Mac OSX Cocoa x86_64](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.5.0/org.eclipse.nebula.widgets.nattable.examples.e4.product-macosx.cocoa.x86_64.tar.gz)
+  * [Windows x86_64](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.5.0/org.eclipse.nebula.widgets.nattable.examples.e4.product-win32.win32.x86_64.zip)
+* [New and Noteworthy](../news/nandn_250)
+* [API Javadoc](https://download.eclipse.org/nattable/releases/2.5.0/apidocs/)
+
 ### NatTable 2.4.0 ([changelog](https://github.com/eclipse-nattable/nattable/milestone/3?closed=1))
 
-* p2 repo: [http://download.eclipse.org/nattable/releases/2.4.0/repository/](http://download.eclipse.org/nattable/releases/2.4.0/repository/) ([repository.zip](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.4.0/repository.zip))
+* p2 repo: [http://download.eclipse.org/nattable/releases/2.4.0/repository/](https://download.eclipse.org/nattable/releases/2.4.0/repository/) ([repository.zip](https://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.4.0/repository.zip))
 * Examples:
   * [NatTableExamples.jar](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.4.0/NatTableExamples.jar)
   * [Linux GTK x86_64](http://www.eclipse.org/downloads/download.php?file=/nattable/releases/2.4.0/org.eclipse.nebula.widgets.nattable.examples.e4.product-linux.gtk.x86_64.tar.gz)
