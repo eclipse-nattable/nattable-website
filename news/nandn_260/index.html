@@ -28,7 +28,7 @@
 <link rel="canonical" href="https://eclipse.dev/nattable/news/nandn_260/" />
 
 
-<link rel="stylesheet" href="https://eclipse.org/eclipse.org-common/themes/solstice/public/stylesheets/astro.min.css?v=1758277476">
+<link rel="stylesheet" href="https://eclipse.org/eclipse.org-common/themes/solstice/public/stylesheets/astro.min.css?v=1758281064">
   
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -1547,6 +1547,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   
   <p>The NatTable 2.6.0 release was made possible by several companies that provided and sponsored ideas, bug reports, discussions and new features you can find in the following sections. We would like to thank everyone involved for their commitment and support on developing the 2.6.0 release.</p>
+<p>We would especially like to thank <a href="https://www.robotron.de/">Robotron Datenbank-Software GmbH</a> for sponsoring the NatTable RAP implementation.</p>
 <p>Of course we would also like to thank our contributors for adding new functions and fixing issues.</p>
 <p>Almost every change in code is tracked via <a href="https://github.com/eclipse-nattable/nattable/milestone/5?closed=1">GitHub Issues</a>, so if you are curious about the details and all the bugs that are fixed and enhancements that were added with the 2.6.0 release, have a look there.</p>
 <h3 id="api-changes">API changes</h3>
@@ -1608,6 +1609,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li>
 <p><strong>RAP Support</strong></p>
 <p>It is now possible to use NatTable with RAP. For this several modifications needed to be done in the NatTable Core, to avoid issues when running with RAP. A detailed description about those modifications can be found in the <a href="https://github.com/eclipse-nattable/nattable/pull/146">corresponding pull request</a>.</p>
+<p>To support NatTable in RAP the newly introduced NatTable RAP fragment needs to be added to the runtime. The fragment uses <a href="https://github.com/raphw/byte-buddy">Byte Buddy</a> to inject the necessary RAP features to NatTable. This is necessary because <code>NatTable</code> is based on <code>Canvas</code>, but we need a specialized <code>CanvasOperationHandler</code> to get everything working in NatTable. This is especially necessary for the mouse interactions and the scrolling. A detailed description on the details of the fragment can be found in the <a href="https://github.com/eclipse-nattable/nattable-rap">NatTable RAP GitHub Repository</a>.</p>
 
     
     <figure class="eclipsefdn-figure col-xs-24">
@@ -1615,7 +1617,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
              alt="NatTable Examples RAP Application"/> 
     </figure>
 
-<p>To support NatTable in RAP the newly introduced NatTable RAP fragment needs to be added to the runtime. The fragment uses <a href="https://github.com/raphw/byte-buddy">Byte Buddy</a> to inject the necessary RAP features to NatTable. This is necessary because <code>NatTable</code> is based on <code>Canvas</code>, but we need a specialized <code>CanvasOperationHandler</code> to get everything working in NatTable. This is especially necessary for the mouse interactions and the scrolling. A detailed description on the details of the fragment can be found in the <a href="https://github.com/eclipse-nattable/nattable-rap">NatTable RAP GitHub Repository</a>.</p>
 </li>
 <li>
 <p><strong>Axis Hover</strong></p>
@@ -2066,7 +2067,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   <div id="footer-js">
   
-  <script src="https://www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/astro.min.js?var=0.0.250?v=1758277477"></script>
+  <script src="https://www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/astro.min.js?var=0.0.250?v=1758281064"></script>
   
 
   
