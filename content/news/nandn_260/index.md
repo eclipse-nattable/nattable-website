@@ -76,6 +76,8 @@ Additionally the NatTable update site does now not contain the third-party-libra
     
     It is now possible to use NatTable with RAP. For this several modifications needed to be done in the NatTable Core, to avoid issues when running with RAP. A detailed description about those modifications can be found in the [corresponding pull request](https://github.com/eclipse-nattable/nattable/pull/146).
 
+    {{< figure src="nattable_examples_rap.png" alt="NatTable Examples RAP Application">}}
+
     To support NatTable in RAP the newly introduced NatTable RAP fragment needs to be added to the runtime. The fragment uses [Byte Buddy](https://github.com/raphw/byte-buddy) to inject the necessary RAP features to NatTable. This is necessary because `NatTable` is based on `Canvas`, but we need a specialized `CanvasOperationHandler` to get everything working in NatTable. This is especially necessary for the mouse interactions and the scrolling. A detailed description on the details of the fragment can be found in the [NatTable RAP GitHub Repository](https://github.com/eclipse-nattable/nattable-rap).
 
 *   **Axis Hover**  
