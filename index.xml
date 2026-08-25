@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Eclipse NatTable&amp;trade; on Nebula NatTable</title>
+    <title>Eclipse NatTable on Nebula NatTable</title>
     <link>https://eclipse.dev/nattable/</link>
-    <description>Recent content in Eclipse NatTable&amp;trade; on Nebula NatTable</description>
+    <description>Recent content in Eclipse NatTable on Nebula NatTable</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>nattable-dev@eclipse.org (Dirk Fauth, Edwin Park, Stephan Wahlbrink)</managingEditor>
@@ -72,7 +72,7 @@
         <author>nattable-dev@eclipse.org (Dirk Fauth, Edwin Park, Stephan Wahlbrink)</author>
       
       <guid>https://eclipse.dev/nattable/download/</guid>
-      <description>The Eclipse NatTable™ download page</description>
+      <description>The Eclipse NatTable download page</description>
     </item>
     
     <item>
@@ -83,7 +83,7 @@
         <author>nattable-dev@eclipse.org (Dirk Fauth, Edwin Park, Stephan Wahlbrink)</author>
       
       <guid>https://eclipse.dev/nattable/features/</guid>
-      <description>A compact overview of the Eclipse NatTable™ features</description>
+      <description>A compact overview of the Eclipse NatTable features</description>
     </item>
     
     <item>
@@ -105,7 +105,7 @@
         <author>nattable-dev@eclipse.org (Dirk Fauth, Edwin Park, Stephan Wahlbrink)</author>
       
       <guid>https://eclipse.dev/nattable/support/</guid>
-      <description>Information about how to get support for Eclipse NatTable™</description>
+      <description>Information about how to get support for Eclipse NatTable</description>
     </item>
     
     <item>
