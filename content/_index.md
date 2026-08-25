@@ -1,5 +1,5 @@
 ---
-title: "Eclipse NatTable&trade;"
+title: "Eclipse NatTable"
 date: 2024-09-09T00:00:00-00:00
 #headline: "The Community for Open Innovation and Collaboration"
 #tagline: "The Eclipse Foundation provides our global community of individuals and organizations with a mature, scalable, and business-friendly environment for open source software collaboration and innovation."

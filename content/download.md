@@ -1,7 +1,7 @@
 ---
 title: "NatTable Download"
 date: 2024-01-19T00:00:00-00:00
-summary: "The Eclipse NatTable&trade; download page"
+summary: "The Eclipse NatTable download page"
 ---
 All downloads are provided under the terms and conditions of the [Eclipse Foundation Software User Agreement](https://www.eclipse.org/legal/epl/notice/) unless otherwise specified.
 
