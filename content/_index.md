@@ -1,5 +1,5 @@
 ---
-title: "Nebula NatTable"
+title: "Eclipse NatTable&trade;"
 date: 2024-09-09T00:00:00-00:00
 #headline: "The Community for Open Innovation and Collaboration"
 #tagline: "The Eclipse Foundation provides our global community of individuals and organizations with a mature, scalable, and business-friendly environment for open source software collaboration and innovation."
@@ -14,7 +14,7 @@ hide_page_title: true
 
 {{< figure src="backgroundMain.png" class="row-no-gutters">}}
 
-# Nebula NatTable - high performance SWT data grid
+# Eclipse NatTable&trade; - high performance SWT data grid
 
 NatTable is a powerful and flexible SWT table/grid widget that is built to handle very large data sets, real-time updates, dynamic styling, and more.
 

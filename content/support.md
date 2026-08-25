@@ -1,7 +1,7 @@
 ---
 title: "NatTable Support"
 date: 2024-01-01T00:00:00-00:00
-summary: "Information about how to get support for Nebula NatTable"
+summary: "Information about how to get support for Eclipse NatTable&trade;"
 ---
 
 The support for NatTable at Eclipse.org is provided by the community on a volunteer basis.

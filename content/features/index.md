@@ -1,7 +1,7 @@
 ---
 title: "NatTable Feature Overview"
 date: 2024-01-01T00:00:00-00:00
-summary: "A compact overview of the Nebula NatTable features"
+summary: "A compact overview of the Eclipse NatTable&trade; features"
 ---
 
 This is a overview of features of the NatTable widget. We also recommend 
